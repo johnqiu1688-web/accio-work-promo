@@ -1,282 +1,291 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accio Work 中文实战派·先锋资源中心 | 跨境 AI 自动化实战</title>
-    <meta name="description" content="Accio Work 中文先锋团资源站。提供 Accio Work 安装教程、报错解决补丁、1688 自动找货实操视频及 Shopify 自动化铺货方案。阿里国际首个企业级 AI Agent 实战指南。">
-    <meta name="keywords" content="Accio Work, Accio Work教程, AI Agent, 跨境电商自动化, 1688自动找货, Shopify自动上架, 小龙虾AI, OpenClaw">
+    <title>Accio Pioneer | The Sourcing Shortcut: Automate Your Shopify Store with AI Agents</title>
+    <meta name="description" content="A No-BS guide for Shopify dropshippers to automate 1688 sourcing and product publishing. Fix M144 errors and deploy your first AI team in 15 mins.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-        }
-        .accent-text {
-            color: #FF8E53;
-        }
-        .btn-primary {
-            background: linear-gradient(90deg, #FF6B6B, #FF8E53);
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 15px -3px rgba(255, 107, 107, 0.4);
-        }
-        .card-glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .feature-icon {
-            background: rgba(255, 142, 83, 0.1);
-            color: #FF8E53;
-        }
-        .glow-box:hover {
-            box-shadow: 0 0 20px rgba(255, 142, 83, 0.2);
-        }
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .gradient-accent { background: linear-gradient(90deg, #f97316, #fb923c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glass-ui { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s; }
+        .glass-ui:hover { border-color: rgba(249, 115, 22, 0.4); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+        .badge-pro { background: rgba(249, 115, 22, 0.1); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .btn-main { box-shadow: 0 0 30px rgba(249, 115, 22, 0.3); transition: all 0.4s; }
+        .btn-main:hover { box-shadow: 0 0 50px rgba(249, 115, 22, 0.6); transform: translateY(-2px); }
+        .comparison-grid div { display: flex; align-items: center; justify-content: center; padding: 24px; }
+        .comparison-grid div:nth-child(4n+1) { justify-content: flex-start; font-weight: 700; color: #fff; }
     </style>
 </head>
-<body class="bg-[#0f0f0f] text-gray-200 font-sans selection:bg-orange-500/30">
+<body class="bg-[#050505] text-slate-400">
 
     <!-- Header -->
-    <header class="border-b border-white/5 sticky top-0 z-50 bg-[#0f0f0f]/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header class="border-b border-white/5 sticky top-0 z-50 bg-[#050505]/80 backdrop-blur-2xl">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center shadow-lg shadow-orange-500/20">
+                <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
                     <i class="fas fa-robot text-white text-xl"></i>
                 </div>
-                <div>
-                    <h1 class="text-lg font-bold tracking-tight text-white leading-none">Accio <span class="accent-text">Pioneer</span></h1>
-                    <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">中文实战先锋团</span>
-                </div>
+                <span class="text-2xl font-black text-white tracking-tighter uppercase">Accio <span class="text-orange-500 italic">Pioneer</span></span>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#scenarios" class="hover:text-orange-400 transition">赚钱场景</a>
-                <a href="#resources" class="hover:text-orange-400 transition">避雷工具包</a>
-                <a href="#news" class="hover:text-orange-400 transition">全网资讯</a>
-                <a href="#faq" class="hover:text-orange-400 transition">FAQ</a>
+            <nav class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+                <a href="#secret" class="hover:text-white transition">The Secret</a>
+                <a href="#process" class="hover:text-white transition">Workflow</a>
+                <a href="#comparison" class="hover:text-white transition">Vs Others</a>
+                <a href="#community" class="hover:text-white transition">Join Us</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <a href="index_en.html" class="text-xs font-bold border border-white/10 px-3 py-1 rounded hover:bg-white/5 transition">English</a>
-                <a href="https://accio.works/" target="_blank" class="btn-primary text-white px-6 py-2 rounded-full text-sm font-bold">
-                    立即装机 (官方版)
-                </a>
+                <a href="index.html" class="text-xs font-bold border border-white/10 px-3 py-1.5 rounded hover:bg-white/5">CN</a>
+                <a href="https://accio.works/" target="_blank" class="bg-orange-600 text-white px-8 py-3 rounded-2xl text-xs font-black btn-main">GET FREE APP</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative py-24 overflow-hidden border-b border-white/5">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-orange-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="inline-flex items-center space-x-3 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full mb-10">
-                <span class="flex h-2 w-2 relative">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                </span>
-                <span class="text-xs font-bold text-orange-400 tracking-wide uppercase">2026 跨境出海新蓝海</span>
+    <!-- Hero -->
+    <section class="relative pt-32 pb-40 overflow-hidden text-center">
+        <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[600px] bg-orange-600/10 blur-[150px] rounded-full -z-10"></div>
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="badge-pro inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
+                <i class="fas fa-check-circle mr-2"></i> Verified M144 Fix Included
             </div>
-            <h2 class="text-5xl md:text-7xl font-black mb-6 text-white leading-tight">
-                让 AI Agent 真正为你 <span class="accent-text italic underline decoration-orange-500/30">赚钱</span><br>
-                <span class="text-3xl md:text-5xl opacity-90">Accio Work 跨境全自动化实战手册</span>
+            <h2 class="text-6xl md:text-8xl font-black text-white mb-10 leading-[1] tracking-tighter">
+                STOP SOURCING<br>
+                <span class="gradient-accent italic underline decoration-orange-500/20">MANUALLY.</span>
             </h2>
-            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                <span class="text-white font-bold">不再停留在“聊天”阶段。</span> 这里是 Accio 中文社区实战资源站，
-                为您打通 1688 找货、Shopify 铺货、TikTok 营销的全链路自动化。
-                <br><span class="text-orange-400/80 font-mono text-sm">[实测效率提升 800%] 1 人可管理 10 个以上精品店铺</span>
+            <p class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-16 font-medium leading-relaxed">
+                How I automated my 1688 sourcing and Shopify publishing with <span class="text-white">Autonomous AI Agents</span>. No-BS guide for global sellers.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#scenarios" class="w-full sm:w-auto px-10 py-4 bg-white text-black font-black rounded-2xl hover:bg-gray-200 transition">
-                    浏览赚钱案例
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+                <a href="#community" class="w-full sm:w-auto px-12 py-6 bg-white text-black font-black rounded-3xl hover:bg-slate-200 transition text-lg shadow-2xl">
+                    GET THE 2026 PATCH
                 </a>
-                <a href="#resources" class="w-full sm:w-auto px-10 py-4 border border-white/20 hover:bg-white/5 text-white font-bold rounded-2xl transition">
-                    下载避雷工具包
+                <a href="promotion/global_seo/01_dropshipping_automation_en.md" class="w-full sm:w-auto px-12 py-6 border border-white/20 hover:bg-white/5 text-white font-black rounded-3xl transition text-lg">
+                    WATCH 3M SETUP
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- TOP 3 赚钱场景 -->
-    <section id="scenarios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+    <!-- The Sourcing Secret -->
+    <section id="secret" class="max-w-7xl mx-auto px-6 py-32 border-t border-white/5">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-orange-500/20 blur-[60px] rounded-full"></div>
+                <h3 class="text-4xl md:text-5xl font-black text-white mb-10 leading-tight italic">The Manual Era is <span class="text-orange-500">Dead.</span></h3>
+                <div class="space-y-8 text-lg md:text-xl font-medium leading-relaxed">
+                    <p>
+                        Most dropshippers are still stuck in <span class="text-white italic">"Copy-Paste Hell."</span> Searching 1688, translating descriptions, editing images—it's a burnout machine.
+                    </p>
+                    <p>
+                        <span class="text-orange-500 font-bold uppercase">Accio Work</span> isn't just another ChatGPT wrapper. It's a <span class="text-white underline decoration-orange-500/50">Local Business Workforce</span> that runs on your desktop, interacts with 1688/Shopify in a secure sandbox, and handles everything autonomously.
+                    </p>
+                    <div class="p-8 bg-white/5 border border-white/10 rounded-[40px] italic text-slate-300">
+                        "Your competitors are already deploying AI Agents. Are you still searching for suppliers manually?"
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="glass-ui p-10 rounded-[3rem] text-center">
+                    <div class="text-5xl font-black text-white mb-3 tracking-tighter">15s</div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Per Product Listing</p>
+                </div>
+                <div class="glass-ui p-10 rounded-[3rem] text-center">
+                    <div class="text-5xl font-black text-white mb-3 tracking-tighter">100%</div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Privacy Guaranteed</p>
+                </div>
+                <div class="glass-ui p-10 rounded-[3rem] text-center">
+                    <div class="text-5xl font-black text-white mb-3 tracking-tighter">10X</div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Scaling Capacity</p>
+                </div>
+                <div class="glass-ui p-10 rounded-[3rem] text-center">
+                    <div class="text-5xl font-black text-white mb-3 tracking-tighter">24/7</div>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-500">Agent Availability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-ROI Skillset -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl font-black text-white mb-4 uppercase italic">Plug-and-Play Profits</h3>
+            <p class="text-slate-500 text-[10px] tracking-[0.3em] uppercase font-black">Optimized for API v2026.04</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass-ui p-8 rounded-[2.5rem] border-t-2 border-orange-500/30">
+                <i class="fas fa-microchip text-orange-500 text-xl mb-4"></i>
+                <h4 class="text-white font-bold text-sm mb-2">Visual Sourcing</h4>
+                <p class="text-slate-500 text-xs">Match Amazon/TikTok items to 1688 factories instantly. No middlemen.</p>
+            </div>
+            <div class="glass-ui p-8 rounded-[2.5rem] border-t-2 border-blue-500/30">
+                <i class="fas fa-magic text-blue-500 text-xl mb-4"></i>
+                <h4 class="text-white font-bold text-sm mb-2">AI SEO Content</h4>
+                <p class="text-slate-500 text-xs">Powered by Claude 4.6. Generate high-converting copy in any language.</p>
+            </div>
+            <div class="glass-ui p-8 rounded-[2.5rem] border-t-2 border-green-500/30">
+                <i class="fas fa-cloud-upload-alt text-green-500 text-xl mb-4"></i>
+                <h4 class="text-white font-bold text-sm mb-2">Batch Sync</h4>
+                <p class="text-slate-500 text-xs">Push 100+ items to Shopify/Amazon in minutes with optimized meta tags.</p>
+            </div>
+            <div class="glass-ui p-8 rounded-[2.5rem] border-t-2 border-purple-500/30">
+                <i class="fas fa-fingerprint text-purple-500 text-xl mb-4"></i>
+                <h4 class="text-white font-bold text-sm mb-2">Local Sandbox</h4>
+                <p class="text-slate-500 text-xs">Physical isolation for each store profile. 100% Anti-association.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fresh From the Field -->
+    <section id="updates" class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="flex items-center justify-between mb-12">
             <div>
-                <h3 class="text-4xl font-black text-white mb-2">TOP 3 核心赚钱场景</h3>
-                <p class="text-gray-500">实测落地数据：从单兵作战到“AI 军团”的跨越</p>
+                <h3 class="text-3xl font-black text-white italic uppercase tracking-tighter">Fresh From the Field</h3>
+                <p class="text-slate-500 text-xs font-bold uppercase tracking-widest">Daily "Power Scaling" Reports</p>
             </div>
-            <div class="flex space-x-4 mt-6 md:mt-0">
-                <div class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs">
-                    <span class="text-gray-500">活跃先锋：</span> <span class="text-white font-bold">1,248+</span>
-                </div>
-                <div class="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-xs">
-                    <span class="text-gray-500">节省工时：</span> <span class="text-green-400 font-bold">45,000h+</span>
-                </div>
-            </div>
+            <a href="AccioWork_Daily_Digest.md" class="text-orange-500 font-black text-[10px] uppercase tracking-widest hover:underline">View All &rarr;</a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Case 1 -->
-            <div class="card-glass rounded-3xl p-8 hover:border-orange-500/50 transition-all duration-300 group glow-box">
-                <div class="w-14 h-14 feature-icon rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-truck-loading text-2xl"></i>
-                </div>
-                <h4 class="text-2xl font-bold text-white mb-4">1688 -> Shopify 自动铺货</h4>
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                    给 Agent 一个 Amazon/Etsy 链接，自动匹配 1688 最优货源，翻译图片并上架。
-                    <span class="text-orange-400 block mt-2 font-bold">实测：单款产品上架仅需 15 秒。</span>
-                </p>
-                <div class="bg-black/60 rounded-xl p-4 border border-white/10 mb-8 font-mono text-[10px] text-gray-400">
-                    <div class="flex items-center space-x-2 mb-2">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        <span class="text-green-500">AGENT ACTIVE</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="promotion/marketing_factory/en/01_shopify_sourcing_scale.md" class="glass-ui p-10 rounded-[3rem] flex items-center justify-between group">
+                <div class="flex items-center space-x-8">
+                    <div class="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center text-3xl group-hover:bg-orange-500/20 transition">🧶</div>
+                    <div>
+                        <h4 class="text-white font-black text-lg mb-1 uppercase tracking-tight">Shopify Sourcing Scale: 1688 Secret</h4>
+                        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">No-BS guide for global dropshippers to scale faster.</p>
                     </div>
-                    >> Analyzing amazon.com/dp/B0...<br>
-                    >> Found 5 matched on 1688.com<br>
-                    >> Price: ¥24.5 vs $39.9<br>
-                    >> Pushing variants to Shopify...
                 </div>
-                <a href="https://johnqiu1688-web.github.io/accio-work-promo/AccioWork_Daily_Digest.md" target="_blank" class="bg-white/5 group-hover:bg-orange-500 text-white group-hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition text-center block">
-                    获取实操 Prompt
-                </a>
+                <i class="fas fa-chevron-right text-slate-800 group-hover:text-orange-500 transition"></i>
+            </a>
+            <a href="promotion/global_seo/01_dropshipping_automation_en.md" class="glass-ui p-10 rounded-[3rem] flex items-center justify-between group">
+                <div class="flex items-center space-x-8">
+                    <div class="w-20 h-20 bg-white/5 rounded-3xl flex items-center justify-center text-3xl group-hover:bg-blue-500/20 transition">🚀</div>
+                    <div>
+                        <h4 class="text-white font-black text-lg mb-1 uppercase tracking-tight">Auto-Listing Mastery: 15s Per SKU</h4>
+                        <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest">Master the art of AI agent execution on Shopify.</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-slate-800 group-hover:text-blue-500 transition"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section id="process" class="bg-[#0a0a0a] py-40 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h3 class="text-5xl font-black text-white mb-6 uppercase italic tracking-tighter">The 3-Step Success Loop</h3>
+                <p class="text-slate-500 font-bold tracking-widest uppercase text-xs">From Zero to Automated Growth</p>
             </div>
-            <!-- Case 2 -->
-            <div class="card-glass rounded-3xl p-8 hover:border-orange-500/50 transition-all duration-300 group glow-box text-center">
-                <div class="w-14 h-14 feature-icon rounded-2xl flex items-center justify-center mb-8 mx-auto">
-                    <i class="fas fa-magic text-2xl"></i>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div class="glass-ui p-12 rounded-[3.5rem] relative">
+                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-white text-black rounded-3xl flex items-center justify-center text-3xl font-black shadow-2xl">01</div>
+                    <h4 class="text-2xl font-black text-white mb-6 pt-6">Patch & Secure</h4>
+                    <p class="leading-relaxed font-medium">Download the desktop app and apply our <span class="text-orange-500">M144 Setup Patch</span> to fix Chrome connection issues instantly.</p>
                 </div>
-                <h4 class="text-2xl font-bold text-white mb-4">TikTok/FB 全自动营销</h4>
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed mx-auto max-w-[240px]">
-                    根据商品属性自动生成 50 组营销文案，匹配热点关键词，定时分发多平台。
-                    <span class="text-blue-400 block mt-2 font-bold">效果：涨粉效率提升 300%</span>
-                </p>
-                <div class="flex justify-center space-x-3 mb-8">
-                    <div class="p-3 bg-white/5 rounded-full border border-white/10"><i class="fab fa-facebook-f text-[#1877F2]"></i></div>
-                    <div class="p-3 bg-white/5 rounded-full border border-white/10"><i class="fab fa-tiktok text-white"></i></div>
-                    <div class="p-3 bg-white/5 rounded-full border border-white/10"><i class="fab fa-instagram text-[#E4405F]"></i></div>
+                <div class="glass-ui p-12 rounded-[3.5rem] relative">
+                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-white text-black rounded-3xl flex items-center justify-center text-3xl font-black shadow-2xl">02</div>
+                    <h4 class="text-2xl font-black text-white mb-6 pt-6">Deploy Agents</h4>
+                    <p class="leading-relaxed font-medium">Load our pre-vetted Sourcing & Publishing Skills. AI automatically optimizes titles, tags, and prices for your store.</p>
                 </div>
-                <a href="https://johnqiu1688-web.github.io/accio-work-promo/AccioWork_Daily_Digest.md" target="_blank" class="bg-white/5 group-hover:bg-orange-500 text-white group-hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition text-center block">
-                    查看 Prompt 预览
-                </a>
-            </div>
-            <!-- Case 3 -->
-            <div class="card-glass rounded-3xl p-8 hover:border-orange-500/50 transition-all duration-300 group glow-box">
-                <div class="w-14 h-14 feature-icon rounded-2xl flex items-center justify-center mb-8">
-                    <i class="fas fa-radar text-2xl"></i>
+                <div class="glass-ui p-12 rounded-[3.5rem] relative">
+                    <div class="absolute -top-6 -left-6 w-16 h-16 bg-white text-black rounded-3xl flex items-center justify-center text-3xl font-black shadow-2xl">03</div>
+                    <h4 class="text-2xl font-black text-white mb-6 pt-6">Autonomous Scale</h4>
+                    <p class="leading-relaxed font-medium">Let your Agent Team handle the heavy lifting. Monitor results from your dashboard while you focus on brand strategy.</p>
                 </div>
-                <h4 class="text-2xl font-bold text-white mb-4">全网竞品价格实时监控</h4>
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                    设置监控雷达，对手调调价、上新、库存变动即刻桌面提醒，自动生成跟价策略。
-                    <span class="text-green-400 block mt-2 font-bold">优势：抢占黄金购物车成功率 +40%</span>
-                </p>
-                <div class="bg-green-500/10 p-4 rounded-xl border border-green-500/20 mb-8">
-                    <div class="flex justify-between text-[10px] mb-2 font-bold">
-                        <span class="text-green-500">COMPETITOR ALERT</span>
-                        <span class="text-gray-500">2 mins ago</span>
-                    </div>
-                    <p class="text-xs text-slate-300 mb-2">Target Store "EcoLife" reduced price for "Portable Blender" to $19.99.</p>
-                    <div class="w-full bg-white/5 rounded-full h-1.5 overflow-hidden">
-                        <div class="bg-green-500 h-full w-[85%]"></div>
-                    </div>
-                </div>
-                <a href="https://johnqiu1688-web.github.io/accio-work-promo/AccioWork_Daily_Digest.md" target="_blank" class="bg-white/5 group-hover:bg-orange-500 text-white group-hover:text-white px-6 py-3 rounded-xl font-bold text-sm transition text-center block">
-                    订阅监控 Skill
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- 避雷工具包与资源 -->
-    <section id="resources" class="bg-white/5 py-24 border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h3 class="text-4xl font-black text-white mb-8">关于 Accio Pioneer</h3>
-                    <p class="text-gray-400 mb-6 text-lg">我们是一群深耕跨境多年的老卖家和开发者。我们深知官方文档的晦涩和安装的繁琐。Accio 的第一道门槛不应是“安装”。</p>
-                    <p class="text-gray-400 mb-10">我们整理了针对国内网络环境的“避雷工具包”，包括官方缺失的配置指南和民间汉化 Skill 库。</p>
-                    <div class="space-y-4">
-                        <a href="https://github.com/johnqiu1688-web/accio-work-promo" target="_blank" class="flex items-center space-x-3 text-orange-500 font-bold hover:underline">
-                            <i class="fab fa-github"></i> <span>获取 GitHub 开源补丁包 (实时更新)</span>
-                        </a>
-                        <a href="#faq" class="flex items-center space-x-3 text-gray-400 text-sm hover:underline">
-                            <i class="fas fa-video"></i> <span>观看 1 分钟快速安装演示</span>
-                        </a>
-                    </div>
+    <!-- Comparison -->
+    <section id="comparison" class="max-w-5xl mx-auto px-6 py-40">
+        <h3 class="text-4xl font-black text-white mb-20 text-center tracking-tighter uppercase italic">Accio vs The World</h3>
+        <div class="glass-ui rounded-[4rem] overflow-hidden">
+            <div class="comparison-grid grid grid-cols-4 bg-white/5 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
+                <div>Feature</div>
+                <div>Manual</div>
+                <div>Legacy RPA</div>
+                <div class="text-orange-500">Accio AI</div>
+            </div>
+            <div class="divide-y divide-white/5 text-sm font-medium">
+                <div class="comparison-grid grid grid-cols-4">
+                    <div>Product Listing</div>
+                    <div class="text-slate-600">30 Mins</div>
+                    <div class="text-slate-600">5 Mins</div>
+                    <div class="text-orange-400 font-black">15 Secs</div>
                 </div>
-                <div class="lg:w-1/2 w-full">
-                    <div class="card-glass p-8 rounded-[40px] border border-white/10 relative shadow-2xl">
-                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-orange-500 rounded-full flex flex-col items-center justify-center shadow-xl rotate-12">
-                            <span class="text-[10px] font-bold text-white/60">FREE</span>
-                            <span class="text-xl font-black text-white">补丁包</span>
-                        </div>
-                        <h4 class="text-xl font-bold text-white mb-6">先锋资源清单 (Pioneer List)</h4>
-                        <ul class="space-y-4">
-                            <li class="flex justify-between items-center border-b border-white/5 pb-4">
-                                <span class="text-sm">Connecting 报错一键修复补丁</span>
-                                <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded">v2.4</span>
-                            </li>
-                            <li class="flex justify-between items-center border-b border-white/5 pb-4">
-                                <span class="text-sm">1688 自动上架 Skill 预设包</span>
-                                <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded">已汉化</span>
-                            </li>
-                            <li class="flex justify-between items-center border-b border-white/5 pb-4">
-                                <span class="text-sm">跨境卖家专用：AI 调优提示词库</span>
-                                <span class="text-[10px] bg-white/10 px-2 py-0.5 rounded">精选</span>
-                            </li>
-                        </ul>
-                        <button class="w-full mt-8 py-4 bg-white text-black font-black rounded-xl hover:bg-gray-200 transition">
-                            加微信领：accio_pioneer
-                        </button>
-                        <p class="mt-4 text-[10px] text-gray-600 text-center uppercase tracking-widest font-bold">工作时间: 9:00 - 21:00 CST</p>
+                <div class="comparison-grid grid grid-cols-4">
+                    <div>Account Risk</div>
+                    <div class="text-slate-600">Low</div>
+                    <div class="text-red-500">High</div>
+                    <div class="text-orange-400 font-black">Secure Sandbox</div>
+                </div>
+                <div class="comparison-grid grid grid-cols-4">
+                    <div>Intelligence</div>
+                    <div class="text-slate-600">Human-Only</div>
+                    <div class="text-slate-600">Zero (Static)</div>
+                    <div class="text-orange-400 font-black">SOTA AI (Claude)</div>
+                </div>
+                <div class="comparison-grid grid grid-cols-4 border-none">
+                    <div>Setup Time</div>
+                    <div class="text-slate-600">Immediate</div>
+                    <div class="text-red-500">Weeks (Code)</div>
+                    <div class="text-orange-400 font-black">15 Minutes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us -->
+    <section id="community" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="bg-gradient-to-br from-orange-600/20 to-transparent p-12 md:p-32 rounded-[5rem] border border-orange-500/10 flex flex-col lg:flex-row items-center gap-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-orange-600/10 blur-[120px] rounded-full"></div>
+            <div class="lg:w-1/2">
+                <h3 class="text-5xl font-black text-white mb-10 tracking-tighter italic">Join the Pioneer Elite</h3>
+                <p class="text-xl text-slate-400 mb-12 font-medium leading-relaxed">
+                    We're a private community of high-volume sellers sharing the "Cheats" and "Patches" that big platforms won't tell you. Join 1,000+ pioneers today.
+                </p>
+                <div class="flex flex-wrap gap-6">
+                    <a href="https://github.com/johnqiu1688-web/accio-work-promo" target="_blank" class="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition flex items-center space-x-4">
+                        <i class="fab fa-github text-2xl"></i>
+                        <span class="font-black uppercase tracking-widest text-xs">Setup Patch</span>
+                    </a>
+                    <a href="AccioWork_Daily_Digest.md" class="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition flex items-center space-x-4">
+                        <i class="fas fa-bolt text-2xl text-orange-500"></i>
+                        <span class="font-black uppercase tracking-widest text-xs">Live Digest</span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2 w-full flex justify-center">
+                <div class="bg-white rounded-[50px] p-10 shadow-2xl text-center max-w-sm">
+                    <div class="w-full aspect-square bg-slate-50 rounded-[40px] mb-8 flex flex-col items-center justify-center border-4 border-dashed border-slate-100">
+                        <i class="fab fa-weixin text-7xl text-green-500 mb-4"></i>
+                        <p class="text-[9px] text-slate-400 font-black uppercase tracking-[0.2em]">Private Community Access</p>
                     </div>
+                    <h4 class="text-2xl font-black text-black mb-2 uppercase tracking-tight">Scan to Join</h4>
+                    <p class="text-sm text-slate-500 font-bold italic mb-6 tracking-tight">ID: accio_pioneer</p>
+                    <span class="bg-green-100 text-green-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Active Support</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-white/5 py-24 bg-[#0a0a0a]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-8">
-                        <div class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center">
-                            <i class="fas fa-robot text-white text-xl"></i>
-                        </div>
-                        <span class="text-2xl font-black text-white">Accio <span class="accent-text">Pioneer</span></span>
-                    </div>
-                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm mb-8">
-                        我们是一个致力于普及 AI Agent 技术、提升中国跨境卖家全球竞争力的自发社区。
-                        加入先锋计划，与 1000+ 卖家共同探索自动化未来。
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://twitter.com/accio_works" target="_blank" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/johnqiu1688-web/accio-work-promo" target="_blank" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
-                        <a href="https://discord.gg/accio-pioneer" target="_blank" class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-white/10 transition text-gray-400 hover:text-white text-xl"><i class="fab fa-discord"></i></a>
-                    </div>
+    <footer class="py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 bg-slate-900 rounded-xl flex items-center justify-center border border-white/10">
+                    <i class="fas fa-robot text-orange-500"></i>
                 </div>
-                <div>
-                    <h5 class="text-white font-bold mb-6">快速链接</h5>
-                    <ul class="space-y-4 text-sm text-gray-500">
-                        <li><a href="#scenarios" class="hover:text-white transition">实战场景</a></li>
-                        <li><a href="#resources" class="hover:text-white transition">工具下载</a></li>
-                        <li><a href="#faq" class="hover:text-white transition">常见问题</a></li>
-                        <li><a href="https://accio.works/" target="_blank" class="hover:text-white transition underline underline-offset-4 decoration-orange-500/50">官方网站</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="text-white font-bold mb-6">先锋资源</h5>
-                    <ul class="space-y-4 text-sm text-gray-500">
-                        <li><a href="AccioWork_Daily_Digest.md" class="hover:text-white transition">每日情报 PDF</a></li>
-                        <li><a href="#" class="hover:text-white transition">1688 选品库</a></li>
-                        <li><a href="#" class="hover:text-white transition">Shopify 自动化库</a></li>
-                    </ul>
-                </div>
+                <span class="text-2xl font-black text-white uppercase tracking-tighter italic">Accio Pioneer</span>
             </div>
-            <div class="text-[10px] text-gray-700 border-t border-white/5 pt-12 text-center md:text-left">
-                <p class="mb-4 tracking-tighter uppercase font-bold text-gray-600">DISCLAIMER / 免责声明</p>
-                <p class="mb-4 leading-loose">
-                    本站点为 Accio Work 中文社区用户自发建立的公益资讯聚合页，不代表官方立场。所有引用的视频、文章、源码版权均归原作者所有。官方下载与技术支持请以 <a href="https://accio.works/" class="underline text-gray-500 hover:text-white transition">accio.works</a> 为准。
-                </p>
-                <p>&copy; 2026 Accio Pioneer Community. Powering the Future of Agentic E-commerce.</p>
+            <p class="text-[10px] text-slate-700 font-black uppercase tracking-[0.3em]">© 2026 Accio Pioneer Community | Built for the 1%.</p>
+            <div class="flex space-x-8 text-slate-600">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </footer>
