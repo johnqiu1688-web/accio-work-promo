@@ -1,1 +1,225 @@
- 123
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accio Pioneer | 打造您的“一人跨国公司” - 跨境 AI 实战中心</title>
+    
+    <!-- 极致性能：预加载核心资产 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        apple: { black: '#000000', grey: '#1d1d1f', text: '#f5f5f7', secondary: '#86868b' },
+                        brand: { orange: '#f97316' }
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'Noto Sans SC', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #000; color: #f5f5f7; -webkit-font-smoothing: antialiased; }
+        .hero-glow { background: radial-gradient(circle at 50% -20%, #1d1d1f 0%, #000 100%); }
+        .section-container { max-width: 980px; margin: 0 auto; padding: 120px 24px; }
+        .apple-card { background: #161617; border-radius: 30px; transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .apple-card:hover { transform: scale(1.01); background: #1c1c1e; }
+        .btn-primary { background: #f97316; color: white; border-radius: 980px; transition: all 0.3s; }
+        .btn-primary:hover { opacity: 0.9; transform: scale(1.03); }
+        .sticky-nav { background: rgba(0, 0, 0, 0.72); backdrop-filter: saturate(180%) blur(20px); }
+        .text-balance { text-wrap: balance; }
+        .qr-card { background: #fff; border-radius: 40px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+        /* 移动端优化 */
+        @media (max-width: 768px) { .section-container { padding: 80px 20px; } .hero-title { font-size: 3.5rem !important; } }
+    </style>
+</head>
+<body class="hero-glow">
+
+    <!-- Navigation -->
+    <nav class="sticky-nav fixed top-0 w-full z-50 border-b border-white/5">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4">
+            <div class="flex items-center space-x-2">
+                <span class="text-xl font-black tracking-tight uppercase">Accio <span class="text-brand-orange">Pioneer</span></span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-[11px] font-bold text-apple-secondary uppercase tracking-[0.2em]">
+                <a href="#features" class="hover:text-white transition">功能</a>
+                <a href="#roi" class="hover:text-white transition">实战</a>
+                <a href="#onboarding" class="hover:text-white transition">上手</a>
+                <a href="#faq" class="hover:text-white transition">问答</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-[10px] font-bold border border-white/10 px-3 py-1.5 rounded hover:bg-white/5 transition">EN</a>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary text-xs font-bold px-6 py-2.5">立即领 App</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section-container text-center pt-48 pb-32">
+        <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-12">
+            <span class="w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse"></span>
+            <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">已激活专属礼包：Claude 4.6 免费权限</span>
+        </div>
+        <h1 class="hero-title text-6xl md:text-[100px] font-black tracking-tighter leading-[0.9] mb-12 text-white text-balance">
+            一人。即是<br><span class="text-brand-orange">跨国公司。</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-apple-secondary max-w-2xl mx-auto font-medium leading-relaxed mb-16 text-balance">
+            15分钟部署 AI 采购团队。自动搜图、智能翻译、Shopify 秒级发品。在硬件级隔离环境中，安全启动您的自动化出海之路。
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mb-24">
+            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-12 py-5 text-lg font-black shadow-2xl shadow-brand-orange/30">立即注册并装机</a>
+            <div class="flex items-center space-x-2 text-apple-secondary text-sm font-bold italic">
+                <i class="fas fa-shield-check text-brand-orange"></i>
+                <span>内含 2026 M144 核心修复补丁</span>
+            </div>
+        </div>
+        
+        <!-- Hero QR Center -->
+        <div class="qr-card inline-block relative overflow-hidden group">
+            <div class="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <img src="https://sc01.alicdn.com/kf/A4084dd5bb70d417b9b06ac6a0b2c02fag.png" alt="Scan to Start" class="w-64 h-64 md:w-80 md:h-64 object-cover rounded-3xl mx-auto mb-8 relative z-10">
+            <h4 class="text-black font-black text-2xl mb-2 relative z-10">扫码快速开始</h4>
+            <p class="text-apple-secondary text-xs font-bold uppercase tracking-widest relative z-10">扫码注册 立即解锁 2000 积分与自动化权限</p>
+        </div>
+    </header>
+
+    <!-- 1. Features: What's New -->
+    <section id="features" class="section-container border-t border-white/5">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight">强大。却异常简单。</h2>
+            <p class="text-apple-secondary text-xl font-medium">针对 M1/M2/M3 芯片深度优化，告别一切卡顿。</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="apple-card p-12">
+                <h3 class="text-3xl font-black mb-6 leading-tight">Claude 4.6<br><span class="text-brand-orange text-2xl uppercase tracking-widest">内置免费使用</span></h3>
+                <p class="text-apple-secondary leading-relaxed font-medium text-lg">无需支付每月 $20 的订阅费。直接调用顶级 SOTA 模型处理复杂的选品分析、营销文案润色与多语种客服。通过本站专属链接注册即可获得。</p>
+            </div>
+            <div class="apple-card p-12">
+                <h3 class="text-3xl font-black mb-6 leading-tight">物理隔离<br><span class="text-blue-500 text-2xl uppercase tracking-widest">环境原生安全</span></h3>
+                <p class="text-apple-secondary leading-relaxed font-medium text-lg">硬件级沙箱隔离技术。每个 Agent 拥有独立的浏览器指纹与 IP 环境，100% 规避多账号关联风险，让您的 PayPal、Shopify、FB 资产处于顶级保护中。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ROI: Scenarios -->
+    <section id="roi" class="section-container">
+        <div class="apple-card p-12 md:p-24 overflow-hidden relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter leading-tight">15秒。<br>从 1688 到 Shopify。</h2>
+                    <p class="text-lg text-apple-secondary mb-12 font-medium leading-relaxed">
+                        丢入亚马逊链接，AI 智能体自动剔除零售中间商，直连义乌/广州源头工厂。一键完成翻译、SEO 优化与多变体同步。1 个人的产能，抵过一整个运营团队。
+                    </p>
+                    <div class="flex items-center space-x-8">
+                        <div>
+                            <div class="text-4xl font-black text-white italic">800%</div>
+                            <p class="text-[10px] text-apple-secondary uppercase tracking-[0.2em] font-black mt-2">效率提升</p>
+                        </div>
+                        <div class="w-px h-12 bg-white/10"></div>
+                        <div>
+                            <div class="text-4xl font-black text-white italic">0</div>
+                            <p class="text-[10px] text-apple-secondary uppercase tracking-[0.2em] font-black mt-2">封号记录</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition duration-1000">
+                    <img src="https://sc02.alicdn.com/kf/A6127d1fca61f4641bbdc5bc370819c6fK.png" alt="Accio Platform" class="w-full opacity-90">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 & 4. Installation & Onboarding -->
+    <section id="onboarding" class="section-container border-t border-white/5">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight italic">3 步开启全自动跨境</h2>
+            <p class="text-apple-secondary text-xl font-medium">从繁琐手工到点击即可收钱</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">01</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">注册与补丁</h4>
+                <p class="text-apple-secondary text-sm leading-relaxed">
+                    点击 <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="text-brand-orange underline">专属链接</a> 注册下载。加载社区提供的 <code>fix_m144</code> 补丁，秒连环境。
+                </p>
+            </div>
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">02</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">唤醒 Agent</h4>
+                <p class="text-apple-secondary text-sm leading-relaxed">
+                    在商店搜索并安装“1688 搜图”和“Shopify 自动发品”Skill。这是你的核心提款机。
+                </p>
+            </div>
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">03</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">下达首个任务</h4>
+                <p class="text-apple-secondary text-sm leading-relaxed">
+                    “找一下这款产品的源头工厂，并翻译同步到我的店铺。”——Agent 开始为您不眠不休工作。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ -->
+    <section id="faq" class="section-container border-t border-white/5">
+        <h2 class="text-4xl font-black text-white mb-16 tracking-tighter">常见问题解答</h2>
+        <div class="space-y-12">
+            <div class="apple-card p-10">
+                <h4 class="text-white font-bold text-xl mb-4">Q: 与传统 RPA 有什么区别？</h4>
+                <p class="text-apple-secondary leading-relaxed">RPA 是死板的点击执行，Accio 是会思考的 Agent。它能理解复杂的业务目标，自动处理物流异常，并根据实时汇率优化报价策略。</p>
+            </div>
+            <div class="apple-card p-10">
+                <h4 class="text-white font-bold text-xl mb-4">Q: 安全性如何保障？</h4>
+                <p class="text-apple-secondary leading-relaxed">Accio 最大的价值之一就是隔离。每个 Agent 运行在物理层面的独立沙箱中，比直接使用共享指纹的 Chrome 插件更安全 10 倍。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Final CTA -->
+    <section class="section-container text-center">
+        <h2 class="text-5xl md:text-[80px] font-black text-white mb-12 tracking-tighter leading-none">准备好规模化了吗？</h2>
+        <div class="bg-white p-12 md:p-20 rounded-[60px] inline-block shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-orange/10 blur-[100px] rounded-full"></div>
+            <img src="https://sc01.alicdn.com/kf/A4084dd5bb70d417b9b06ac6a0b2c02fag.png" alt="Scan to Start" class="w-64 h-64 md:w-80 md:h-64 object-cover rounded-[40px] mx-auto mb-10 shadow-lg relative z-10">
+            <h4 class="text-black font-black text-3xl mb-4 relative z-10">扫码立得 2026 最新安装包</h4>
+            <p class="text-apple-secondary font-bold mb-10 uppercase tracking-widest relative z-10">邀请码: IC721157098311 | 含 Claude 4.6 免费权</p>
+            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary inline-block px-16 py-5 text-xl font-black relative z-10 shadow-xl shadow-brand-orange/40">通过邀请链接开启自动化</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-32 px-6 border-t border-white/5 bg-black text-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-center space-x-3 mb-12 text-white font-black italic">
+                <i class="fas fa-bolt text-brand-orange"></i>
+                <span class="tracking-widest">ACCIO PIONEER</span>
+            </div>
+            <p class="text-[10px] text-zinc-700 font-bold uppercase tracking-[0.4em] mb-8">
+                © 2026 Accio Pioneer | 实战派 AI 增长引擎 | 1000 计划当前进度: 2.1%
+            </p>
+            <div class="flex justify-center space-x-10 text-zinc-600">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Bar (Refined) -->
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-[#161617]/90 backdrop-blur-2xl rounded-full p-4 flex items-center justify-between border border-white/10 shadow-2xl z-[100] md:hidden">
+        <div class="pl-4">
+            <p class="text-white text-[10px] font-black uppercase tracking-tight">Code: IC721157098311</p>
+            <p class="text-[8px] text-apple-secondary uppercase font-bold tracking-widest">Free Claude 4.6 Perks</p>
+        </div>
+        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-8 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">立即注册</a>
+    </div>
+
+</body>
+</html>
