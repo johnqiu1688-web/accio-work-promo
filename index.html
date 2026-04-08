@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accio Pioneer | The AI Growth Hub for Global Sellers</title>
-    <meta name="description" content="Professional Accio Work AI Agent hub. 1688 automation cases, M144 bug fixes, and beginner onboarding guides.">
+    <title>Accio Pioneer | Be a One-Person Multinational - AI Agent Growth Hub</title>
     
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Ultra Performance: Preload core assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script>
         tailwind.config = {
@@ -16,216 +17,203 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { orange: '#f97316', dark: '#050505', card: '#0f0f10', border: '#1f1f22' }
-                    }
+                        apple: { black: '#000000', grey: '#1d1d1f', text: '#f5f5f7', secondary: '#86868b' },
+                        brand: { orange: '#f97316' }
+                    },
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
                 }
             }
         }
     </script>
 
     <style>
-        body { background-color: #050505; color: #e4e4e7; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
-        .grid-bg { background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; }
-        .glass-ui { background: rgba(15, 15, 16, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.4s; }
-        .section-header { border-left: 4px solid #f97316; padding-left: 1.5rem; margin-bottom: 2.5rem; font-weight: 800; color: #fff; }
-        .sticky-card { position: sticky; top: 120px; }
-        .btn-apple { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .btn-apple:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4); }
-        .faq-item { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 2rem 0; }
-        .mobile-bar { position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; z-index: 100; }
+        body { background-color: #000; color: #f5f5f7; -webkit-font-smoothing: antialiased; }
+        .hero-glow { background: radial-gradient(circle at 50% -20%, #1d1d1f 0%, #000 100%); }
+        .section-container { max-width: 980px; margin: 0 auto; padding: 120px 24px; }
+        .apple-card { background: #161617; border-radius: 30px; transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .apple-card:hover { transform: scale(1.01); background: #1c1c1e; }
+        .btn-primary { background: #f97316; color: white; border-radius: 980px; transition: all 0.3s; }
+        .btn-primary:hover { opacity: 0.9; transform: scale(1.03); }
+        .sticky-nav { background: rgba(0, 0, 0, 0.72); backdrop-filter: saturate(180%) blur(20px); }
+        .text-balance { text-wrap: balance; }
+        .qr-card { background: #fff; border-radius: 40px; padding: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+        @media (max-width: 768px) { .section-container { padding: 80px 20px; } .hero-title { font-size: 3.5rem !important; } }
     </style>
 </head>
-<body class="grid-bg min-h-screen">
+<body class="hero-glow">
 
-    <!-- Nav -->
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 border-b border-white/5 bg-black/60 backdrop-blur-xl">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <!-- Navigation -->
+    <nav class="sticky-nav fixed top-0 w-full z-50 border-b border-white/5">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 py-4">
             <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center">
-                    <i class="fas fa-bolt text-white text-sm"></i>
-                </div>
-                <span class="text-xl font-black tracking-tight text-white italic uppercase">Accio <span class="text-brand-orange">Pioneer</span></span>
+                <span class="text-xl font-black tracking-tight uppercase">Accio <span class="text-brand-orange italic">Pioneer</span></span>
             </div>
-            <div class="hidden md:flex space-x-10 text-[11px] font-bold text-zinc-400 uppercase tracking-widest">
+            <div class="hidden md:flex space-x-10 text-[11px] font-bold text-apple-secondary uppercase tracking-[0.2em]">
                 <a href="#features" class="hover:text-white transition">Features</a>
                 <a href="#roi" class="hover:text-white transition">Results</a>
-                <a href="#install" class="hover:text-white transition">Setup</a>
-                <a href="#onboarding" class="hover:text-white transition">Onboarding</a>
+                <a href="#onboarding" class="hover:text-white transition">Setup</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
             </div>
             <div class="flex items-center space-x-4">
-                <a href="index_cn.html" class="text-[10px] font-black border border-white/10 px-3 py-1.5 rounded-md hover:bg-white/5 transition uppercase">CN</a>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-apple text-[10px] font-black px-6 py-2.5 rounded-full text-white uppercase tracking-widest">Get Free App</a>
+                <a href="index_cn.html" class="text-[10px] font-bold border border-white/10 px-3 py-1.5 rounded hover:bg-white/5 transition">CN</a>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary text-xs font-bold px-6 py-2.5">GET APP</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 pt-32 pb-40">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <!-- LEFT COLUMN: Value Content -->
-            <div class="lg:col-span-8 space-y-32">
-                
-                <!-- Hero Value -->
-                <section>
-                    <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-tight uppercase">
-                        One Person.<br><span class="text-brand-orange">Multinational.</span>
-                    </h1>
-                    <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed font-medium">
-                        Stop wasting time on manual sourcing. We focus on fixing M144 errors and automating 1688 to Shopify workflows so you can scale securely.
-                    </p>
-                </section>
-
-                <!-- 1. Latest Info -->
-                <section id="features">
-                    <h2 class="text-3xl section-header uppercase tracking-tight">01. What's New & Core Features</h2>
-                    <div class="glass-ui p-10 rounded-[2.5rem] border-l-4 border-l-brand-orange">
-                        <div class="flex items-center space-x-3 mb-6">
-                            <span class="bg-brand-orange/10 text-brand-orange text-[10px] font-black px-3 py-1 rounded-full uppercase">April 2026 Update</span>
-                            <h3 class="text-white text-2xl font-black italic">v0.5.6-beta: The Silicon Leap</h3>
-                        </div>
-                        <p class="text-lg leading-relaxed text-zinc-300 mb-8">
-                            Accio Work has been fully optimized for M1/M2/M3 chips, bypassing the Chrome M144 communication lag.
-                        </p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
-                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Free Claude 4.6 Access</h4>
-                                <p class="text-[11px] text-zinc-500">Users registered via this hub gain temporary free access to SOTA models for business reasoning.</p>
-                            </div>
-                            <div class="p-6 bg-white/5 rounded-2xl border border-white/5">
-                                <h4 class="text-white font-bold mb-2 uppercase text-xs tracking-widest">Deep Factory Filter</h4>
-                                <p class="text-[11px] text-zinc-500">Automatically skip resellers. Connect directly to source factories in Yiwu & Guangzhou.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 2. ROI Scenarios -->
-                <section id="roi">
-                    <h2 class="text-3xl section-header uppercase tracking-tight">02. Results: How AI Makes Money</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="glass-ui p-8 rounded-[2rem]">
-                            <div class="text-4xl mb-6 text-brand-orange"><i class="fas fa-shipping-fast"></i></div>
-                            <h4 class="text-white text-xl font-black mb-4 uppercase tracking-tighter">15s to Shopify</h4>
-                            <p class="text-sm text-zinc-400 leading-relaxed">Drop an Amazon URL. The Agent finds the source, translates to native English, and lists it instantly. One operator = 10 assistants. </p>
-                        </div>
-                        <div class="glass-ui p-8 rounded-[2rem]">
-                            <div class="text-4xl mb-6 text-blue-500"><i class="fas fa-fingerprint"></i></div>
-                            <h4 class="text-white text-xl font-black mb-4 uppercase tracking-tighter">Sandbox Security</h4>
-                            <p class="text-sm text-zinc-400 leading-relaxed">Hardware-isolated sandbox environment. Manage 50+ stores with no IP linkage risk. Protect your PayPal/FB assets. </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 3. Fast Setup -->
-                <section id="install">
-                    <h2 class="text-3xl section-header uppercase tracking-tight">03. 3-Minute Setup (M144 Fix)</h2>
-                    <div class="bg-brand-orange/5 border border-dashed border-brand-orange/20 p-10 rounded-[2.5rem]">
-                        <h4 class="text-white text-2xl font-bold mb-6 italic">No More "Connecting" Errors</h4>
-                        <div class="space-y-6 text-zinc-300">
-                            <p class="text-sm">Plugin stuck? Follow these 3 steps to fix it with the Pioneer Community Patch:</p>
-                            <ol class="space-y-4 text-sm font-medium">
-                                <li class="flex items-center space-x-4"><span class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-[10px]">1</span> <span>Register via the [Exclusive Link] on the right and download.</span></li>
-                                <li class="flex items-center space-x-4"><span class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-[10px]">2</span> <span>Scan the QR code to join our Discord/WeChat for the <code>fix_m144</code> patch.</span></li>
-                                <li class="flex items-center space-x-4"><span class="w-6 h-6 bg-brand-orange rounded-full flex items-center justify-center text-white text-[10px]">3</span> <span>Restart Accio and enjoy lightning-fast connection.</span></li>
-                            </ol>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 4. Onboarding -->
-                <section id="onboarding">
-                    <h2 class="text-3xl section-header uppercase tracking-tight">04. 15-Min Quick Start Guide</h2>
-                    <div class="space-y-16 ml-6 border-l border-white/5 pl-10">
-                        <div class="relative">
-                            <div class="absolute -left-[61px] top-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-black text-[10px]">01</div>
-                            <h4 class="text-white text-xl font-bold mb-2 uppercase tracking-tighter">Soul Configuration</h4>
-                            <p class="text-sm text-zinc-500">Input your business tags (e.g., 'Pet Product Seller'). AI routes the best supply chain models instantly.</p>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-[61px] top-0 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white font-black text-[10px]">02</div>
-                            <h4 class="text-white text-xl font-bold mb-2 uppercase tracking-tighter">Load Skills</h4>
-                            <p class="text-sm text-zinc-500">Install '1688 Search' and 'Shopify Auto-Lister' from the Skill Store. These are your money-makers.</p>
-                        </div>
-                        <div class="relative">
-                            <div class="absolute -left-[61px] top-0 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white font-black text-[10px]">03</div>
-                            <h4 class="text-white text-xl font-bold mb-2 uppercase tracking-tighter">First Instruction</h4>
-                            <p class="text-sm text-zinc-500">Just chat: "Find source factory for this product, translate the copy, and sync to my store."</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 5. FAQ -->
-                <section id="faq">
-                    <h2 class="text-3xl section-header uppercase tracking-tight">05. Common Questions (FAQ)</h2>
-                    <div class="divide-y divide-white/5">
-                        <div class="py-8">
-                            <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Is Accio Work free?</h4>
-                            <p class="text-sm text-zinc-500 leading-relaxed">Basic version is free. Register via this hub to gain temporary free access to SOTA models like Claude 4.6.</p>
-                        </div>
-                        <div class="py-8">
-                            <h4 class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Will it ban my store?</h4>
-                            <p class="text-sm text-zinc-500 leading-relaxed">No. Accio's hardware-level isolation is safer than using standard Chrome extensions which share browser fingerprints.</p>
-                        </div>
-                    </div>
-                </section>
-
+    <!-- Hero Section -->
+    <header class="section-container text-center pt-48 pb-32">
+        <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-12">
+            <span class="w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse"></span>
+            <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">Referral Perk: Free Claude 4.6 Included</span>
+        </div>
+        <h1 class="hero-title text-6xl md:text-[100px] font-black tracking-tighter leading-[0.9] mb-12 text-white text-balance uppercase">
+            One Person.<br><span class="text-brand-orange">Multinational.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-apple-secondary max-w-2xl mx-auto font-medium leading-relaxed mb-16 text-balance">
+            Deploy your AI Procurement Team in 15 mins. Auto-sourcing, Native translation, and Shopify listing. Scale securely within a hardware-isolated sandbox.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mb-24">
+            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-12 py-5 text-lg font-black shadow-2xl shadow-brand-orange/30">REGISTER & GET CLIENT</a>
+            <div class="flex items-center space-x-2 text-apple-secondary text-sm font-bold italic uppercase tracking-widest">
+                <i class="fas fa-shield-check text-brand-orange"></i>
+                <span>Includes 2026 M144 Fix Patch</span>
             </div>
+        </div>
+        
+        <!-- Hero QR Center -->
+        <div class="qr-card inline-block relative overflow-hidden group">
+            <div class="absolute inset-0 bg-brand-orange/5 opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+            <img src="https://sc01.alicdn.com/kf/A4084dd5bb70d417b9b06ac6a0b2c02fag.png" alt="Scan to Start" class="w-64 h-64 md:w-80 md:h-64 object-cover rounded-3xl mx-auto mb-8 relative z-10">
+            <h4 class="text-black font-black text-2xl mb-2 relative z-10 uppercase tracking-tighter">Scan to Start</h4>
+            <p class="text-apple-secondary text-xs font-bold uppercase tracking-widest relative z-10">Register now to unlock 2000 credits & AI Automation</p>
+        </div>
+    </header>
 
-            <!-- RIGHT COLUMN: Sticky Conversion Sidebar -->
-            <div class="lg:col-span-4">
-                <div class="sticky-card space-y-10">
-                    
-                    <!-- Main QR & Register Card -->
-                    <div class="bg-white rounded-[3rem] p-10 text-center shadow-[0_20px_60px_rgba(249,115,22,0.15)]">
-                        <div class="w-full aspect-square bg-zinc-50 rounded-[2.5rem] mb-10 overflow-hidden border-4 border-dashed border-zinc-100 p-2">
-                            <img src="https://sc01.alicdn.com/kf/A4084dd5bb70d417b9b06ac6a0b2c02fag.png" alt="Invite QR" class="w-full h-full object-cover rounded-2xl shadow-inner">
+    <!-- 1. Features: What's New -->
+    <section id="features" class="section-container border-t border-white/5">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase">Pro Power. Simple UX.</h2>
+            <p class="text-apple-secondary text-xl font-medium">Deeply optimized for M1/M2/M3 chips. Eliminate connection lag.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="apple-card p-12">
+                <h3 class="text-3xl font-black mb-6 leading-tight uppercase">Claude 4.6<br><span class="text-brand-orange text-2xl uppercase tracking-widest">Built-in Access</span></h3>
+                <p class="text-apple-secondary leading-relaxed font-medium text-lg">No more $20/month subscriptions. Call top-tier SOTA models for product analysis and marketing copy directly. Unlocked via this referral hub.</p>
+            </div>
+            <div class="apple-card p-12">
+                <h3 class="text-3xl font-black mb-6 leading-tight uppercase">Hardware Sandbox<br><span class="text-blue-500 text-2xl uppercase tracking-widest">Native Security</span></h3>
+                <p class="text-apple-secondary leading-relaxed font-medium text-lg">Hardware-level isolation. Each Agent owns a unique browser fingerprint and IP environment. Protect your PayPal, Shopify, and FB assets from linkage bans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ROI: Scenarios -->
+    <section id="roi" class="section-container">
+        <div class="apple-card p-12 md:p-24 overflow-hidden relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter leading-tight uppercase">15 Seconds.<br>To Shopify.</h2>
+                    <p class="text-lg text-apple-secondary mb-12 font-medium leading-relaxed">
+                        Drop an Amazon URL. The AI Agent skips resellers, connects to source factories in Yiwu/Guangzhou, translates descriptions, and lists instantly. One operator = 10 Virtual Assistants.
+                    </p>
+                    <div class="flex items-center space-x-8">
+                        <div>
+                            <div class="text-4xl font-black text-white italic">800%</div>
+                            <p class="text-[10px] text-apple-secondary uppercase tracking-[0.2em] font-black mt-2">Efficiency Gain</p>
                         </div>
-                        <h4 class="text-black font-black text-3xl mb-4 tracking-tighter uppercase">Join the Pioneers</h4>
-                        <p class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-8 italic">Empowering sellers via AI Automation</p>
-                        <div class="space-y-4">
-                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="block w-full py-5 btn-apple text-white font-black rounded-2xl text-[10px] uppercase tracking-[0.2em] shadow-xl">Register with Referral Link</a>
-                            <p class="text-[9px] text-zinc-400 font-bold uppercase leading-relaxed px-4">Includes: M144 Patch + 1688 Auto-Skill + Free Claude 4.6 Perk</p>
+                        <div class="w-px h-12 bg-white/10"></div>
+                        <div>
+                            <div class="text-4xl font-black text-white italic">0</div>
+                            <p class="text-[10px] text-apple-secondary uppercase tracking-[0.2em] font-black mt-2">Account Bans</p>
                         </div>
                     </div>
-
-                    <!-- Progress Tracker Card -->
-                    <div class="glass-ui p-10 rounded-[3rem] text-center border-white/10">
-                        <div class="text-brand-orange text-[10px] font-black uppercase tracking-[0.3em] mb-4">Accio 1000 Mission Progress</div>
-                        <div class="text-6xl font-black text-white italic tracking-tighter mb-6">2.1%</div>
-                        <div class="w-full bg-white/5 h-3 rounded-full overflow-hidden mb-6 shadow-inner">
-                            <div class="bg-brand-orange h-full w-[2.1%] shadow-[0_0_20px_rgba(249,115,22,0.6)]"></div>
-                        </div>
-                        <p class="text-[10px] text-zinc-500 font-bold uppercase tracking-[0.3em] leading-relaxed">Target: 1,000 sellers automated in 90 days</p>
-                    </div>
-
+                </div>
+                <div class="rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 transition duration-1000">
+                    <img src="https://sc02.alicdn.com/kf/A6127d1fca61f4641bbdc5bc370819c6fK.png" alt="Accio Platform" class="w-full opacity-90">
                 </div>
             </div>
-
         </div>
-    </main>
+    </section>
+
+    <!-- 3 & 4. Installation & Onboarding -->
+    <section id="onboarding" class="section-container border-t border-white/5">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase italic">3 Steps to Scale</h2>
+            <p class="text-apple-secondary text-xl font-medium">From manual labor to one-click revenue</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">01</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">Register & Patch</h4>
+                <p class="text-apple-secondary text-sm leading-relaxed">
+                    Click the <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="text-brand-orange underline">Exclusive Link</a> to register. Download the client and load the community <code>fix_m144</code> patch.
+                </p>
+            </div>
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">02</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">Wake the Agent</h4>
+                <p class="text-sm text-apple-secondary leading-relaxed uppercase font-bold">Install '1688 Search' and 'Shopify Auto-Lister' Skills from the store. These are your automated profit engines.</p>
+            </div>
+            <div class="relative">
+                <div class="text-5xl font-black text-white/5 absolute -top-10 left-0">03</div>
+                <h4 class="text-white text-xl font-black mb-4 uppercase">First Instruction</h4>
+                <p class="text-sm text-apple-secondary leading-relaxed uppercase font-bold">"Find the source for this product and sync it to my Shopify store." — Agent starts working 24/7 for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ -->
+    <section id="faq" class="section-container border-t border-white/5">
+        <h2 class="text-4xl font-black text-white mb-16 tracking-tighter uppercase">Common Questions</h2>
+        <div class="space-y-12">
+            <div class="apple-card p-10">
+                <h4 class="text-white font-bold text-xl mb-4">How is this different from RPA?</h4>
+                <p class="text-apple-secondary leading-relaxed font-medium">RPA is rigid clicks. Accio is a thinking Agent. It understands goals, handles supply chain exceptions, and optimizes descriptions based on local trends.</p>
+            </div>
+            <div class="apple-card p-10">
+                <h4 class="text-white font-bold text-xl mb-4">Is it safe for my stores?</h4>
+                <p class="text-apple-secondary leading-relaxed font-medium">Yes. Accio's built-in hardware sandbox provides better isolation than standard Chrome extensions which share system browser fingerprints.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Final CTA -->
+    <section class="section-container text-center">
+        <h2 class="text-5xl md:text-[80px] font-black text-white mb-12 tracking-tighter leading-none uppercase">Ready to scale?</h2>
+        <div class="bg-white p-12 md:p-20 rounded-[60px] inline-block shadow-2xl relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-orange/10 blur-[100px] rounded-full"></div>
+            <img src="https://sc01.alicdn.com/kf/A4084dd5bb70d417b9b06ac6a0b2c02fag.png" alt="Scan to Start" class="w-64 h-64 md:w-80 md:h-64 object-cover rounded-[40px] mx-auto mb-10 shadow-lg relative z-10">
+            <h4 class="text-black font-black text-3xl mb-4 relative z-10 uppercase tracking-tighter">Scan to register & get client</h4>
+            <p class="text-apple-secondary font-bold mb-10 uppercase tracking-widest relative z-10 italic">Referral Code: IC721157098311 | Free Claude 4.6 Perks</p>
+            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary inline-block px-16 py-5 text-xl font-black relative z-10 shadow-xl shadow-brand-orange/40 uppercase tracking-widest">Register & Start Now</a>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="py-32 px-6 border-t border-white/5 bg-[#020202] text-center">
+    <footer class="py-32 px-6 border-t border-white/5 bg-black text-center">
         <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-center space-x-3 mb-12">
-                <div class="w-6 h-6 bg-brand-orange rounded flex items-center justify-center shadow-lg shadow-brand-orange/20">
-                    <i class="fas fa-bolt text-white text-[10px]"></i>
-                </div>
-                <span class="text-white font-black uppercase tracking-widest text-xs italic">Accio Pioneer</span>
+            <div class="flex items-center justify-center space-x-3 mb-12 text-white font-black italic">
+                <i class="fas fa-bolt text-brand-orange"></i>
+                <span class="tracking-widest uppercase">ACCIO PIONEER</span>
             </div>
-            <p class="text-[10px] text-zinc-700 font-bold uppercase tracking-[0.4em]">
-                © 2026 Accio Pioneer Community | Scaling Sellers solo with AI
+            <p class="text-[10px] text-zinc-700 font-bold uppercase tracking-[0.4em] mb-8">
+                © 2026 Accio Pioneer | The Practical AI Growth Engine | Goal: 1,000 Installs
             </p>
+            <div class="flex justify-center space-x-10 text-zinc-600">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+            </div>
         </div>
     </footer>
 
     <!-- Mobile Sticky Bar -->
-    <div class="mobile-bar glass-ui rounded-full p-4 flex items-center justify-between border-brand-orange/20 md:hidden">
-        <div class="pl-4 text-left">
-            <p class="text-white text-[10px] font-black uppercase tracking-tighter">Referral: IC721157098311</p>
-            <p class="text-[8px] text-zinc-500 uppercase font-bold tracking-widest">Free Claude Access Inside</p>
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-[#161617]/90 backdrop-blur-2xl rounded-full p-4 flex items-center justify-between border border-white/10 shadow-2xl z-[100] md:hidden">
+        <div class="pl-4">
+            <p class="text-white text-[10px] font-black uppercase tracking-tight">Referral: IC721157098311</p>
+            <p class="text-[8px] text-apple-secondary uppercase font-bold tracking-widest">Free Claude 4.6 Included</p>
         </div>
-        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-apple px-8 py-2.5 rounded-full text-[10px] font-black text-white uppercase tracking-widest shadow-lg">Register Now</a>
+        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-8 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">REGISTER</a>
     </div>
 
 </body>
