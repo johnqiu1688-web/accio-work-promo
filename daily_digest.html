@@ -3,68 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>先锋站快讯：全球 AI 电商情报 | Accio Pioneer</title>
+    <title>Accio Pioneer | 先锋站快讯：Accio & 全球 AI 跨境情报</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b', card: '#111112' } }
-                }
-            }
+            theme: { extend: { colors: { brand: { orange: '#f97316', dark: '#0a0a0b' } } } }
         }
     </script>
     <style>
         body { background-color: #0a0a0b; color: #e4e4e7; font-family: -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
         .glass-ui { background: rgba(17, 17, 18, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); }
-        .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); }
-        .news-card { border-bottom: 1px solid rgba(255,255,255,0.05); padding: 24px 0; text-align: left; }
+        .news-card { border-left: 2px solid rgba(249, 115, 22, 0.3); padding-left: 20px; margin-bottom: 32px; transition: all 0.3s; text-align: left; }
+        .news-card:hover { border-left-color: #f97316; background: rgba(255,255,255,0.02); }
+        .category-tag { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: #f97316; margin-bottom: 8px; display: block; }
     </style>
 </head>
 <body class="py-12 px-6">
-    <div class="max-w-5xl mx-auto">
-        <nav class="mb-12 text-left">
-            <a href="index_cn.html" class="text-zinc-500 hover:text-white transition text-xs font-bold uppercase tracking-widest flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-                返回增长中心
-            </a>
-        </nav>
+    <div class="max-w-4xl mx-auto">
+        <a href="index_cn.html" class="inline-flex items-center text-zinc-500 hover:text-white mb-12 transition text-sm font-bold">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            返回增长中心
+        </a>
 
-        <header class="mb-24 text-left">
-            <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-8">
-                <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">每日 08:00 更新</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.95]">
-                全球。<br>情报<span class="text-brand-orange">集成。</span>
-            </h1>
-            <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed text-left">
-                由 Accio Intelligence Agent 自动抓取 Reddit、X(Twitter) 及各类电商论坛，为你筛选最有价值的 AI 提效情报。
-            </p>
-        </header>
+        <div class="glass-ui p-10 md:p-16 rounded-[3rem]">
+            <h1 class="text-4xl font-black text-white mb-4 text-left">先锋站快讯</h1>
+            <p class="text-zinc-500 text-sm mb-12 uppercase tracking-widest font-bold text-left">Accio 动态 & 全球 AI 跨境情报一站式看板</p>
 
-        <div class="space-y-8 mb-24 text-left">
-            <div class="news-card">
-                <span class="text-brand-orange text-[10px] font-black uppercase tracking-widest">[2026.04.09]</span>
-                <h4 class="text-white font-bold text-lg mt-2 mb-2">Shopify 宣布深度集成 Accio-like 原生智能体</h4>
-                <p class="text-sm text-zinc-500">这意味着自动化发品的门槛将进一步降低，拥有 Accio 先发优势的卖家需加速品牌化转型。</p>
+            <div class="space-y-16">
+                
+                <!-- Accio Work Section -->
+                <section>
+                    <h2 class="text-xl font-black text-white mb-8 flex items-center">
+                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        Accio Work 官方与社区动态
+                    </h2>
+                    <div class="news-card">
+                        <span class="category-tag">官方新闻</span>
+                        <h3 class="text-white font-bold text-lg mb-2">Accio Work 助力“一人企业”：美国创业者利用 AI 压缩数周选品周期</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">MIT Tech Review 深度报道了美国卖家利用 Accio Work 将传统长达数周的供应商调研缩短至一个下午。</p>
+                        <a href="https://www.technologyreview.com/2026/04/06/1135118/ai-online-seller-alibaba-accio/" target="_blank" class="text-orange-500 text-xs font-bold underline">阅读原文 &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">实战案例</span>
+                        <h3 class="text-white font-bold text-lg mb-2">【爆文】别再卷团队了！30分钟手搓跨国公司 ROI 破纪录</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">深度解析“超级个体”概念，展示如何利用 Accio 跑通全球供应链的全自动化闭环。</p>
+                        <a href="opc_strategy.html" class="text-orange-500 text-xs font-bold underline">阅读实战攻略 &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">视频号/小红书热门</span>
+                        <h3 class="text-white font-bold text-lg mb-2">视频号热议：阿里系 Accio “能直接做生意”的 AI 是如何炼成的？</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">解析如何通过自然语言对话实现从市场分析到自动化发品的“人盯 AI”模式。</p>
+                    </div>
+                </section>
+
+                <hr class="border-white/5">
+
+                <!-- Global AI Section -->
+                <section>
+                    <h2 class="text-xl font-black text-white mb-8 flex items-center">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                        全球 AI 行业动态 (跨境视角)
+                    </h2>
+                    <div class="news-card">
+                        <span class="category-tag">Claude / Anthropic</span>
+                        <h3 class="text-white font-bold text-lg mb-2">Claude Mythos 正式亮相：SWE-bench 评分 93.9% 创历史新高</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed"><strong class="text-white">搞钱视角</strong>：Anthropic 发布最强模型，其自主编程能力提升，预示着更复杂的自动化任务将成为可能。</p>
+                        <a href="https://lumichats.com/blog/claude-mythos-anthropic-most-powerful-ai-model-april-2026-what-you-need-to-know" target="_blank" class="text-orange-500 text-xs font-bold underline">详情链接 &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">OpenAI / GPT</span>
+                        <h3 class="text-white font-bold text-lg mb-2">GPT-5.4 集成 Agentic Workflow：从“对话”转向“自主任务执行”</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed"><strong class="text-white">搞钱视角</strong>：模型能自主拆解、调用工具并完成闭环，进一步模糊了人类职员与 AI Agent 的界限。</p>
+                        <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="text-orange-500 text-xs font-bold underline">详情链接 &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">电商视觉</span>
+                        <h3 class="text-white font-bold text-lg mb-2">Midjourney Niji 7 与 V8 Alpha 发布</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed"><strong class="text-white">搞钱视角</strong>：大幅提升了材质渲染真实度，为跨境卖家提供了更低成本的详情页视觉方案。</p>
+                        <a href="https://www.youtube.com/watch?v=TZ1zWvbXFug" target="_blank" class="text-orange-500 text-xs font-bold underline">观看演示 &rarr;</a>
+                    </div>
+                </section>
+
             </div>
-            <div class="news-card text-left">
-                <span class="text-zinc-600 text-[10px] font-black uppercase tracking-widest">[2026.04.08]</span>
-                <h4 class="text-white font-bold text-lg mt-2 mb-2">1688 源头工厂实地认证数据 Skill 已更新</h4>
-                <p class="text-sm text-zinc-500">新增 5000+ 家义乌优质饰品工厂数据，支持通过 Agent 一键询盘并获取报价单。</p>
+
+            <div class="mt-20 p-10 bg-white rounded-[2.5rem] text-center text-black">
+                <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="QR" class="w-48 h-48 mx-auto mb-6">
+                <h3 class="text-2xl font-black mb-2">扫码获取所有工具补丁</h3>
+                <p class="text-zinc-500 text-sm font-bold mb-8">邀请码: IC721157098311 | 一站式解锁 AI 生产力</p>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="bg-orange-600 text-white px-12 py-4 rounded-full font-bold inline-block shadow-lg">立即注册 Accio</a>
             </div>
         </div>
-
-        <!-- Final CTA -->
-        <section class="text-center pb-32">
-            <div class="bg-white rounded-[3rem] p-12 inline-block shadow-2xl max-w-md">
-                <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="QR" class="w-48 h-48 mx-auto mb-6">
-                <h3 class="text-black font-black text-2xl mb-2 text-center">获取每日情报推送</h3>
-                <p class="text-zinc-500 font-bold mb-8 text-sm italic text-center text-center">邀请码: IC721157098311 | 加入先锋群</p>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary block w-full py-5 text-white font-black rounded-2xl uppercase tracking-widest text-sm text-center">立即注册并装机</a>
-            </div>
-        </section>
     </div>
 </body>
 </html>
