@@ -31,7 +31,7 @@
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.5); filter: brightness(1.1); }
         .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249,115,22,0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
         .playbook-card { border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); transition: all 0.3s; }
-        .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249, 115, 22, 0.2); }
+        .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249,115,22,0.2); }
         .mobile-bar { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 380px; z-index: 100; background: rgba(17,17,18,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
         #loader { position: fixed; inset: 0; background: #0a0a0b; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s; }
         #loader.hidden { opacity: 0; pointer-events: none; }
@@ -44,119 +44,165 @@
     <nav class="fixed top-0 w-full z-50 px-6 py-4 border-b border-white/5 bg-black/70 backdrop-blur-xl">
         <div class="max-w-[1400px] mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-lg shadow-orange-600/20 text-white font-bold tracking-tighter italic">A</div>
-                <span class="text-white font-black tracking-tighter text-lg italic uppercase">Accio Pioneer</span>
+                <div class="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-lg" style="box-shadow:0 0 15px rgba(249,115,22,0.4);">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white uppercase italic">Accio <span class="text-brand-orange">Pioneer</span></span>
+                </div>
             </div>
-            <div class="hidden md:flex items-center space-x-10 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400">
-                <a href="#playbooks" class="hover:text-brand-orange transition-colors">Playbooks</a>
-                <a href="daily_digest_en.html" class="hover:text-brand-orange transition-colors">Daily Digest</a>
-                <a href="index_cn.html" class="px-4 py-2 bg-white/5 rounded-lg border border-white/10 text-white">中文版</a>
+            <div class="hidden xl:flex space-x-12 text-[11px] font-bold text-zinc-400 uppercase tracking-[0.15em]">
+                <a href="#playbook" class="hover:text-white transition">Playbook</a>
+                <a href="#features" class="hover:text-white transition">Features</a>
+                <a href="#install" class="hover:text-white transition">Setup</a>
+                <a href="#faq" class="hover:text-white transition">FAQ</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="index_cn.html" class="text-[10px] font-bold border border-white/10 px-3 py-1.5 rounded-lg hover:bg-white/5 transition uppercase">CN</a>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary text-xs font-bold px-6 py-2.5 rounded-full text-white uppercase tracking-widest">Register Now</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="pt-48 pb-32 px-6 hero-gradient relative">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-8">
-                <span class="relative flex h-2 w-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
-                </span>
-                <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">2026 AI Seller Hub Special Edition</span>
-            </div>
-            <h1 class="text-6xl md:text-9xl font-black text-white mb-8 tracking-tighter leading-[0.95]">
-                More Than Tools.<br>An <span class="text-brand-orange">AI Engine.</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-medium">
-                Accio Work Pioneer Station. Hardware-level security, deep 1688 automation, and Claude 4.6 powered workflows for the 2026 seller.
-            </p>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-[1400px] mx-auto px-6 pb-48">
+    <main class="max-w-[1400px] mx-auto px-6 pt-32 pb-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
             
-            <!-- Left: Playbooks & Updates -->
-            <div class="lg:col-span-8 space-y-32">
+            <!-- LEFT COLUMN -->
+            <div class="lg:col-span-8 space-y-24">
                 
-                <!-- Section: Deep Playbooks -->
-                <section id="playbooks">
-                    <div class="section-header">Deep AI Solutions</div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Playbook 1: OPC -->
-                        <a href="opc_strategy.html" class="playbook-card p-8 rounded-[2.5rem] group block">
-                            <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                                <svg class="w-7 h-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            </div>
-                            <h3 class="text-2xl font-black text-white mb-4 group-hover:text-brand-orange transition">One-Person Multinational</h3>
-                            <p class="text-sm text-zinc-500 leading-relaxed mb-8">How to run 50 stores with just 3 AI Agents? 30 minutes from sourcing to profit.</p>
-                            <span class="text-[10px] font-bold text-brand-orange uppercase tracking-widest flex items-center">
-                                Learn More <svg class="w-3 h-3 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </span>
-                        </a>
-
-                        <!-- Playbook 2: Sourcing -->
-                        <a href="sourcing_hacks.html" class="playbook-card p-8 rounded-[2.5rem] group block">
-                            <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                                <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                            </div>
-                            <h3 class="text-2xl font-black text-white mb-4 group-hover:text-blue-500 transition">1688 Deep Sourcing</h3>
-                            <p class="text-sm text-zinc-500 leading-relaxed mb-8">AI Factory Filtering: How to bypass middlemen and find direct source factories with 30% more margin.</p>
-                            <span class="text-[10px] font-bold text-blue-500 uppercase tracking-widest flex items-center">
-                                Learn More <svg class="w-3 h-3 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </span>
-                        </a>
-
-                        <!-- Playbook 3: Operator -->
-                        <a href="shopify_workflow.html" class="playbook-card p-8 rounded-[2.5rem] group block">
-                            <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                                <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            </div>
-                            <h3 class="text-2xl font-black text-white mb-4 group-hover:text-emerald-500 transition">15s Automated Listing</h3>
-                            <p class="text-sm text-zinc-500 leading-relaxed mb-8">For Operators: Auto-sync from 1688 to Shopify with Claude 4.6 copywriting & SKU translation.</p>
-                            <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-widest flex items-center">
-                                Learn More <svg class="w-3 h-3 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </span>
-                        </a>
-
-                        <!-- Playbook 4: Security -->
-                        <a href="security_deepdive.html" class="playbook-card p-8 rounded-[2.5rem] group block">
-                            <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
-                                <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                            </div>
-                            <h3 class="text-2xl font-black text-white mb-4 group-hover:text-purple-500 transition">Enterprise Security</h3>
-                            <p class="text-sm text-zinc-500 leading-relaxed mb-8">Account Safety Guide: How Accio's hardware-level sandbox protects your stores from platform detection.</p>
-                            <span class="text-[10px] font-bold text-purple-500 uppercase tracking-widest flex items-center">
-                                Learn More <svg class="w-3 h-3 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                            </span>
-                        </a>
+                <section class="hero-gradient rounded-[2.5rem] p-12 md:p-16 border border-white/5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-orange/5 blur-[100px] rounded-full -z-10"></div>
+                    <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-8">
+                        <span class="w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse"></span>
+                        <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest text-left">Exclusive Perk: Free Claude 4.6 Access Activated</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.05] uppercase">
+                        One Person.<br><span class="text-brand-orange">Multinational.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed font-medium mb-10">
+                        The AI Growth Hub for professional sellers. We provide automated "Playbooks" configured by role and company type.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-10 py-4 text-sm font-bold rounded-full text-white uppercase tracking-widest">Register & Get App</a>
+                        <div class="flex items-center space-x-2 text-zinc-500 text-xs font-medium uppercase tracking-widest italic">
+                            <svg class="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg>
+                            <span>Includes 2026 M144 Fix Patch</span>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Section: Updates -->
-                <section>
-                    <div class="section-header">Pioneer News</div>
-                    <div class="glass-ui p-10 rounded-[2.5rem] border-white/5 relative overflow-hidden">
-                        <div class="flex items-center justify-between mb-8">
-                            <span class="text-brand-orange text-[10px] font-black uppercase tracking-[0.2em]">2026-04-09 Morning Update</span>
-                            <span class="bg-brand-orange/20 text-brand-orange px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest">URGENT</span>
+                <!-- Playbook Section (Categorized Value) -->
+                <section id="playbook">
+                    <h2 class="section-header uppercase tracking-tight">01. Solutions Library: Tailored for Your Role</h2>
+                    
+                    <div class="mb-16">
+                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2">
+                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
+                            <span>By Business Type</span>
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="playbook-card p-8 rounded-3xl group text-left">
+                                <div class="text-3xl mb-6">🏆</div>
+                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-brand-orange transition uppercase tracking-tighter">Solo Founder (OPC)</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-6">Learn how to research, source, and open a store in 30 mins using Accio. Use free Claude 4.6 to replace senior operators.</p>
+                                <a href="opc_strategy.html" class="text-brand-orange text-xs font-bold uppercase tracking-widest hover:underline">Read Case Study &rarr;</a>
+                            </div>
+                            <div class="playbook-card p-8 rounded-3xl group text-left">
+                                <div class="text-3xl mb-6">🏢</div>
+                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-blue-500 transition uppercase tracking-tighter">Established Enterprise</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-6">Scale securely with hardware isolation. Manage 50+ stores without linkage risks. High-volume automation & ERP sync.</p>
+                                <a href="security_deepdive.html" class="text-blue-500 text-xs font-bold uppercase tracking-widest hover:underline">View Security Analysis &rarr;</a>
+                            </div>
                         </div>
-                        <h3 class="text-2xl font-black text-white mb-6">M144 Environment Patch Released</h3>
-                        <p class="text-zinc-500 text-sm leading-relaxed mb-8">A major fix for M144 environment errors. The Accio Pioneer lab has deployed a new hardware-level isolation patch for all members.</p>
-                        <div class="flex items-center space-x-6">
-                            <a href="daily_digest_en.html" class="text-white font-bold text-xs uppercase tracking-widest border-b border-brand-orange pb-1 hover:text-brand-orange transition">Read Full Report</a>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2">
+                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
+                            <span>By User Role</span>
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="playbook-card p-6 rounded-2xl text-left">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><svg class="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><span>Operator</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">Auto-sourcing, 15s listing, and AI-optimized SEO copy for Shopify/Amazon.</p>
+                                <a href="shopify_workflow.html" class="text-zinc-300 text-[10px] font-bold underline">Video Tutorial</a>
+                            </div>
+                            <div class="playbook-card p-6 rounded-2xl text-left">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93z"/></svg><span>Sourcing</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">Deep Factory Filter to skip middlemen on 1688. Direct factory connection hack.</p>
+                                <a href="sourcing_hacks.html" class="text-zinc-300 text-[10px] font-bold underline">Get Script</a>
+                            </div>
+                            <div class="playbook-card p-6 rounded-2xl text-left">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 17.08l1.5 1.41z"/></svg><span>Sales</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">24/7 AI email replies and global market trend analysis via agents.</p>
+                                <a href="daily_digest_en.html" class="text-zinc-300 text-[10px] font-bold underline">Live Digest</a>
+                            </div>
                         </div>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section id="features">
+                    <h2 class="section-header uppercase tracking-tight">02. What's New & Core Features</h2>
+                    <div class="glass-ui rounded-[2rem] overflow-hidden">
+                        <div class="relative overflow-hidden bg-zinc-900 h-48 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#111112] to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 z-10 text-left">
+                                <span class="bg-brand-orange/20 text-brand-orange text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-[0.15em] border border-brand-orange/20">2026.04 UPDATE</span>
+                                <h3 class="text-white text-2xl font-black mt-3 italic">v0.5.6-beta: Silicon Optimization</h3>
+                            </div>
+                            <svg class="w-24 h-24 text-zinc-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div class="p-10 text-left">
+                            <p class="text-base leading-relaxed text-zinc-300 mb-10">
+                                Accio Work is now fully optimized for M1/M2/M3 chips, eliminating lag. <strong class="text-white">Exclusive referrals grant free access to Claude 4.6.</strong>
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-microchip"></i></div>
+                                    <div><h4 class="text-white font-bold text-sm mb-2">Free Claude 4.6</h4><p class="text-[11px] text-zinc-400 leading-relaxed">No $20/mo individual subs needed. SOTA models for reasoning.</p></div>
+                                </div>
+                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-500"><i class="fas fa-fingerprint"></i></div>
+                                    <div><h4 class="text-white font-bold text-sm mb-2">Sandbox Security</h4><p class="text-[11px] text-zinc-400 leading-relaxed">Hardware isolation. Manage 50+ stores securely.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="install">
+                    <h2 class="section-header uppercase tracking-tight">03. 3-Minute Setup (M144 Fix)</h2>
+                    <div class="glass-ui rounded-[2rem] p-10 md:p-12 highlight-card text-left">
+                        <div class="flex items-start space-x-6 mb-10">
+                            <div class="w-14 h-14 bg-brand-orange/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-wrench"></i></div>
+                            <div>
+                                <h4 class="text-white text-2xl font-black mb-2 uppercase tracking-tighter">Fix "Connecting..." Issues Instantly</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed">Chrome M144 kernel update caused communication block. Use our Community Patch to fix it in 1s.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs">1</div><div><h5 class="text-white font-bold text-sm mb-1 uppercase">Register & Download</h5><p class="text-xs text-zinc-500 leading-relaxed">Register via the <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="text-brand-orange font-bold hover:underline">Exclusive Link</a>.</p></div></div>
+                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs border border-white/10">2</div><div><h5 class="text-white font-bold text-sm mb-1 uppercase">Get Patch</h5><p class="text-xs text-zinc-500 leading-relaxed">Scan QR on the right, join community, and reply <code>fix</code>.</p></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="faq">
+                    <h2 class="section-header uppercase tracking-tight">04. Common Questions (FAQ)</h2>
+                    <div class="glass-ui rounded-[2rem] p-10 md:p-12 divide-y divide-white/5 text-left">
+                        <div class="pb-6 pt-6"><h4 class="text-white font-bold mb-2 uppercase text-xs">Is it safe for my store?</h4><p class="text-sm text-zinc-400 leading-relaxed">Yes. Hardware sandbox isolation prevents browser fingerprint linkage better than standard extensions.</p></div>
+                        <div class="pt-6"><h4 class="text-white font-bold mb-2 uppercase text-xs">Better than traditional RPA?</h4><p class="text-sm text-zinc-400 leading-relaxed">Accio Agents think. They handle supply chain exceptions automatically instead of just erroring out.</p></div>
                     </div>
                 </section>
             </div>
 
-            <!-- Right: Registration Sidebar -->
+            <!-- RIGHT COLUMN -->
             <div class="lg:col-span-4">
                 <div class="sticky-card space-y-8">
-                    <div class="glass-ui p-10 rounded-[3rem] text-center bg-white border-transparent">
-                        <div class="w-full bg-white rounded-[2rem] mb-8 overflow-hidden p-2 border-4 border-dashed border-zinc-100 shadow-inner">
+                    <div class="bg-white rounded-[2.5rem] p-10 text-center shadow-2xl">
+                        <!-- SCANNABLE QR: Pure white bg, clean crop -->
+                        <div class="w-full bg-white rounded-[2rem] mb-8 overflow-hidden p-2 border-4 border-dashed border-zinc-100">
                             <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="Invite QR" class="w-full aspect-square object-contain">
                         </div>
                         <h4 class="text-black font-black text-2xl mb-2 tracking-tighter uppercase">Scan to Join</h4>
