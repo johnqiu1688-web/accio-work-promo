@@ -10,7 +10,7 @@
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b' } }
+                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b', card: '#111112' } }
                 }
             }
         }
@@ -19,41 +19,48 @@
         body { background-color: #0a0a0b; color: #e4e4e7; font-family: -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
         .glass-ui { background: rgba(17, 17, 18, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); }
         .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); }
+        .security-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 24px; }
     </style>
 </head>
-<body class="py-12 px-6 text-left">
-    <div class="max-w-4xl mx-auto">
-        <a href="index_cn.html" class="inline-flex items-center text-zinc-500 hover:text-white mb-12 transition text-sm font-bold uppercase tracking-widest">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-            返回实战中心
-        </a>
+<body class="py-12 px-6">
+    <div class="max-w-5xl mx-auto">
+        <nav class="mb-12">
+            <a href="index_cn.html" class="text-zinc-500 hover:text-white transition text-xs font-bold uppercase tracking-widest flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                返回增长中心
+            </a>
+        </nav>
 
-        <div class="glass-ui p-10 md:p-16 rounded-[3rem]">
-            <h1 class="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-tight">规模化扩张：Accio 如何让 50+ 账号实现“零关联”运营</h1>
-            
-            <img src="https://sc02.alicdn.com/kf/A5ee90ee7c3d94b64bfabf5e0eec3f322S.png" alt="Security Dashboard" class="w-full h-80 object-cover rounded-3xl mb-12 opacity-80">
+        <header class="mb-24">
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.95]">
+                规模化。<br>更要<span class="text-blue-500">零风险。</span>
+            </h1>
+            <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed">
+                传统 VPC 的时代已经结束。Accio Work 为大型运营团队提供 hardware 级的指纹隔离与物理沙箱，确保 50+ 账号长久存活。
+            </p>
+        </header>
 
-            <div class="prose prose-invert prose-orange max-w-none space-y-8 text-zinc-300 leading-relaxed">
-                <h2 class="text-2xl font-bold text-white mt-12">1. 传统 VPC 的局限性</h2>
-                <p>过去，管理多账号需要购买昂贵的远程服务器（VPC/VPS），不仅速度慢，且指纹依然存在泄露风险。Accio Work 引入了全新的硬件级物理隔离技术。</p>
+        <div class="space-y-24">
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="security-card">
+                    <h4 class="text-white font-bold text-xl mb-4 italic">硬件级隔离技术</h4>
+                    <p class="text-sm text-zinc-500 leading-relaxed text-left">不同于 Chrome 插件仅修改 UA，Accio 能够为每一个 Agent 伪造独立的硬件层指纹（Canvas, WebGL, WebRTC），从底层规避平台探测。</p>
+                </div>
+                <div class="security-card">
+                    <h4 class="text-white font-bold text-xl mb-4 italic">IP 隧道映射</h4>
+                    <p class="text-sm text-zinc-500 leading-relaxed text-left">内置 IP 分发逻辑。确保您的不同店铺在操作时，网络特征完全隔离，杜绝因 IP 关联导致的“连坐”封号。</p>
+                </div>
+            </section>
 
-                <h2 class="text-2xl font-bold text-white mt-12">2. 核心技术：硬件级沙箱</h2>
-                <ul class="space-y-4">
-                    <li><strong class="text-white">独立指纹</strong>：每个 Agent 自动生成唯一的浏览器内核指纹，包含 Canvas、WebRTC 等 50+ 维度。</li>
-                    <li><strong class="text-white">IP 隧道隔离</strong>：内置 IP 转发机制，确保 A 店铺永远无法探测到 B 店铺的本地 network 特征。</li>
-                    <li><strong class="text-white">本地数据加密</strong>：所有 Cookie、缓存数据保存在本地加密沙箱中，杜绝跨账号读取。</li>
-                </ul>
-
-                <h2 class="text-2xl font-bold text-white mt-12">3. 企业级应用：从 1 到 100 的自动化</h2>
-                <p>利用 Accio 的多 Agent 协同功能，您可以配置一个“主 Agent”负责分配任务，50 个“执行 Agent”负责在不同账号下执行铺货、广告监控等任务。无需人工干预，彻底释放产能。</p>
-            </div>
-
-            <div class="mt-20 p-10 bg-white rounded-[2.5rem] text-center text-black">
-                <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="Register QR" class="w-48 h-48 mx-auto mb-6">
-                <h3 class="text-2xl font-black mb-2">部署您的企业级安全架构</h3>
-                <p class="text-zinc-500 text-sm font-bold mb-8">立即注册 获取企业版内测资格</p>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-12 py-4 rounded-full text-white font-bold inline-block">专属注册通道</a>
-            </div>
+            <!-- Final CTA -->
+            <section class="text-center pb-32">
+                <div class="bg-white rounded-[3rem] p-12 inline-block shadow-2xl max-w-md">
+                    <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="QR" class="w-48 h-48 mx-auto mb-6">
+                    <h3 class="text-black font-black text-2xl mb-2">获取企业级安全补丁</h3>
+                    <p class="text-zinc-500 font-bold mb-8 text-sm italic">邀请码: IC721157098311 | 立即部署</p>
+                    <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary block w-full py-5 text-white font-black rounded-2xl uppercase tracking-widest text-sm">专属注册通道</a>
+                </div>
+            </section>
         </div>
     </div>
 </body>
