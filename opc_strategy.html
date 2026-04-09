@@ -3,61 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一人跨国公司 (OPC) 实战方案 | Accio Pioneer</title>
+    <title>一人跨国公司 (OPC) 终极实战指南 | Accio Pioneer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b' } }
+                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b', card: '#111112' } }
                 }
             }
         }
     </script>
     <style>
         body { background-color: #0a0a0b; color: #e4e4e7; font-family: -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+        .hero-glow { background: radial-gradient(circle at 50% -20%, rgba(249, 115, 22, 0.15) 0%, transparent 50%); }
         .glass-ui { background: rgba(17, 17, 18, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); }
         .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); }
+        .metric-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 24px; }
     </style>
 </head>
-<body class="py-12 px-6">
-    <div class="max-w-4xl mx-auto">
-        <a href="index_cn.html" class="inline-flex items-center text-zinc-500 hover:text-white mb-12 transition text-sm font-bold uppercase tracking-widest">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-            返回实战中心
-        </a>
+<body class="hero-glow">
+    <div class="max-w-5xl mx-auto px-6 py-12 lg:py-24">
+        
+        <!-- Breadcrumb -->
+        <nav class="mb-12">
+            <a href="index_cn.html" class="text-zinc-500 hover:text-white transition text-xs font-bold uppercase tracking-widest flex items-center">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                返回增长中心
+            </a>
+        </nav>
 
-        <div class="glass-ui p-10 md:p-16 rounded-[3rem]">
-            <h1 class="text-4xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-tight">2026 跨境终局：Accio Work 让“一人跨国公司”从科幻变为现实</h1>
+        <!-- Header -->
+        <header class="mb-24">
+            <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full mb-8">
+                <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">核心需求深度解析</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.95]">
+                一人。<br>即是<span class="text-brand-orange">跨国公司。</span>
+            </h1>
+            <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed">
+                2026 年跨境电商的终极形态：创始人负责“决策”，AI Agent 负责“执行”。30 分钟跑通从选品到盈利的全流程。
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="space-y-32">
             
-            <img src="https://sc02.alicdn.com/kf/Af2aadb77e9aa4dc8812444e5cb7185182.png" alt="OPC Concept" class="w-full h-80 object-cover rounded-3xl mb-12 opacity-80">
+            <!-- Section 1: The Concept -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl font-black text-white italic border-l-4 border-brand-orange pl-6">什么是 OPC 模式？</h2>
+                    <p class="text-zinc-400 leading-relaxed">
+                        一人跨国公司（One-Person Multinational）不再是梦想。借由 Accio Work 的多智能体协同，一个独立创业者可以同时驱动三支“数字战队”：
+                    </p>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start space-x-3"><span class="text-brand-orange font-black">●</span> <span><strong class="text-white">采购部</strong>：24/7 监控 1688 价格波动，自动过滤中间商。</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-brand-orange font-black">●</span> <span><strong class="text-white">市场部</strong>：利用 Claude 4.6 撰写地道美式英语文案，生成视觉大片。</span></li>
+                        <li class="flex items-start space-x-3"><span class="text-brand-orange font-black">●</span> <span><strong class="text-white">运营部</strong>：自动同步库存，处理客户邮件，监控广告 ROAS。</span></li>
+                    </ul>
+                </div>
+                <div class="glass-ui rounded-[3rem] overflow-hidden">
+                    <img src="https://sc02.alicdn.com/kf/Af2aadb77e9aa4dc8812444e5cb7185182.png" alt="OPC Vision" class="w-full h-full object-cover">
+                </div>
+            </section>
 
-            <div class="prose prose-invert prose-orange max-w-none space-y-8 text-zinc-300 leading-relaxed">
-                <p class="text-xl italic border-l-4 border-brand-orange pl-6 py-2">“不再看你拥有多少员工，而看你驾驭多少智能体。”</p>
-                
-                <h2 class="text-2xl font-bold text-white mt-12">1. 那个“Aha!”时刻：从杂事缠身到指点江山</h2>
-                <p>作为一个在跨境圈摸爬滚打五年的“老兵”，我曾经坚信：要做大，必须有团队。直到 2026 年初，我因为团队管理成本过高、利润被房租和工资吞噬而陷入焦虑。</p>
-                <p>Accio Work 让我意识到，我缺的不是员工，而是一个能够执行商业逻辑的“数字大脑”。当我第一次下达指令：“调研北美家具市场，找出 1688 对应工厂，并在 30 分钟内搭建好 Shopify 店铺”时，我看到了奇迹。</p>
+            <!-- Section 2: Actionable Steps -->
+            <section id="steps" class="space-y-16">
+                <h2 class="text-3xl font-black text-white text-center">30 分钟开店实战流程</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="metric-card space-y-4">
+                        <div class="text-4xl">🔍</div>
+                        <h4 class="text-white font-bold text-xl uppercase">第 05 分钟：情报捕获</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">在 Amazon 看到爆款，丢链接给 Accio。Agent 自动反查 1688 厂家，计算落地成本与预期毛利。</p>
+                    </div>
+                    <div class="metric-card space-y-4">
+                        <div class="text-4xl">🎨</div>
+                        <h4 class="text-white font-bold text-xl uppercase">第 15 分钟：品牌生成</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">AI 自动生成 brand name、Logo 与 Shopify 店铺主题。调用 Claude 4.6 优化所有产品的 SEO 描述。</p>
+                    </div>
+                    <div class="metric-card space-y-4">
+                        <div class="text-4xl">🚀</div>
+                        <h4 class="text-white font-bold text-xl uppercase">第 30 分钟：自动化运行</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">一键同步 1688 货源至 Shopify。开启 Accio 物理隔离沙箱，登录 FB 广告后台开始测品。</p>
+                    </div>
+                </div>
+            </section>
 
-                <h2 class="text-2xl font-bold text-white mt-12">2. 三大搞钱支柱</h2>
-                <ul class="space-y-4">
-                    <li><strong class="text-white">智感找货 (Intelligent Sourcing)</strong>：自动扫描全网，通过“工厂深度过滤”插件直接锁定源头，利润空间提升 30%。</li>
-                    <li><strong class="text-white">全链路部署</strong>：AI 生成地道美式营销文案，1 个运营指令抵过 10 个外包助手。</li>
-                    <li><strong class="text-white">物理隔离安全感</strong>：自带硬件级沙箱环境，多账号独立指纹，彻底保护 PayPal/FB 资产。</li>
-                </ul>
+            <!-- Section 3: The Tech Advantage -->
+            <section class="glass-ui p-12 md:p-20 rounded-[40px] relative overflow-hidden">
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand-orange/10 blur-[100px] rounded-full"></div>
+                <h2 class="text-3xl font-black text-white mb-12">为什么 Accio 是 OPC 的唯一选择？</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-4">
+                        <h4 class="text-brand-orange font-black text-lg italic">● 免费调用 Claude 4.6</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            OPC 创业者最头疼的就是高昂的工具订阅费。Accio 专属链接用户内置免费模型权限，直接省下每月 $20+ 的支出。
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-blue-500 font-black text-lg italic">● 彻底规避关联封号</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            一人操作 50 个店铺？在普通 Chrome 下必死无疑。Accio 的物理沙箱为每个 Agent 配置独立指纹，是目前最稳的解决方案。
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-                <h2 class="text-2xl font-bold text-white mt-12">3. 实战复盘：30分钟“手搓”跨国公司</h2>
-                <p>逻辑是真的，但你需要“先锋团”的配置：领取 M144 补丁确保秒连，激活特权免费用 Claude 4.6。</p>
-            </div>
+            <!-- Final Conversion -->
+            <section class="text-center space-y-12 pb-32">
+                <div class="bg-white rounded-[3rem] p-12 inline-block shadow-2xl shadow-orange-600/20 max-w-md">
+                    <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="Scan to Start" class="w-64 h-64 mx-auto mb-8 rounded-2xl shadow-inner border border-zinc-100">
+                    <h3 class="text-black font-black text-3xl mb-4 tracking-tighter">开启你的 OPC 时代</h3>
+                    <p class="text-zinc-500 font-bold mb-10 text-sm italic">邀请码: IC721157098311 | 内含 2026 修复补丁</p>
+                    <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary block w-full py-5 text-white font-black rounded-2xl uppercase tracking-widest text-sm">立即注册并装机</a>
+                </div>
+            </section>
 
-            <div class="mt-20 p-10 bg-white rounded-[2.5rem] text-center text-black">
-                <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="Register QR" class="w-48 h-48 mx-auto mb-6">
-                <h3 class="text-2xl font-black mb-2">立即开启你的一人跨国公司</h3>
-                <p class="text-zinc-500 text-sm font-bold mb-8">邀请码: IC721157098311 | 扫码立得 2000 积分</p>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-12 py-4 rounded-full text-white font-bold inline-block">通过专属链接注册</a>
-            </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.3em]">© 2026 Accio Pioneer | OPC 专项实战指南 | 1000 计划执行中</p>
+    </footer>
+
 </body>
 </html>
