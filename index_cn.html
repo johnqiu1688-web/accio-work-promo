@@ -29,193 +29,151 @@
         .sticky-card { position: sticky; top: 100px; }
         .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); display: inline-block; text-align: center; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.5); filter: brightness(1.1); }
-        .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249, 115, 22, 0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
+        .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249,115,22,0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
         .playbook-card { border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); transition: all 0.3s; }
-        .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249, 115, 22, 0.2); }
+        .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249,115,22,0.2); }
         .mobile-bar { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 380px; z-index: 100; background: rgba(17,17,18,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
         #loader { position: fixed; inset: 0; background: #0a0a0b; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s; }
         #loader.hidden { opacity: 0; pointer-events: none; }
     </style>
 </head>
-<body class="grid-bg min-h-screen text-left">
+<body class="grid-bg min-h-screen">
     <div id="loader"><span style="color:#f97316;font-weight:bold;letter-spacing:2px;">ACCIO PIONEER</span></div>
 
     <!-- Nav -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4 border-b border-white/5 bg-black/70 backdrop-blur-xl">
         <div class="max-w-[1400px] mx-auto flex justify-between items-center text-zinc-400">
             <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-lg" style="box-shadow:0 0 15px rgba(249,115,22,0.4);">
-                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <div class="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                 </div>
-                <div>
-                    <span class="text-xl font-black tracking-tight text-white uppercase">Accio <span class="text-brand-orange italic font-black">Pioneer</span></span>
-                </div>
+                <span class="text-white font-black tracking-tighter text-lg italic uppercase">Accio <span class="text-brand-orange">Pioneer</span></span>
             </div>
-            <div class="hidden xl:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.15em]">
-                <a href="#playbook" class="hover:text-white transition">实战方案库</a>
-                <a href="#news" class="hover:text-white transition">功能动态</a>
-                <a href="#install" class="hover:text-white transition">安装修复</a>
-                <a href="#faq" class="hover:text-white transition">常见问题</a>
+            <div class="hidden md:flex space-x-10 text-[10px] font-black uppercase tracking-[0.2em] items-center">
+                <a href="#playbook" class="hover:text-brand-orange transition duration-300">实战剧本</a>
+                <a href="#security" class="hover:text-brand-orange transition duration-300">安全沙箱</a>
+                <a href="#tools" class="hover:text-brand-orange transition duration-300">工具补丁</a>
+                <a href="index.html" class="text-zinc-600 hover:text-white transition">EN</a>
             </div>
-            <div class="flex items-center space-x-4">
-                <a href="index.html" class="text-[10px] font-bold border border-white/10 px-3 py-1.5 rounded-lg hover:bg-white/5 transition uppercase tracking-widest">EN</a>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary text-xs font-bold px-6 py-2.5 rounded-full text-white shadow-lg uppercase tracking-widest">立即注册</a>
-            </div>
+            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="bg-white text-black px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-brand-orange hover:text-white transition duration-500 shadow-xl shadow-white/5">立即加入</a>
         </div>
     </nav>
 
-    <main class="max-w-[1400px] mx-auto px-6 pt-32 pb-32 text-left">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
-            <!-- LEFT COLUMN -->
-            <div class="lg:col-span-8 space-y-24">
+    <main class="pt-32 pb-24 px-6 hero-gradient">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 
-                <!-- Hero Value -->
-                <section class="hero-gradient rounded-[2.5rem] p-12 md:p-16 border border-white/5 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-orange/5 blur-[100px] rounded-full -z-10 text-left"></div>
-                    <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.05] text-left">
-                        打造您的<br><span class="text-brand-orange">“一人跨国公司”</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed font-medium mb-10 text-left">
-                        跨境卖家的 AI 实战增长中心。我们不仅分享工具，更提供按角色、按场景配置的自动化“盈利剧本”。
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-10 py-4 text-sm font-bold rounded-full text-white uppercase tracking-widest">立即注册并装机</a>
-                        <div class="flex items-center space-x-2 text-zinc-500 text-xs font-medium">
-                            <svg class="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                            <span>内含 2026 M144 修复补丁</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- NEW: Playbook Section (Categorized Value) -->
-                <section id="playbook" class="text-left">
-                    <h2 class="section-header uppercase tracking-tighter">01. 实战方案库：为您的角色量身定制</h2>
+                <!-- Left Content -->
+                <div class="lg:col-span-8 space-y-32">
                     
-                    <!-- By Company Type -->
-                    <div class="mb-16">
-                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2 text-left">
-                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
-                            <span>按企业类型方案 (Business Types)</span>
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="playbook-card p-8 rounded-3xl group">
-                                <div class="text-3xl mb-6">🏆</div>
-                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-brand-orange transition italic uppercase tracking-tight">一人跨国公司 (OPC)</h4>
-                                <p class="text-zinc-400 text-sm leading-relaxed mb-6 text-left">小白零基础如何通过 Accio 30 分钟完成调研、选品到开店？利用免费 Claude 4.6 替代高级运营。</p>
-                                <a href="opc_strategy.html" class="text-brand-orange text-xs font-black uppercase tracking-widest hover:underline">查看实战攻略 &rarr;</a>
-                            </div>
-                            <div class="playbook-card p-8 rounded-3xl group">
-                                <div class="text-3xl mb-6">🏢</div>
-                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-blue-500 transition italic uppercase tracking-tight">传统转型企业</h4>
-                                <p class="text-zinc-400 text-sm leading-relaxed mb-6 text-left">如何利用物理沙箱管理 50+ 账号防止关联？大规模自动化铺货与 ERP 数据同步方案。</p>
-                                <a href="security_deepdive.html" class="text-blue-500 text-xs font-black uppercase tracking-widest hover:underline">安全性深度解析 &rarr;</a>
-                            </div>
+                    <!-- Hero Section -->
+                    <section class="space-y-12">
+                        <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
+                            </span>
+                            <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest">2026 跨境实战增长看板</span>
                         </div>
-                    </div>
+                        <h1 class="text-6xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter uppercase italic">
+                            别只管 <span class="text-brand-orange underline decoration-8 underline-offset-8 decoration-white/10">对话。</span><br>要让它 <span class="text-brand-orange">执行。</span>
+                        </h1>
+                        <p class="text-xl md:text-2xl text-zinc-500 max-w-3xl font-bold leading-relaxed">
+                            Accio Work 是全球首个<span class="text-white border-b-2 border-brand-orange">“可执行”</span>的跨境 AI Agent。在物理沙箱中自动化 1688 找货、Shopify 发品、Claude 4.6 二创。一个人，就是一个部门。
+                        </p>
+                        <div class="flex flex-wrap gap-6 pt-6">
+                            <a href="#playbook" class="btn-primary px-12 py-5 rounded-2xl text-white font-black uppercase tracking-[0.2em] text-sm">探索实战剧本</a>
+                            <a href="daily_digest.html" class="glass-ui px-8 py-5 rounded-2xl text-zinc-400 font-bold hover:text-white transition flex items-center group">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-3 group-hover:animate-pulse"></span>
+                                实时全球 AI 情报
+                            </a>
+                        </div>
+                    </section>
 
-                    <!-- By Role -->
-                    <div class="text-left">
-                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2">
-                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
-                            <span>按职业角色方案 (User Roles)</span>
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div class="playbook-card p-6 rounded-2xl">
-                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2 uppercase tracking-tighter"><i class="fas fa-user-tie text-brand-orange"></i><span>运营主管</span></h5>
-                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4 text-left">自动搜图匹配源头工厂，15秒完成翻译上架，SEO 文案自动化生成。</p>
-                                <a href="shopify_workflow.html" class="text-zinc-300 text-[10px] font-black underline italic tracking-widest uppercase">查看发品流</a>
-                            </div>
-                            <div class="playbook-card p-6 rounded-2xl text-left">
-                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2 uppercase tracking-tighter"><i class="fas fa-search-location text-green-500"></i><span>专业采购</span></h5>
-                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4 text-left">使用“深度工厂过滤”Skill 自动剔除 1688 二手代理商，直连义乌源头。</p>
-                                <a href="sourcing_hacks.html" class="text-zinc-300 text-[10px] font-black underline italic tracking-widest uppercase">找货黑科技</a>
-                            </div>
-                            <div class="playbook-card p-6 rounded-2xl text-left">
-                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2 uppercase tracking-tighter"><i class="fas fa-chart-line text-blue-500"></i><span>海外销售</span></h5>
-                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4 text-left">利用 AI 智能体 24/7 回复邮件，分析海外小红书/TikTok 爆款趋势。</p>
-                                <a href="daily_digest.html" class="text-zinc-300 text-[10px] font-black underline italic tracking-widest uppercase">全球情报看点</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 1. Latest Info -->
-                <section id="news" class="text-left">
-                    <h2 class="section-header uppercase tracking-tighter">02. 最新动态与重磅功能</h2>
-                    <div class="glass-ui rounded-[2rem] overflow-hidden">
-                        <div class="relative overflow-hidden bg-zinc-900 h-48 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#111112] to-transparent"></div>
-                            <div class="absolute bottom-8 left-8 z-10 text-left">
-                                <span class="bg-brand-orange/20 text-brand-orange text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-[0.15em] border border-brand-orange/20">2026.04 更新</span>
-                                <h3 class="text-white text-2xl font-black mt-3 italic uppercase">v0.5.6-beta：芯片级性能飞跃</h3>
-                            </div>
-                        </div>
-                        <div class="p-10 text-left">
-                            <p class="text-base leading-relaxed text-zinc-300 mb-10 text-left">
-                                Accio Work 已针对 M1/M2/M3 芯片完成深度调优，彻底解决了 Chrome M144 导致的延迟。<strong class="text-white">专属链接用户现可免费调用 Claude 4.6 模型</strong>。
-                            </p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4 border border-white/5">
-                                    <div class="w-10 h-10 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-microchip"></i></div>
-                                    <div class="text-left"><h4 class="text-white font-black text-sm mb-2 uppercase tracking-tight italic">Claude 4.6 免费特权</h4><p class="text-[11px] text-zinc-400 leading-relaxed text-left">顶级 SOTA 模型处理复杂的货源分析与润色。</p></div>
+                    <!-- Playbook Grid -->
+                    <section id="playbook" class="space-y-16">
+                        <div class="section-header">多角色实战剧本 (Role Playbooks)</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Role 1 -->
+                            <a href="opc_strategy.html" class="playbook-card p-10 rounded-[2.5rem] group block">
+                                <div class="text-zinc-600 text-[10px] font-black uppercase tracking-widest mb-4">个人/初创</div>
+                                <h3 class="text-3xl font-black text-white mb-6 group-hover:text-brand-orange transition italic tracking-tighter uppercase">一人跨国公司 (OPC)</h3>
+                                <p class="text-sm text-zinc-500 mb-8 leading-relaxed font-medium">适合超级个体。一人操盘全链路：TikTok 测品、1688 锁源、独立站全自动化闭环。</p>
+                                <div class="flex items-center text-brand-orange text-xs font-black uppercase tracking-widest">
+                                    进入剧本 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </div>
-                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4 border border-white/5 text-left">
-                                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-500"><i class="fas fa-fingerprint"></i></div>
-                                    <div class="text-left"><h4 class="text-white font-black text-sm mb-2 uppercase tracking-tight italic">硬件级沙箱 2.0</h4><p class="text-[11px] text-zinc-400 leading-relaxed text-left">独立物理隔离，50+ 店铺零关联风险。</p></div>
+                            </a>
+                            <!-- Role 2 -->
+                            <a href="shopify_workflow.html" class="playbook-card p-10 rounded-[2.5rem] group block">
+                                <div class="text-zinc-600 text-[10px] font-black uppercase tracking-widest mb-4">运营主管</div>
+                                <h3 class="text-3xl font-black text-white mb-6 group-hover:text-brand-orange transition italic tracking-tighter uppercase">15秒发品 SOP</h3>
+                                <p class="text-sm text-zinc-500 mb-8 leading-relaxed font-medium">适合精品站/铺货站。从采集到二创、翻译、同步 Shopify，15秒内完成全自动化执行。</p>
+                                <div class="flex items-center text-brand-orange text-xs font-black uppercase tracking-widest">
+                                    进入剧本 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </div>
-                            </div>
+                            </a>
+                            <!-- Role 3 -->
+                            <a href="sourcing_hacks.html" class="playbook-card p-10 rounded-[2.5rem] group block">
+                                <div class="text-zinc-600 text-[10px] font-black uppercase tracking-widest mb-4">采购精英</div>
+                                <h3 class="text-3xl font-black text-white mb-6 group-hover:text-brand-orange transition italic tracking-tighter uppercase">1688 锁源黑客</h3>
+                                <p class="text-sm text-zinc-500 mb-8 leading-relaxed font-medium">适合供应链玩家。穿透 SEO 迷雾，AI 穿透二道贩子直连一级源头工厂，利润提升 30%。</p>
+                                <div class="flex items-center text-brand-orange text-xs font-black uppercase tracking-widest">
+                                    进入剧本 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </div>
+                            </a>
+                            <!-- Role 4 -->
+                            <a href="security_deepdive.html" class="playbook-card p-10 rounded-[2.5rem] group block">
+                                <div class="text-zinc-600 text-[10px] font-black uppercase tracking-widest mb-4">传统企业</div>
+                                <h3 class="text-3xl font-black text-white mb-6 group-hover:text-brand-orange transition italic tracking-tighter uppercase">零风险多端运营</h3>
+                                <p class="text-sm text-zinc-500 mb-8 leading-relaxed font-medium">适合大团队。硬件级沙箱与物理 IP 隔离，多账号并联操作，杜绝关联封号风险。</p>
+                                <div class="flex items-center text-brand-orange text-xs font-black uppercase tracking-widest">
+                                    进入剧本 <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </div>
+                            </a>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
 
-                <!-- 3. Fast Install Guide -->
-                <section id="install" class="text-left">
-                    <h2 class="section-header uppercase tracking-tighter">03. 快速安装指引 (含 M144 修复)</h2>
-                    <div class="glass-ui rounded-[2rem] p-10 md:p-12 highlight-card text-left">
-                        <div class="flex items-start space-x-6 mb-10">
-                            <div class="w-14 h-14 bg-brand-orange/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-wrench"></i></div>
-                            <div>
-                                <h4 class="text-white text-2xl font-black mb-2 uppercase italic tracking-tighter">解决 "Connecting..." 报错</h4>
-                                <p class="text-sm text-zinc-400 leading-relaxed text-left">使用本站提供的"2026 环境补丁包"即可 1 秒修复连接。</p>
-                            </div>
-                        </div>
-                        <div class="space-y-6 text-left">
-                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs">1</div><div class="text-left"><h5 class="text-white font-black text-sm mb-1 uppercase italic">注册与下载</h5><p class="text-xs text-zinc-500 leading-relaxed">通过 <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="text-brand-orange font-black hover:underline">专属注册链接</a> 注册下载。</p></div></div>
-                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs border border-white/10">2</div><div class="text-left"><h5 class="text-white font-black text-sm mb-1 uppercase italic">获取 M144 补丁</h5><p class="text-xs text-zinc-500 leading-relaxed text-left">扫码右侧海报加入先锋群，领取 <code>fix_m144</code> 修复包。</p></div></div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="lg:col-span-4">
-                <div class="sticky-card space-y-8">
-                    <div class="bg-white rounded-[2.5rem] p-10 text-center shadow-2xl">
+                <!-- Right Sidebar (Registration) -->
+                <div class="lg:col-span-4">
+                    <div class="sticky-card glass-ui p-10 rounded-[3rem] text-center border-brand-orange/20 shadow-2xl shadow-orange-600/10">
                         <div class="w-full bg-white rounded-[2rem] mb-8 overflow-hidden p-2 border-4 border-dashed border-zinc-100">
                             <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="专属注册二维码" class="w-full aspect-square object-contain">
                         </div>
-                        <h4 class="text-black font-black text-2xl mb-2 tracking-tight uppercase italic">扫码注册先锋团</h4>
+                        <h4 class="text-black font-black text-2xl mb-2 tracking-tight uppercase">扫码注册先锋团</h4>
                         <p class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-8 italic">助力卖家 拥抱 AI 自动化</p>
                         <div class="space-y-4">
-                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="block w-full py-4 btn-primary text-white font-black rounded-xl text-xs uppercase tracking-widest shadow-xl italic">点击专属链接 立即注册</a>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="block w-full py-4 btn-primary text-white font-bold rounded-xl text-xs uppercase tracking-widest shadow-xl">点击专属链接 立即注册</a>
+                            <div class="bg-zinc-50 rounded-xl p-4 text-left">
+                                <p class="text-[9px] text-zinc-600 font-bold uppercase tracking-wider mb-2 text-center">注册即享特权</p>
+                                <div class="space-y-2 text-[10px] text-zinc-500">
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>M144 环境修复补丁</span></div>
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>1688 自动化实战 Skill</span></div>
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>Claude 4.6 免费权限</span></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="glass-ui p-8 rounded-[2rem] text-center border-white/10 text-left">
-                        <div class="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4 text-center">Accio 1000 计划进度</div>
-                        <div class="text-5xl font-black text-white italic tracking-tighter mb-4 text-center">2.1%</div>
+                    <div class="glass-ui p-8 rounded-[2rem] text-center border-white/10 mt-8">
+                        <div class="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4">Accio 1000 计划进度</div>
+                        <div class="text-5xl font-black text-white italic tracking-tighter mb-4">2.1%</div>
                         <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden shadow-inner"><div class="bg-brand-orange h-full w-[2.1%] shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div></div>
-                        <p class="text-[9px] text-zinc-500 mt-4 font-black uppercase tracking-wider leading-relaxed text-center italic">目标：90 天助力 1,000 位卖家实现全自动运营</p>
+                        <p class="text-[9px] text-zinc-500 mt-4 font-bold uppercase tracking-wider leading-relaxed">目标：90 天助力 1,000 位卖家实现全自动运营</p>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="py-24 px-6 border-t border-white/5 bg-[#050505] text-center text-left">
-        <p class="text-[10px] text-zinc-600 font-black uppercase tracking-[0.3em] italic text-center">© 2026 Accio Pioneer | 装机进度: 2.1% (21/1000)</p>
+    <footer class="py-24 px-6 border-t border-white/5 bg-[#050505] text-center">
+        <p class="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.3em]">© 2026 Accio Pioneer | 装机进度: 2.1% (21/1000)</p>
     </footer>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-bar rounded-full p-4 flex items-center justify-between shadow-2xl md:hidden">
+        <div class="pl-5 text-left"><p class="text-white text-[10px] font-black tracking-tight">邀请码: IC721157098311</p><p class="text-[8px] text-zinc-500 uppercase font-bold">送 Claude 4.6 权限</p></div>
+        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-8 py-2.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest shadow-lg">立即注册</a>
+    </div>
 
     <script>setTimeout(()=>{document.getElementById('loader')?.classList.add('hidden')}, 300);</script>
 </body>
