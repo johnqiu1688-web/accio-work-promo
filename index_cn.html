@@ -29,12 +29,14 @@
         .sticky-card { position: sticky; top: 100px; }
         .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); display: inline-block; text-align: center; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.5); filter: brightness(1.1); }
-        .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249, 115, 22, 0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
+        .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249,115,22,0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
         .playbook-card { border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); transition: all 0.3s; }
         .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249,115,22,0.2); }
         .mobile-bar { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 380px; z-index: 100; background: rgba(17,17,18,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
         #loader { position: fixed; inset: 0; background: #0a0a0b; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s; }
         #loader.hidden { opacity: 0; pointer-events: none; }
+        @keyframes scroll { 0% { transform: translateY(0); } 100% { transform: translateY(-120px); } }
+        .animate-scroll { animation: scroll 15s linear infinite; }
     </style>
 </head>
 <body class="grid-bg min-h-screen">
@@ -204,7 +206,7 @@
                     <div class="bg-white rounded-[2.5rem] p-10 text-center shadow-2xl">
                         <!-- FIXED QR: Clean white background, no margin distortions -->
                         <div class="w-full bg-white rounded-[2rem] mb-8 overflow-hidden p-2 border-4 border-dashed border-zinc-100">
-                            <img src="https://sc02.alicdn.com/kf/Af8abc7bbb705480e89088f5766043977f.png" alt="专属注册二维码" class="w-full aspect-square object-contain">
+                            <img src="https://sc01.alicdn.com/kf/Hee84a47456724bf9aff148b7402a3d06y.png" alt="专属注册二维码" class="w-full aspect-square object-contain">
                         </div>
                         <h4 class="text-black font-black text-2xl mb-2 tracking-tight uppercase">扫码注册先锋团</h4>
                         <p class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-8 italic">助力卖家 拥抱 AI 自动化</p>
@@ -220,11 +222,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="glass-ui p-8 rounded-[2rem] text-center border-white/10">
-                        <div class="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-4">Accio 1000 计划进度</div>
-                        <div class="text-5xl font-black text-white italic tracking-tighter mb-4">2.1%</div>
-                        <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden shadow-inner"><div class="bg-brand-orange h-full w-[2.1%] shadow-[0_0_15px_rgba(249,115,22,0.5)]"></div></div>
-                        <p class="text-[9px] text-zinc-500 mt-4 font-bold uppercase tracking-wider leading-relaxed">目标：90 天助力 1,000 位卖家实现全自动运营</p>
+                    <div class="glass-ui p-8 rounded-[2rem] text-center border-white/10 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange to-transparent opacity-30 animate-pulse"></div>
+                        <div class="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-6">🚀 实时装机动态</div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-zinc-400 text-xs">您</span>
+                                <span class="text-zinc-600 text-lg font-black">→</span>
+                                <span class="text-brand-orange text-4xl font-black italic" id="user-count">112</span>
+                            </div>
+                            <div class="text-white text-sm font-black tracking-tight">
+                                位创业者通过本站<br>开启了 <span class="text-brand-orange italic">OPC 之旅</span>
+                            </div>
+                        </div>
+                        <!-- 滚动弹幕 -->
+                        <div class="mt-6 pt-4 border-t border-white/5">
+                            <div class="overflow-hidden h-6 relative">
+                                <div class="absolute w-full text-xs text-zinc-500 font-bold animate-scroll" id="recent-joins">
+                                    <div class="py-1">🟢 深圳 张** 刚刚加入了 OPC 计划</div>
+                                    <div class="py-1">🟢 义乌 李** 开始了 1688 自动化选品</div>
+                                    <div class="py-1">🟢 广州 王** 领取了 M144 修复补丁</div>
+                                    <div class="py-1">🟢 杭州 陈** 激活了 Claude 4.6 权限</div>
+                                    <div class="py-1">🟢 上海 赵** 完成了 Shopify 首单同步</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden shadow-inner mt-4">
+                            <div class="bg-brand-orange h-full w-[11.2%] shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-[9px] text-zinc-500 mt-3 font-bold uppercase tracking-wider">目标：90 天助力 1,000 位卖家实现全自动运营</p>
                     </div>
                 </div>
             </div>
