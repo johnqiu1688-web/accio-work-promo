@@ -1,82 +1,77 @@
- <!-- Sync -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accio Pioneer | Live Digest: Accio Work & Global AI News</title>
-    <script src="https://cdn.tailwindcss.com" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <title>Accio Pioneer | Global AI Commerce Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { brand: { orange: '#f97316', dark: '#0a0a0b' } } } }
+        }
+    </script>
     <style>
-        body { background-color: #050505; color: #94a3b8; font-family: -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-        .content-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); padding: 2.5rem; border-radius: 2rem; }
-        .news-item { border-left: 2px solid rgba(249, 115, 22, 0.3); padding-left: 20px; margin-bottom: 32px; transition: all 0.3s; text-align: left; }
-        .news-item:hover { border-left-color: #f97316; background: rgba(255,255,255,0.02); }
+        body { background-color: #0a0a0b; color: #e4e4e7; font-family: -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+        .glass-ui { background: rgba(17, 17, 18, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); }
+        .news-card { border-left: 2px solid rgba(249, 115, 22, 0.3); padding-left: 20px; margin-bottom: 32px; transition: all 0.3s; text-align: left; }
+        .news-card:hover { border-left-color: #f97316; background: rgba(255,255,255,0.02); }
         .category-tag { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; color: #f97316; margin-bottom: 8px; display: block; }
     </style>
 </head>
-<body class="p-8 md:p-16">
-    <div class="max-w-5xl mx-auto">
-        <a href="index.html" class="inline-flex items-center text-slate-600 hover:text-white mb-12 transition text-sm font-bold uppercase tracking-widest">
+<body class="py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="inline-flex items-center text-zinc-500 hover:text-white mb-12 transition text-sm font-bold">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
             Back to Hub
         </a>
-        
-        <div class="content-card">
-            <h1 class="text-4xl font-black text-white mb-4">Live Digest</h1>
-            <p class="text-slate-500 text-sm mb-12 uppercase tracking-widest font-bold">Accio Work Dynamics & Global AI Insights (2026-04-14) | Progress: 11.8% (118/1000)</p>
-
-            <div class="space-y-16">
-                <!-- Accio Work Section -->
-                <section>
-                    <h2 class="text-xl font-black text-white mb-8 flex items-center">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                        Accio Work Ecosystem
-                    </h2>
-                    <div class="news-item">
-                        <span class="category-tag">Global Launch</span>
-                        <h3 class="text-white font-bold text-lg mb-2">ReutersTech: Alibaba launches Zero-code AI agents for sourcing</h3>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">Report on Accio Work as a zero-code platform where AI agents handle sourcing, negotiations, and compliance globally.</p>
-                        <a href="https://twitter.com/ReutersTech/status/2036113303626265084" target="_blank" class="text-orange-500 text-xs font-bold underline">View Details &rarr;</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="category-tag">Performance</span>
-                        <h3 class="text-white font-bold text-lg mb-2">Build Your Digital Employee Team in 2 Minutes</h3>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">Official tutorial on assembling a 24/7 AI task force for global trade automation.</p>
-                        <a href="https://www.bilibili.com/video/BV1WTDWBYELy/" target="_blank" class="text-orange-500 text-xs font-bold underline">Watch Video &rarr;</a>
-                    </div>
-                </section>
-
-                <hr class="border-white/5">
-
-                <!-- Global AI Section -->
-                <section>
-                    <h2 class="text-xl font-black text-white mb-8 flex items-center">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                        Global AI Industry Trends
-                    </h2>
-                    <div class="news-item">
-                        <span class="category-tag">OpenAI / GPT</span>
-                        <h3 class="text-white font-bold text-lg mb-2">GPT-5.4 with Agentic Workflow Integrated</h3>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">Native support for autonomous task decomposition and execution, blurring the line between human staff and agents.</p>
-                        <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="text-orange-500 text-xs font-bold underline">Release Notes &rarr;</a>
-                    </div>
-                    <div class="news-item">
-                        <span class="category-tag">Claude / Anthropic</span>
-                        <h3 class="text-white font-bold text-lg mb-2">Claude Mythos Debuts: SWE-bench Record Holder (93.9%)</h3>
-                        <p class="text-sm text-slate-400 mb-4 leading-relaxed">Superior reasoning and coding capabilities enable more complex automation for sellers.</p>
-                        <a href="https://lumichats.com/blog/claude-mythos-anthropic-most-powerful-ai-model-april-2026-what-you-need-to-know" target="_blank" class="text-orange-500 text-xs font-bold underline">Full Story &rarr;</a>
-                    </div>
-                </section>
+        <div class="glass-ui p-10 md:p-16 rounded-[3rem]">
+            <h1 class="text-4xl font-black text-white mb-4 text-left">Pioneer Daily Digest</h1>
+            <div class="flex items-center justify-between mb-12">
+                <p class="text-zinc-500 text-sm uppercase tracking-widest font-bold text-left">Accio Updates & Global AI Commerce Intelligence (April 14, 2026)</p>
+                <span class="bg-emerald-500/20 text-emerald-500 text-[10px] font-black px-3 py-1 rounded-full animate-pulse border border-emerald-500/30">LIVE UPDATES</span>
             </div>
 
-            <div class="mt-20 p-10 bg-white rounded-[2.5rem] text-center text-black shadow-2xl shadow-orange-600/20">
-                <img src="https://sc01.alicdn.com/kf/Hee84a47456724bf9aff148b7402a3d06y.png" alt="QR" class="w-48 h-48 mx-auto mb-6">
-                <h3 class="text-2xl font-black mb-2 uppercase">Scale Your AI Team Today</h3>
-                <p class="text-slate-500 text-sm font-bold mb-8 italic">Referral Code: IC721157098311 | Includes M144 Patch</p>
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="bg-orange-600 text-white px-12 py-4 rounded-full font-bold inline-block shadow-lg uppercase tracking-widest text-xs">Register with Referral Link</a>
+            <div class="space-y-16">
+                <!-- Apr 14 Update -->
+                <section class="mb-16">
+                    <h2 class="text-xl font-black text-white mb-8 flex items-center">
+                        <span class="w-2.5 h-2.5 bg-brand-orange rounded-full mr-3 shadow-[0_0_10px_#f97316]"></span>
+                        April 14: Agentic Commerce Revolution & AI Sourcing Blitz
+                    </h2>
+                    <div class="news-card border-brand-orange/40 bg-brand-orange/[0.02]">
+                        <span class="category-tag text-brand-orange">TRENDS</span>
+                        <h3 class="text-white font-bold text-lg mb-2">Agentic Commerce 2026: Why Your Website is Invisible to AI Buyers</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">With the rise of Google UCP, AI agents are now the primary consumers. Accio Work ensures your Shopify store is agent-ready, bridging the gap between human eyes and autonomous buyers.</p>
+                        <a href="content_pool/en/2026-04-14/agentic_commerce_2026.md" class="text-brand-orange text-xs font-bold underline italic">Read Deep Dive &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">EFFICIENCY</span>
+                        <h3 class="text-white font-bold text-lg mb-2">The Death of the Middleman: How AI Sourcing is Scaling 1688 Stores to 8 Figures</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">Human sourcing agents are becoming a bottleneck. Accio’s AI sourcing engine handles 1688 negotiations and QC in seconds, allowing you to scale with zero human friction.</p>
+                        <a href="content_pool/en/2026-04-14/ai_sourcing_revolution.md" class="text-brand-orange text-xs font-bold underline italic">Read Deep Dive &rarr;</a>
+                    </div>
+                    <div class="news-card">
+                        <span class="category-tag">DISCOVERY</span>
+                        <h3 class="text-white font-bold text-lg mb-2">Beyond Search: Navigating the 'Zero-Click' AI Discovery Revolution</h3>
+                        <p class="text-sm text-zinc-400 mb-4 leading-relaxed">SEO is dead. In the zero-click era, Accio optimizes your brand's presence in the AI's "final answer," ensuring you appear in Perplexity and GPT-S summaries.</p>
+                        <a href="content_pool/en/2026-04-14/zero_click_seo_discovery.md" class="text-brand-orange text-xs font-bold underline italic">Read Deep Dive &rarr;</a>
+                    </div>
+                </section>
+                
+                <hr class="border-white/5 my-12">
+            </div>
+            
+            <div class="mt-20 p-10 bg-white rounded-[2.5rem] text-center text-black">
+                <h3 class="text-2xl font-black mb-2">Unlock Your AI Productivity</h3>
+                <p class="text-zinc-500 text-sm font-bold mb-8">Invitation Code: IC721157098311 | One-stop AI Agentic Commerce</p>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="bg-orange-600 text-white px-12 py-4 rounded-full font-bold inline-block shadow-lg">Join Accio Now</a>
             </div>
         </div>
     </div>
+    
+    <footer class="py-16 text-center border-t border-white/5 mt-20">
+        <p class="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.3em]">© 2026 Accio Pioneer | Progress: 11.8% (118/1000)</p>
+    </footer>
 </body>
 </html>
