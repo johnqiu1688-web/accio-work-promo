@@ -61,7 +61,7 @@
                     <span class="status-badge bg-green-500/10 text-green-500">已修复 / FIXED</span>
                     <span class="text-zinc-600 text-[10px] font-bold uppercase tracking-widest">Update: 2026-04-12</span>
                 </div>
-                <h2 class="text-2xl font-bold text-white mb-4">Chrome M144: ERR_CONNECTION_REFUSED 采集报错解决方案</h2>
+                <h2 class="text-2xl font-bold text-white mb-4">Chrome M144: `ERR_CONNECTION_REFUSED` 采集报错解决方案</h2>
                 <div class="prose prose-invert max-w-none text-zinc-400 space-y-4">
                     <p>在 Chrome 144.x 版本更新后，Google 强化了对 Manifest V3 的强制执行以及 V8 引擎的沙箱限制，导致大量传统跨域采集插件失效。报错表现为 1688 或第三方 API 返回连接重置。</p>
                     
@@ -89,7 +89,7 @@
                 </div>
                 <h2 class="text-2xl font-bold text-white mb-4">1688 反爬机制升级：如何避免验证码死循环？</h2>
                 <div class="prose prose-invert max-w-none text-zinc-400 space-y-4">
-                    <p>1688 近期升级了基于行为轨迹的 UA (User Agent) 校验。如果你的并发请求过快或指纹不连贯，会触发滑块验证码死循环。目前的有效策略是模拟真实用户的“预加载”行为。</p>
+                    <p>1688 近期升级了基于行为轨迹要 UA (User Agent) 校验。如果你的并发请求过快或指纹不连贯，会触发滑块验证码死循环。目前的有效策略是模拟真实用户的“预加载”行为。</p>
                     <p>● **方案提示**：在发起批量采集前，先通过 Agent 自动进行一次“模拟搜索”并停留 2 秒，建立有效的 Cookie Session。</p>
                 </div>
             </section>
