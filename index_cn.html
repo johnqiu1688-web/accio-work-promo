@@ -1,225 +1,427 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accio Pioneer | 自研 Skills 实验室 (Skills Lab)</title>
+    <title>Accio Pioneer | 跨境卖家的 AI 实战增长中心 - 价值内容驱动版</title>
+    <meta name="description" content="专业 Accio Work AI 智能体社区。提供 1688 自动化选品案例、M144 报错修复补丁及针对不同角色（运营/采购/销售）的实战指南。">
     
-    <style>
-        html, body {
-            background-color: #050505 !important;
-            color: #d4d4d8 !important;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-        }
-        .grid-bg { 
-            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
-                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); 
-            background-size: 40px 40px; 
-        }
-        .hero-glow { 
-            background: radial-gradient(circle at 50% -20%, rgba(249, 115, 22, 0.15) 0%, transparent 50%); 
-        }
-    </style>
-
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/tailwindcss@3.4.1/dist/tailwindcss.min.js" onerror="this.remove()"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { brand: { orange: '#f97316', dark: '#050505', card: '#0f0f10' } }
+                    colors: { brand: { orange: '#f97316', dark: '#0a0a0b', card: '#111112', border: '#1e1e20' } }
                 }
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .glass-ui { 
-                background: rgba(15, 15, 16, 0.8); 
-                backdrop-filter: blur(20px); 
-                border: 1px solid rgba(255, 255, 255, 0.06); 
-            }
-            .btn-primary { 
-                background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); 
-                transition: all 0.3s; 
-                box-shadow: 0 4px 15px rgba(249,115,22,0.3); 
-            }
-            .skill-card { 
-                background: rgba(255,255,255,0.02); 
-                border: 1px solid rgba(255,255,255,0.05); 
-                border-radius: 20px; 
-                padding: 32px; 
-                transition: all 0.3s;
-            }
-            .skill-card:hover {
-                border-color: rgba(249,115,22,0.3);
-                transform: translateY(-4px);
-            }
-        }
+
+    <style>
+        body { background-color: #0a0a0b; color: #e4e4e7; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+        .grid-bg { background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+        .glass-ui { background: rgba(17, 17, 18, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.06); transition: all 0.4s; }
+        .glass-ui:hover { border-color: rgba(249, 115, 22, 0.3); background: rgba(20, 20, 22, 0.9); transform: translateY(-2px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .section-header { border-left: 5px solid #f97316; padding-left: 1.5rem; margin-bottom: 2.5rem; font-weight: 900; color: #fff; font-size: 1.75rem; letter-spacing: -0.02em; }
+        .sticky-card { position: sticky; top: 100px; }
+        .btn-primary { background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); transition: all 0.3s; box-shadow: 0 4px 15px rgba(249,115,22,0.3); display: inline-block; text-align: center; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(249,115,22,0.5); filter: brightness(1.1); }
+        .hero-gradient { background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(249,115,22,0.12) 0%, transparent 70%), radial-gradient(ellipse 60% 50% at 80% 40%, rgba(59,130,246,0.05) 0%, transparent 60%); }
+        .playbook-card { border: 1px solid rgba(255,255,255,0.05); background: rgba(255,255,255,0.02); transition: all 0.3s; }
+        .playbook-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(249,115,22,0.2); }
+        .mobile-bar { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); width: calc(100% - 48px); max-width: 380px; z-index: 100; background: rgba(17,17,18,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); }
+        #loader { position: fixed; inset: 0; background: #0a0a0b; z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s; }
+        #loader.hidden { opacity: 0; pointer-events: none; }
+        @keyframes scroll { 0% { transform: translateY(0); } 100% { transform: translateY(-120px); } }
+        .animate-scroll { animation: scroll 15s linear infinite; }
     </style>
 </head>
-<body class="grid-bg hero-glow min-h-screen">
-    <div class="max-w-5xl mx-auto px-6 py-12 lg:py-24">
-        
-        <!-- Breadcrumb -->
-        <nav class="mb-12 text-left">
-            <a href="index_cn.html" class="text-zinc-500 hover:text-white transition text-xs font-bold uppercase tracking-widest flex items-center !no-underline">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-                返回主站
-            </a>
-        </nav>
+<body class="grid-bg min-h-screen">
+    <div id="loader"><span style="color:#f97316;font-weight:bold;letter-spacing:2px;">ACCIO PIONEER</span></div>
 
-        <!-- Header -->
-        <header class="mb-24 text-left">
-            <div class="flex items-center space-x-4 mb-8">
-                <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full">
-                    <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest text-left text-orange-500">先锋团自研专区</span>
+    <!-- Nav -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 border-b border-white/5 bg-black/70 backdrop-blur-xl">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center text-zinc-400">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 bg-brand-orange rounded-xl flex items-center justify-center shadow-lg" style="box-shadow:0 0 15px rgba(249,115,22,0.4);">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
                 </div>
-                <a href="troubleshooting.html" class="text-[10px] font-black text-zinc-500 uppercase tracking-widest hover:text-white transition">补丁与故障修复中心 &rarr;</a>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-white uppercase">Accio <span class="text-brand-orange italic">Pioneer</span></span>
+                </div>
             </div>
-            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.95] text-left">
-                自研 <span class="text-brand-orange">Skills</span> 实验室
-            </h1>
-            <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed text-left">
-                这里存放的是我们基于真实跨境场景（独立站、B2B 开发、营销引流）自研的 **“智能执行指令集”**。将 AI 从聊天助手升级为业务合伙人。
-            </p>
-        </header>
-
-        <!-- Skills Grid -->
-        <div class="space-y-16">
-            
-            <!-- Skill 1: B2B Lead Intelligence -->
-            <div class="skill-card text-left">
-                <div class="flex items-center justify-between mb-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-16 h-16 bg-blue-500/20 text-blue-500 rounded-2xl flex items-center justify-center">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-white">B2B 获客情报专家 2.0</h3>
-                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-blue-500">Lead Intelligence Skill</p>
-                        </div>
-                    </div>
-                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v2.0.4</span>
-                </div>
-                
-                <p class="text-zinc-400 mb-8 leading-relaxed">不再只是名单，而是商机。专门用于寻找高增长海外买家（DTC 品牌、电商大卖家），并进行深度的背景调查。为用户生成包含官网、CEO 领英、联系方式及**高转化破冰钩子**的“拿来即用”获客看板。</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 深度痛点探测 (4.14 更新)</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">实时监测 2026 Chrome M144 更新导致的供应链端自动化崩溃点。已完成对 **Pura (香氛)** 与 **Eight Sleep (睡眠科技)** 的专属审计，识别出其在订阅管理与重型物流审计中的 AI 增益点。</p>
-                    </div>
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 全方位情报看板</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">已锁定包含 Pura、Joovv 在内的 10 家独角兽品牌 CEO 领英及背景数据，内置“M144 修复”营销钩子。</p>
-                    </div>
-                </div>
-                
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
-                    立即获取该 Skill
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
-                </a>
+            <div class="hidden xl:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.15em]">
+                <a href="#welfare" class="hover:text-white transition text-brand-orange font-bold">福利中心</a>
+                <a href="skills_lab.html" class="hover:text-white transition text-blue-500 font-bold">自研 Skills</a>
+                <a href="troubleshooting.html" class="hover:text-white transition text-zinc-300 font-bold">故障修复/补丁</a>
+                <a href="#playbook" class="hover:text-white transition">实战方案库</a>
+                <a href="#news" class="hover:text-white transition">功能动态</a>
+                <a href="#install" class="hover:text-white transition">安装说明</a>
             </div>
-
-            <!-- Skill 2: Viral Content Generator -->
-            <div class="skill-card text-left">
-                <div class="flex items-center justify-between mb-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-16 h-16 bg-purple-500/20 text-purple-500 rounded-2xl flex items-center justify-center">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-white">爆款内容生成引擎</h3>
-                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-purple-500">Viral Content Engine</p>
-                        </div>
-                    </div>
-                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v1.5.0</span>
-                </div>
-                
-                <p class="text-zinc-400 mb-8 leading-relaxed">独立站运营商必备。通过深度学习国内外（知乎、YouTube、Reddit 等）最高热度的跨境文章，自动拆解流量逻辑，生成具备高转化力的原创深度内容。</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 9步爆款工作流</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">涵盖搜热、架构拆解、视觉素材匹配、真实性核实到流量监测的全链路内容管理。</p>
-                    </div>
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 多语言全量产出</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">每日自动生成 3 中 3 英深度文章，原创度 >90%，内置平台分发策略建议。</p>
-                    </div>
-                </div>
-
-                <!-- Case Study Placeholder 2 -->
-                <div class="mb-10 bg-zinc-950 rounded-3xl p-8 border border-white/5 relative group overflow-hidden">
-                    <div class="flex items-center justify-between mb-6">
-                        <h4 class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em]">内容爆破实测 / Traffic Impact</h4>
-                        <span class="text-brand-orange text-[10px] font-bold italic">Viral Content Result</span>
-                    </div>
-                    <div class="aspect-video bg-zinc-900 rounded-xl flex items-center justify-center border border-dashed border-zinc-800 group-hover:border-brand-orange/30 transition-all">
-                        <div class="text-center">
-                            <p class="text-white text-xs font-bold uppercase mb-2 italic">实测：2026 智能体商务元年 (98% 电商网站不兼容 AI)</p>
-                            <p class="text-zinc-400 text-[9px] max-w-xs mx-auto">通过分析 Google UCP 协议，生成针对“AI 发现”时代的品牌 SEO 方案。Reddit 互动量提升 40%，带来 300+ 高质量 B2B 访客。</p>
-                        </div>
-                    </div>
-                    <p class="mt-4 text-[11px] text-zinc-600 font-medium">✨ 实例：为某宠物独立站生成的一篇“1688 货源深度评测”文章，在 Reddit 获得了 50+ Upvotes 并带来 300+ 独立访客。</p>
-                </div>
-                
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
-                    立即获取该 Skill
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
-                </a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-[10px] font-bold border border-white/10 px-3 py-1.5 rounded-lg hover:bg-white/5 transition">EN</a>
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary text-xs font-bold px-6 py-2.5 rounded-full text-white shadow-lg">立即注册</a>
             </div>
-
-            <!-- Skill 3: High-Conversion Site Architect -->
-            <div class="skill-card text-left">
-                <div class="flex items-center justify-between mb-8">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-16 h-16 bg-emerald-500/20 text-emerald-500 rounded-2xl flex items-center justify-center">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-black text-white">先锋建站架构师 (M-HCS) 3.0</h3>
-                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-emerald-500">Site Architect Skill</p>
-                        </div>
-                    </div>
-                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v3.0.1</span>
-                </div>
-                
-                <p class="text-zinc-400 mb-8 leading-relaxed">这不仅是一个 Skill，更是一套实战方法论。提炼自本站从 0 到 1 的建设全流程：包含域名选型策略、GitHub Pages 零成本部署、Apple 风格 UI 装修规范以及高转化文案编写模版。让你不仅拥有网站，更拥有一个自动获客的“增长中心”。</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 全链路建站路线图</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">涵盖域名申请、基础设施配置、文案钩子设计到 UI 质感装修的每一步实操细节。</p>
-                    </div>
-                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
-                        <h4 class="text-white font-bold mb-2">● 增长看板集成规范</h4>
-                        <p class="text-xs text-zinc-500 leading-relaxed">内置实时装机计数器代码与 ROI 计算器模版，通过社交证明 (Social Proof) 极大拉高转化。</p>
-                    </div>
-                </div>
-
-                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
-                    立即获取该 Skill
-                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
-                </a>
-            </div>
-
-            <!-- More Skills Coming Soon -->
-            <div class="p-12 border-2 border-dashed border-zinc-800 rounded-3xl text-center">
-                <p class="text-zinc-600 font-bold uppercase tracking-[0.2em] text-sm">更多自研 Skills 正在实测中：Shopify SEO、TikTok 暴力引流、全自动物流核算...</p>
-            </div>
-
         </div>
+    </nav>
 
-        <!-- Footer -->
-        <footer class="py-24 border-t border-white/5 text-center mt-32">
-            <p class="text-[10px] text-zinc-700 font-bold uppercase tracking-[0.4em]">© 2026 Accio Pioneer | 自研 Skills 实验室 | 装机进度: 11.8% (118/1000)</p>
-        </footer>
+    <main class="max-w-[1400px] mx-auto px-6 pt-32 pb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- LEFT COLUMN -->
+            <div class="lg:col-span-8 space-y-24">
+                
+                <!-- Hero Value -->
+                <section class="hero-gradient rounded-[2.5rem] p-12 md:p-16 border border-white/5 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-orange/5 blur-[100px] rounded-full -z-10"></div>
+                    <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight leading-[1.05]">
+                        打造您的<br><span class="text-brand-orange">“一人跨国公司”</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed font-medium mb-10">
+                        2026 智能体商务 (Agentic Commerce) 元年。我们不只是修 Bug，而是通过 <span class="text-white border-b-2 border-brand-orange">1688 自动化与工厂 DNA 审计</span>，帮您直接节省 10% 采购成本，实现真正的全自动运营。对比 Doba 等传统平台，Accio 提供更底层的物理隔离与 AI 决策能力。
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-10 py-4 text-sm font-bold rounded-full text-white">立即注册并装机</a>
+                        <div class="flex items-center space-x-2 text-zinc-500 text-xs font-medium">
+                            <svg class="w-4 h-4 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>内含 2026 M144 修复补丁</span>
+                        </div>
+                    </div>
+                </section>
 
+                <!-- 🛡️ 安全与安装 (Security & Install) -->
+                <section id="security-install" class="mb-24">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Security Card -->
+                        <div class="glass-ui p-10 rounded-[2.5rem] border-emerald-500/20">
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div class="w-12 h-12 bg-emerald-500/10 text-emerald-500 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-black text-white italic">100% 本地物理隔离沙箱</h3>
+                            </div>
+                            <p class="text-sm text-zinc-400 leading-relaxed mb-6">
+                                担心关联？担心数据泄露？Accio 采用 **本地沙箱架构**。
+                            </p>
+                            <ul class="space-y-3 text-xs text-zinc-500 font-bold uppercase tracking-wide">
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span> 0 数据云端上传：所有 1688 采集逻辑在本地运行</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span> 物理隔离：独立指纹环境，完美规避平台风控</li>
+                                <li class="flex items-center"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full mr-2"></span> 开源透明：支持技术审计，确保 100% 隐私安全</li>
+                            </ul>
+                        </div>
+                        <!-- Install Card -->
+                        <div class="glass-ui p-10 rounded-[2.5rem] border-blue-500/20">
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div class="w-12 h-12 bg-blue-500/10 text-blue-500 rounded-xl flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <h3 class="text-xl font-black text-white italic">30 秒极致安装指南</h3>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <span class="bg-blue-500/20 text-blue-500 text-[10px] font-black px-2 py-0.5 rounded border border-blue-500/30">STEP 01</span>
+                                    <p class="text-xs text-zinc-400 font-medium">注册 Accio 账号并下载桌面版安装包</p>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="bg-blue-500/20 text-blue-500 text-[10px] font-black px-2 py-0.5 rounded border border-blue-500/30">STEP 02</span>
+                                    <p class="text-xs text-zinc-400 font-medium">双击运行，点击 "M144 Fix" 智能修复按钮</p>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <span class="bg-blue-500/20 text-blue-500 text-[10px] font-black px-2 py-0.5 rounded border border-blue-500/30">STEP 03</span>
+                                    <p class="text-xs text-zinc-400 font-medium">重启浏览器，立刻恢复 1688 自动化选品</p>
+                                </div>
+                            </div>
+                            <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between">
+                                <span class="text-[9px] text-zinc-600 font-black uppercase tracking-widest italic">✨ 无需手动配置环境变量</span>
+                                <span class="text-blue-500 text-[9px] font-black animate-pulse">一键极速修复 &rarr;</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 🎁 福利中心 (Welfare Hub) -->
+                <section id="welfare">
+                    <h2 class="section-header">00. 🎁 Accio Work 专属福利中心</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Welfare 1 -->
+                        <div class="playbook-card p-8 rounded-[2rem] relative overflow-hidden group border-brand-orange/30">
+                            <div class="absolute top-4 right-4 bg-brand-orange text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">限时</div>
+                            <div class="text-4xl mb-6">🎬</div>
+                            <h4 class="text-white font-black text-lg mb-3">发视频领 PRO 版本</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed mb-6">在 B站/小红书/抖音发布 Accio Work 使用评测视频，带话题 #AccioWork #一人跨国公司，即可免费升级为 PRO 版本，解锁无限算力。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-brand-orange text-xs font-bold uppercase tracking-widest hover:underline">立即参与 &rarr;</a>
+                        </div>
+                        <!-- Welfare 2 -->
+                        <div class="playbook-card p-8 rounded-[2rem] relative overflow-hidden group border-green-500/30">
+                            <div class="absolute top-4 right-4 bg-green-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">免费</div>
+                            <div class="text-4xl mb-6">🧠</div>
+                            <h4 class="text-white font-black text-lg mb-3">免费 Claude 4.6 调用权</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed mb-6">通过先锋团专属链接注册，直接解锁 Claude 4.6 顶级商用模型调用权。省下每月 $20 订阅费，让 AI 帮你写文案、做分析。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-green-500 text-xs font-bold uppercase tracking-widest hover:underline">免费领取 &rarr;</a>
+                        </div>
+                        <!-- Welfare 3 -->
+                        <div class="playbook-card p-8 rounded-[2rem] relative overflow-hidden group border-blue-500/30">
+                            <div class="absolute top-4 right-4 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">必备</div>
+                            <div class="text-4xl mb-6">🔧</div>
+                            <h4 class="text-white font-black text-lg mb-3">M144 专属修复补丁</h4>
+                            <p class="text-zinc-400 text-xs leading-relaxed mb-6">Chrome M144 内核导致连接报错？先锋团独家修复补丁，一键解决"Connecting..."卡死问题，支持 M1/M2/M3 芯片。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-blue-500 text-xs font-bold uppercase tracking-widest hover:underline">扫码领取 &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NEW: Playbook Section (Categorized Value) -->
+                
+                <!-- 🛠️ 自研 Skills 实验室 (Skills Lab) -->
+                <section id="skills-lab" class="mb-32">
+                    <h2 class="section-header">01. 🛠️ 先锋团自研 Skills 实验室</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                        <!-- Skill 1 -->
+                        <div class="glass-ui p-10 rounded-[2.5rem] relative overflow-hidden group border-blue-500/20">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/5 blur-[50px] group-hover:bg-blue-500/10 transition"></div>
+                            <div class="w-14 h-14 bg-blue-500/10 text-blue-500 rounded-2xl flex items-center justify-center mb-8">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-white mb-4 italic">B2B 获客情报专家</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed mb-8">
+                                自动化探测目标客户业务现状，生成包含官网、CEO 领英及**高转化破冰钩子**的情报看板。
+                            </p>
+                            <a href="skills_lab.html" class="inline-flex items-center text-blue-500 font-bold text-xs uppercase tracking-widest hover:translate-x-2 transition">查看 Skill 详情</a>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div class="glass-ui p-10 rounded-[2.5rem] relative overflow-hidden group border-purple-500/20">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-purple-500/5 blur-[50px] group-hover:bg-purple-500/10 transition"></div>
+                            <div class="w-14 h-14 bg-purple-500/10 text-purple-500 rounded-2xl flex items-center justify-center mb-8">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                            </div>
+                            <h3 class="text-2xl font-black text-white mb-4 italic">爆款内容生成引擎</h3>
+                            <p class="text-sm text-zinc-400 leading-relaxed mb-8">
+                                自动拆解全网高热度跨境文章流量逻辑，每日生成 6 篇（3 中 3 英）高原创度深度内容。
+                            </p>
+                            <a href="skills_lab.html" class="inline-flex items-center text-purple-500 font-bold text-xs uppercase tracking-widest hover:translate-x-2 transition">查看 Skill 详情</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- 🎁 福利中心 (Welfare Hub) -->
+                <section id="welfare">
+                    <h2 class="section-header">00. 🎁 Accio Work 官方限时福利</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Welfare 1 -->
+                        <div class="highlight-card p-8 rounded-[2.5rem] relative overflow-hidden group">
+                            <div class="absolute top-4 right-4 bg-brand-orange text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">官方活动</div>
+                            <div class="text-4xl mb-6">🎬</div>
+                            <h4 class="text-white font-black text-xl mb-3">发视频领 PRO 会员</h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">在 B站/小红书/Instagram 发布 Accio Work 使用评测视频并带话题 <strong class="text-white">#VibeSellingChallenge</strong>，前 500 名参与者可免费领取 <strong class="text-white">1 个月 PRO 会员</strong>，解锁无限算力。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-brand-orange text-xs font-bold uppercase tracking-widest hover:underline">立即参与活动 &rarr;</a>
+                        </div>
+                        <!-- Welfare 2 -->
+                        <div class="highlight-card p-8 rounded-[2.5rem] relative overflow-hidden group border-green-500/20">
+                            <div class="absolute top-4 right-4 bg-green-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">免费试用</div>
+                            <div class="text-4xl mb-6">🧠</div>
+                            <h4 class="text-white font-black text-xl mb-3">2 周顶级模型免费用</h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">通过专属邀请码注册的新用户，可获得 <strong class="text-white">14 天无限次调用 Claude 4.6 与 GPT 5.4</strong> 的特权。无需每月 $20 订阅费，直接开启高阶 AI 选品。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-green-500 text-xs font-bold uppercase tracking-widest hover:underline">点击免费领取 &rarr;</a>
+                        </div>
+                        <!-- Welfare 3 -->
+                        <div class="highlight-card p-8 rounded-[2.5rem] relative overflow-hidden group border-blue-500/20">
+                            <div class="absolute top-4 right-4 bg-blue-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">积分大礼</div>
+                            <div class="text-4xl mb-6">💰</div>
+                            <h4 class="text-white font-black text-xl mb-3">注册即送 2000 积分</h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">使用先锋团专属码注册，立得 <strong class="text-white">2000 积分奖励</strong>。积分可用于驱动 Agent 执行全自动调研、供应商谈判及店铺搭建任务。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-blue-500 text-xs font-bold uppercase tracking-widest hover:underline">注册领取积分 &rarr;</a>
+                        </div>
+                        <!-- Welfare 4 -->
+                        <div class="highlight-card p-8 rounded-[2.5rem] relative overflow-hidden group border-purple-500/20">
+                            <div class="absolute top-4 right-4 bg-purple-600 text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-wider">创业基金</div>
+                            <div class="text-4xl mb-6">💸</div>
+                            <h4 class="text-white font-black text-xl mb-3">$10,000 创业基金挑战</h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed mb-6">参加 <strong class="text-white">#AccioMySideHustle</strong> 视频挑战赛，展示你如何利用 AI 智能体运营副业。获胜者最高可获得 <strong class="text-white">$10,000 创业奖金</strong> 支持。</p>
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="text-purple-500 text-xs font-bold uppercase tracking-widest hover:underline">查看挑战详情 &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="playbook">
+                    <h2 class="section-header">01. 实战方案库：为您的角色量身定制</h2>
+                    
+                    <!-- By Company Type -->
+                    <div class="mb-16">
+                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2">
+                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
+                            <span>按企业类型方案 (Business Types)</span>
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="playbook-card p-8 rounded-3xl group">
+                                <div class="text-3xl mb-6">🏆</div>
+                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-brand-orange transition">一人跨国公司 (OPC)</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-6">小白零基础如何通过 Accio 30 分钟完成调研、选品到开店？利用免费 Claude 4.6 替代高级运营。</p>
+                                <a href="opc_strategy.html" class="text-brand-orange text-xs font-bold uppercase tracking-widest hover:underline">查看实战软文 &rarr;</a>
+                            </div>
+                            <div class="playbook-card p-8 rounded-3xl group">
+                                <div class="text-3xl mb-6">🏢</div>
+                                <h4 class="text-white font-black text-xl mb-4 group-hover:text-blue-500 transition">传统转型企业</h4>
+                                <p class="text-zinc-400 text-sm leading-relaxed mb-6">如何利用物理沙箱管理 50+ 账号防止关联？大规模自动化铺货与 ERP 数据同步方案。</p>
+                                <a href="security_deepdive.html" class="text-blue-500 text-xs font-bold uppercase tracking-widest hover:underline">安全性深度解析 &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- By Role -->
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-8 flex items-center space-x-2">
+                            <span class="w-2 h-2 bg-brand-orange rounded-full"></span>
+                            <span>按职业角色方案 (User Roles)</span>
+                        </h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="playbook-card p-6 rounded-2xl">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><i class="fas fa-user-tie text-brand-orange"></i><span>运营主管</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">自动搜图匹配源头工厂，15秒完成翻译上架，SEO 文案自动化生成。</p>
+                                <a href="shopify_workflow.html" class="text-zinc-300 text-[10px] font-bold underline">观看视频教程</a>
+                            </div>
+                            <div class="playbook-card p-6 rounded-2xl">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><i class="fas fa-search-location text-green-500"></i><span>专业采购</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">使用“深度工厂过滤”Skill 自动剔除 1688 二手代理商，直连义乌源头。</p>
+                                <a href="sourcing_hacks.html" class="text-zinc-300 text-[10px] font-bold underline">获取找货脚本</a>
+                            </div>
+                            <div class="playbook-card p-6 rounded-2xl">
+                                <h5 class="text-white font-bold mb-3 flex items-center space-x-2"><i class="fas fa-chart-line text-blue-500"></i><span>海外销售</span></h5>
+                                <p class="text-[11px] text-zinc-500 leading-relaxed mb-4">利用 AI 智能体 24/7 回复邮件，分析海外小红书/TikTok 爆款趋势。</p>
+                                <a href="daily_digest.html" class="text-zinc-300 text-[10px] font-bold underline">查看每日情报</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 1. Latest Info -->
+                <section id="news">
+                    <h2 class="section-header">02. 最新动态与重磅功能</h2>
+                    <div class="glass-ui rounded-[2rem] overflow-hidden">
+                        <div class="relative overflow-hidden bg-zinc-900 h-48 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#111112] to-transparent"></div>
+                            <div class="absolute bottom-8 left-8 z-10 text-left">
+                                <span class="bg-brand-orange/20 text-brand-orange text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-[0.15em] border border-brand-orange/20">2026.04 更新</span>
+                                <h3 class="text-white text-2xl font-black mt-3 italic">v0.5.6-beta：芯片级性能飞跃</h3>
+                            </div>
+                            <svg class="w-24 h-24 text-zinc-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <div class="p-10">
+                            <p class="text-base leading-relaxed text-zinc-300 mb-10 text-left">
+                                Accio Work 已针对 M1/M2/M3 芯片完成深度调优，彻底解决了 Chrome M144 导致的延迟。<strong class="text-white">专属链接用户现可免费调用 Claude 4.6 模型</strong>。
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-brand-orange/10 rounded-lg flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-microchip"></i></div>
+                                    <div class="text-left"><h4 class="text-white font-bold text-sm mb-2">Claude 4.6 免费特权</h4><p class="text-[11px] text-zinc-400 leading-relaxed">顶级 SOTA 模型处理复杂的货源分析与润色。</p></div>
+                                </div>
+                                <div class="highlight-card p-6 rounded-xl flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-500"><i class="fas fa-fingerprint"></i></div>
+                                    <div class="text-left"><h4 class="text-white font-bold text-sm mb-2">硬件级沙箱 2.0</h4><p class="text-[11px] text-zinc-400 leading-relaxed">独立物理隔离，50+ 店铺零关联风险。</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Fast Install Guide -->
+                <section id="install">
+                    <h2 class="section-header">03. 快速安装指引 (含 M144 修复)</h2>
+                    <div class="glass-ui rounded-[2rem] p-10 md:p-12 highlight-card text-left">
+                        <div class="flex items-start space-x-6 mb-10">
+                            <div class="w-14 h-14 bg-brand-orange/20 rounded-2xl flex items-center justify-center flex-shrink-0 text-brand-orange"><i class="fas fa-wrench"></i></div>
+                            <div>
+                                <h4 class="text-white text-2xl font-black mb-2 uppercase">解决 "Connecting..." 报错</h4>
+                                <p class="text-sm text-zinc-400 leading-relaxed">使用本站提供的"2026 环境补丁包"即可 1 秒修复连接。</p>
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-brand-orange rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs">1</div><div><h5 class="text-white font-bold text-sm mb-1">注册与下载</h5><p class="text-xs text-zinc-500 leading-relaxed">通过 <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="text-brand-orange font-bold hover:underline">专属注册链接</a> 注册下载。</p></div></div>
+                            <div class="flex items-start space-x-5 bg-white/5 p-5 rounded-xl"><div class="w-8 h-8 bg-zinc-700 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-black text-xs border border-white/10">2</div><div><h5 class="text-white font-bold text-sm mb-1">获取 M144 补丁</h5><p class="text-xs text-zinc-500 leading-relaxed">扫码右侧海报加入先锋群，领取 <code>fix_m144</code> 修复包。</p></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. FAQ -->
+                <section id="faq">
+                    <h2 class="section-header">04. 常见问题解答 (FAQ)</h2>
+                    <div class="glass-ui rounded-[2rem] p-10 md:p-12 divide-y divide-white/5 text-left">
+                        <div class="pb-6 pt-6"><h4 class="text-white font-bold mb-2">Q: 为什么比传统 RPA 好用？</h4><p class="text-sm text-zinc-400 leading-relaxed">Accio Agent 会思考。遇到 1688 缺货，它会自动寻找替代方案，而非直接报错报错停。支持中文指令下达复杂任务。</p></div>
+                        <div class="pt-6"><h4 class="text-white font-bold mb-2">Q: 安全性如何保障？</h4><p class="text-sm text-zinc-400 leading-relaxed">硬件级沙箱隔离比浏览器插件更安全，能有效防止浏览器指纹关联，保护您的核心店铺资产。</p></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="lg:col-span-4">
+                <div class="sticky-card space-y-8">
+                    <div class="bg-white rounded-[2.5rem] p-10 text-center shadow-2xl">
+                        <!-- FIXED QR: Clean white background, no margin distortions -->
+                        <div class="w-full bg-white rounded-[2rem] mb-8 overflow-hidden p-2 border-4 border-dashed border-zinc-100">
+                            <img src="https://sc01.alicdn.com/kf/Hee84a47456724bf9aff148b7402a3d06y.png" alt="专属注册二维码" class="w-full aspect-square object-contain">
+                        </div>
+                        <h4 class="text-black font-black text-2xl mb-2 tracking-tight uppercase">扫码注册先锋团</h4>
+                        <p class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em] mb-8 italic">助力卖家 拥抱 AI 自动化</p>
+                        <div class="space-y-4">
+                            <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="block w-full py-4 btn-primary text-white font-bold rounded-xl text-xs uppercase tracking-widest shadow-xl">点击专属链接 立即注册</a>
+                            <div class="bg-zinc-50 rounded-xl p-4 text-left">
+                                <p class="text-[9px] text-zinc-600 font-bold uppercase tracking-wider mb-2 text-center">注册即享特权</p>
+                                <div class="space-y-2 text-[10px] text-zinc-500">
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>M144 环境修复补丁</span></div>
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>1688 自动化实战 Skill</span></div>
+                                    <div class="flex items-center space-x-2"><svg class="w-3 h-3 text-brand-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41z"/></svg><span>Claude 4.6 免费权限</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-ui p-8 rounded-[2rem] text-center border-white/10 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-brand-orange to-transparent opacity-30 animate-pulse"></div>
+                        <div class="text-brand-orange text-[9px] font-black uppercase tracking-[0.2em] mb-6">🚀 实时装机动态</div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-center space-x-2">
+                                <span class="text-zinc-400 text-xs">您</span>
+                                <span class="text-zinc-600 text-lg font-black">→</span>
+                                <span class="text-brand-orange text-4xl font-black italic" id="user-count">118</span>
+                            </div>
+                            <div class="text-white text-sm font-black tracking-tight">
+                                位创业者通过本站<br>开启了 <span class="text-brand-orange italic">OPC 之旅</span>
+                            </div>
+                        </div>
+                        <!-- 滚动弹幕 -->
+                        <div class="mt-6 pt-4 border-t border-white/5">
+                            <div class="overflow-hidden h-6 relative">
+                                <div class="absolute w-full text-xs text-zinc-500 font-bold animate-scroll" id="recent-joins">
+                                    <div class="py-1">✨ 成功收录至 FutureTools (4月13日)</div>
+                                    <div class="py-1">🟢 深圳 张** 刚刚加入了 OPC 计划</div>
+                                    <div class="py-1">🟢 义乌 李** 开始了 1688 自动化选品</div>
+                                    <div class="py-1">🟢 广州 王** 领取了 M144 修复补丁</div>
+                                    <div class="py-1">🟢 杭州 陈** 激活了 Claude 4.6 权限</div>
+                                    <div class="py-1">🟢 上海 赵** 完成了 Shopify 首单同步</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden shadow-inner mt-4">
+                            <div class="bg-brand-orange h-full w-[11.8%] shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-all duration-1000"></div>
+                        </div>
+                        <p class="text-[9px] text-zinc-500 mt-3 font-bold uppercase tracking-wider">目标：90 天助力 1,000 位卖家实现全自动运营</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-24 px-6 border-t border-white/5 bg-[#050505] text-center">
+        <p class="text-[10px] text-zinc-600 font-bold uppercase tracking-[0.3em]">© 2026 Accio Pioneer | 装机进度: 11.8% (118/1000)</p>
+    </footer>
+
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-bar rounded-full p-4 flex items-center justify-between shadow-2xl md:hidden">
+        <div class="pl-5 text-left"><p class="text-white text-[10px] font-black tracking-tight">邀请码: IC721157098311</p><p class="text-[8px] text-zinc-500 uppercase font-bold">送 Claude 4.6 权限</p></div>
+        <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" target="_blank" class="btn-primary px-8 py-2.5 rounded-full text-[10px] font-bold text-white uppercase tracking-widest shadow-lg">立即注册</a>
     </div>
+
+    <script>setTimeout(()=>{document.getElementById('loader')?.classList.add('hidden')}, 300);</script>
 </body>
 </html>
