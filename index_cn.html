@@ -1,1 +1,225 @@
-<!-- test -->\n<!DOCTYPE html>...
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accio Pioneer | 自研 Skills 实验室 (Skills Lab)</title>
+    
+    <style>
+        html, body {
+            background-color: #050505 !important;
+            color: #d4d4d8 !important;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grid-bg { 
+            background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); 
+            background-size: 40px 40px; 
+        }
+        .hero-glow { 
+            background: radial-gradient(circle at 50% -20%, rgba(249, 115, 22, 0.15) 0%, transparent 50%); 
+        }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: { brand: { orange: '#f97316', dark: '#050505', card: '#0f0f10' } }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass-ui { 
+                background: rgba(15, 15, 16, 0.8); 
+                backdrop-filter: blur(20px); 
+                border: 1px solid rgba(255, 255, 255, 0.06); 
+            }
+            .btn-primary { 
+                background: linear-gradient(180deg, #f97316 0%, #ea580c 100%); 
+                transition: all 0.3s; 
+                box-shadow: 0 4px 15px rgba(249,115,22,0.3); 
+            }
+            .skill-card { 
+                background: rgba(255,255,255,0.02); 
+                border: 1px solid rgba(255,255,255,0.05); 
+                border-radius: 20px; 
+                padding: 32px; 
+                transition: all 0.3s;
+            }
+            .skill-card:hover {
+                border-color: rgba(249,115,22,0.3);
+                transform: translateY(-4px);
+            }
+        }
+    </style>
+</head>
+<body class="grid-bg hero-glow min-h-screen">
+    <div class="max-w-5xl mx-auto px-6 py-12 lg:py-24">
+        
+        <!-- Breadcrumb -->
+        <nav class="mb-12 text-left">
+            <a href="index_cn.html" class="text-zinc-500 hover:text-white transition text-xs font-bold uppercase tracking-widest flex items-center !no-underline">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                返回主站
+            </a>
+        </nav>
+
+        <!-- Header -->
+        <header class="mb-24 text-left">
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="inline-flex items-center space-x-2 bg-brand-orange/10 border border-brand-orange/20 px-4 py-1.5 rounded-full">
+                    <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest text-left text-orange-500">先锋团自研专区</span>
+                </div>
+                <a href="troubleshooting.html" class="text-[10px] font-black text-zinc-500 uppercase tracking-widest hover:text-white transition">补丁与故障修复中心 &rarr;</a>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.95] text-left">
+                自研 <span class="text-brand-orange">Skills</span> 实验室
+            </h1>
+            <p class="text-xl text-zinc-400 max-w-2xl leading-relaxed text-left">
+                这里存放的是我们基于真实跨境场景（独立站、B2B 开发、营销引流）自研的 **“智能执行指令集”**。将 AI 从聊天助手升级为业务合伙人。
+            </p>
+        </header>
+
+        <!-- Skills Grid -->
+        <div class="space-y-16">
+            
+            <!-- Skill 1: B2B Lead Intelligence -->
+            <div class="skill-card text-left">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-blue-500/20 text-blue-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">B2B 获客情报专家 2.0</h3>
+                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-blue-500">Lead Intelligence Skill</p>
+                        </div>
+                    </div>
+                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v2.0.4</span>
+                </div>
+                
+                <p class="text-zinc-400 mb-8 leading-relaxed">不再只是名单，而是商机。专门用于寻找高增长海外买家（DTC 品牌、电商大卖家），并进行深度的背景调查。为用户生成包含官网、CEO 领英、联系方式及**高转化破冰钩子**的“拿来即用”获客看板。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 深度痛点探测 (4.14 更新)</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">实时监测 2026 Chrome M144 更新导致的供应链端自动化崩溃点。已完成对 **Pura (香氛)** 与 **Eight Sleep (睡眠科技)** 的专属审计，识别出其在订阅管理与重型物流审计中的 AI 增益点。</p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 全方位情报看板</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">已锁定包含 Pura、Joovv 在内的 10 家独角兽品牌 CEO 领英及背景数据，内置“M144 修复”营销钩子。</p>
+                    </div>
+                </div>
+                
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
+                    立即获取该 Skill
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Skill 2: Viral Content Generator -->
+            <div class="skill-card text-left">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-purple-500/20 text-purple-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">爆款内容生成引擎</h3>
+                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-purple-500">Viral Content Engine</p>
+                        </div>
+                    </div>
+                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v1.5.0</span>
+                </div>
+                
+                <p class="text-zinc-400 mb-8 leading-relaxed">独立站运营商必备。通过深度学习国内外（知乎、YouTube、Reddit 等）最高热度的跨境文章，自动拆解流量逻辑，生成具备高转化力的原创深度内容。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 9步爆款工作流</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">涵盖搜热、架构拆解、视觉素材匹配、真实性核实到流量监测的全链路内容管理。</p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 多语言全量产出</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">每日自动生成 3 中 3 英深度文章，原创度 >90%，内置平台分发策略建议。</p>
+                    </div>
+                </div>
+
+                <!-- Case Study Placeholder 2 -->
+                <div class="mb-10 bg-zinc-950 rounded-3xl p-8 border border-white/5 relative group overflow-hidden">
+                    <div class="flex items-center justify-between mb-6">
+                        <h4 class="text-zinc-500 text-[10px] font-black uppercase tracking-[0.2em]">内容爆破实测 / Traffic Impact</h4>
+                        <span class="text-brand-orange text-[10px] font-bold italic">Viral Content Result</span>
+                    </div>
+                    <div class="aspect-video bg-zinc-900 rounded-xl flex items-center justify-center border border-dashed border-zinc-800 group-hover:border-brand-orange/30 transition-all">
+                        <div class="text-center">
+                            <p class="text-white text-xs font-bold uppercase mb-2 italic">实测：2026 智能体商务元年 (98% 电商网站不兼容 AI)</p>
+                            <p class="text-zinc-400 text-[9px] max-w-xs mx-auto">通过分析 Google UCP 协议，生成针对“AI 发现”时代的品牌 SEO 方案。Reddit 互动量提升 40%，带来 300+ 高质量 B2B 访客。</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-[11px] text-zinc-600 font-medium">✨ 实例：为某宠物独立站生成的一篇“1688 货源深度评测”文章，在 Reddit 获得了 50+ Upvotes 并带来 300+ 独立访客。</p>
+                </div>
+                
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
+                    立即获取该 Skill
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- Skill 3: High-Conversion Site Architect -->
+            <div class="skill-card text-left">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-emerald-500/20 text-emerald-500 rounded-2xl flex items-center justify-center">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black text-white">先锋建站架构师 (M-HCS) 3.0</h3>
+                            <p class="text-xs text-zinc-500 font-bold tracking-widest uppercase mt-1 text-emerald-500">Site Architect Skill</p>
+                        </div>
+                    </div>
+                    <span class="bg-zinc-800 text-zinc-400 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">已更新 v3.0.1</span>
+                </div>
+                
+                <p class="text-zinc-400 mb-8 leading-relaxed">这不仅是一个 Skill，更是一套实战方法论。提炼自本站从 0 到 1 的建设全流程：包含域名选型策略、GitHub Pages 零成本部署、Apple 风格 UI 装修规范以及高转化文案编写模版。让你不仅拥有网站，更拥有一个自动获客的“增长中心”。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 全链路建站路线图</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">涵盖域名申请、基础设施配置、文案钩子设计到 UI 质感装修的每一步实操细节。</p>
+                    </div>
+                    <div class="p-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <h4 class="text-white font-bold mb-2">● 增长看板集成规范</h4>
+                        <p class="text-xs text-zinc-500 leading-relaxed">内置实时装机计数器代码与 ROI 计算器模版，通过社交证明 (Social Proof) 极大拉高转化。</p>
+                    </div>
+                </div>
+
+                <a href="https://www.asource.com/login?sId=umzNndQ1hSoD6nRS0CHImg%3D%3D&ic=IC721157098311&tenant=accio_work" class="inline-flex items-center text-brand-orange font-black uppercase tracking-widest text-sm hover:translate-x-2 transition !no-underline">
+                    立即获取该 Skill
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l7-7m-7 7H3"/></svg>
+                </a>
+            </div>
+
+            <!-- More Skills Coming Soon -->
+            <div class="p-12 border-2 border-dashed border-zinc-800 rounded-3xl text-center">
+                <p class="text-zinc-600 font-bold uppercase tracking-[0.2em] text-sm">更多自研 Skills 正在实测中：Shopify SEO、TikTok 暴力引流、全自动物流核算...</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="py-24 border-t border-white/5 text-center mt-32">
+            <p class="text-[10px] text-zinc-700 font-bold uppercase tracking-[0.4em]">© 2026 Accio Pioneer | 自研 Skills 实验室 | 装机进度: 11.8% (118/1000)</p>
+        </footer>
+
+    </div>
+</body>
+</html>
