@@ -27,7 +27,7 @@
 ## 🌐 全球 AI 行业动态 (跨境必读)
 *   **[数据] 2026 零售趋势：Agentic Shopping 正在取代传统关键词搜索**
     *   **搞钱视角**：AI 不再只是推荐商品，而是代表用户执行购买。1688 自动化是接入此生态的入场券。
-*   **[趋势] “Discovery Agent Optimization (DAO)”：取代 SEO 的 New 战场**
+*   **[趋势] “Discovery Agent Optimization (DAO)”：取代 SEO 的新战场**
     *   **搞钱视角**：传统关键词优化已死，让 AI Agent 能读懂并信任你的供应链数据才是王道。
 *   **[技术] Claude Mythos 发布：支持超长供应链博弈推理**
     *   **搞钱视角**：更复杂的采购谈判、库存对冲现在可以通过 Accio 闭环处理。
