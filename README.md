@@ -4,7 +4,7 @@
   <img src="https://sc02.alicdn.com/kf/A349d16a97b884f2dab0565d15d4a03ffE.png" width="800" alt="Accio Pioneer Hero">
   <br>
   <p><b>🚀 5秒钟上手，开启你的“一人跨国公司 (OPC)”自动化时代。</b></p>
-  <p><i>“与其雇佣 10 个昂贵的运营，不如驾驭 10 个忠诚性的 AI Agent。”</i></p>
+  <p><i>“与其雇佣 10 个昂贵的运营，不如驾驭 10 个忠诚的 AI Agent。”</i></p>
 
   <p>
     <a href="https://johnqiu1688-web.github.io/accio-work-promo/troubleshooting.html">
@@ -24,28 +24,29 @@
 
 ---
 
-### ⚡ 为什么 47+ 资深卖家选择 Accio Pioneer？ (The Unbeatable Edge)
+### ⚡ 为什么 118+ 资深卖家选择 Accio Pioneer？ (Official Architecture)
 
-| 核心痛点 | 传统方案 (Legacy) | **Accio 先锋方案 (Pioneer)** |
+| 核心特性 | 官方定义 (Official) | **Accio 先锋实战优势** |
 | :--- | :--- | :--- |
-| **连接报错** | Chrome M144 强制断连，插件报 `ERR_REFUSED` | **本地沙箱隔离**，物理级绕过权限限制，100% 稳定 |
-| **采购利润** | 找 Dropshipping Agent，被加价 300% | **1688 DNA 过滤**，穿透二道贩子，直连出厂价 |
-| **账号安全** | 云端指纹雷同，容易被 1688/Shopify 关联封号 | **本地硬件指纹注入**，每个账号独立沙箱，0 关联风险 |
-| **搞钱效率** | 手动选品、上架、写文案，一天憋出 1 篇 | **AI 爆款引擎**，15秒上架，每日自动产出 6 篇高转化软文 |
+| **产品身份** | **Digital Worker (数字员工)** | 不只是工具，是具备独立大脑 (Agent-core) 的采购/选品代理 |
+| **安全架构** | **Physical Sandbox (物理沙箱)** | 遵循 Local-First 架构，采购数据、1688 供应商名录 100% 本地存储 |
+| **浏览器通信** | **Browser Relay (官方扩展)** | 解决 M144/M145 断连报错，通过“开发者模式”黄金路径 100% 稳定运行 |
+| **执行系统** | **Skill System (技能系统)** | 集成自研 1688 DNA 审计 Skill，穿透二道贩子，直连出厂价 |
+| **账号防护** | **Hardware Fingerprint** | 本地沙箱注入独立硬件指纹，Shopify/1688 零关联风险 |
 
 ---
 
-### 🛠️ 30秒极速上手：从“环境修复”到“利润收割”
+### 🛠️ 30秒极速上手：遵循官方架构的最佳实践 (Best Practices)
 
 #### **第一步：环境大修复 (Environment Fix)**
-针对 2026 最新 Chrome M144 版本，解决所有 1688/Shopify 插件的“转圈”挂起问题。
-- [👉 获取 M144 修复补丁 & 本地沙箱驱动](https://johnqiu1688-web.github.io/accio-work-promo/troubleshooting.html)
+针对 2026 最新 Chrome M144+，解决由于 Manifest V3 限制导致的“转圈”挂起问题。
+- [👉 获取官方架构 M144 修复补丁](https://johnqiu1688-web.github.io/accio-work-promo/troubleshooting.html)
+- **注意**：安装时请务必 **关闭 VPN** 干扰。
 
 #### **第二步：利润倍增器 (Skills Lab)**
-解锁我们针对真实跨境场景自研的“智能执行指令集”：
-- **[B2B 获客情报]**：直接锁定全球 DTC 品牌创始人，绕过采购前台.
-- **[1688 过滤引擎]**：穿透 1688 代理商，直连真实出厂价格.
-- **[爆款内容引擎]**：跨平台（知乎/Reddit/X）自动化矩阵分发.
+解锁符合 Accio 技能架构的“智能执行指令集”：
+- **[B2B 获客情报]**：基于 Agentic Workflow 锁定全球 DTC 品牌创始人。
+- **[1688 过滤引擎]**：通过 DNA 审计 Skill 穿透代理商。
 - [👉 进入自研 Skills 实验室](https://johnqiu1688-web.github.io/accio-work-promo/skills_lab.html)
 
 #### **第三步：启动装机 (Launch)**
