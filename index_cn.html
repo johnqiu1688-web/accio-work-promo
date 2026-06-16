@@ -140,9 +140,9 @@
         <div class="flex items-center justify-between">
             <div class="flex-1 overflow-hidden h-6">
                 <div class="flex items-center space-x-20 animate-marquee whitespace-nowrap text-zinc-600 text-[9px] font-black uppercase tracking-widest">
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2"></span> 知识库更新: 官方 Dashboard 已集成 M144 Fix 专项按钮</span>
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2"></span> 实战情报: 🟢 宁波汽配工厂通过【4.8分抢单包】获取 3 名新买家</span>
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2"></span> 系统预警: Accio 正在紧急扩容以支持 10.5% 的激活爆发期</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 知识库更新: 官方 Dashboard 已集成 M144 Fix 专项按钮</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 实战情报: 🟢 宁波汽配工厂通过【4.8分抢单包】获取 3 名新买家</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 系统预警: Accio 正在紧急扩容以支持 48.0% 的激活爆发期</span>
                 </div>
             </div>
             <div class="pl-12 text-[10px] font-black text-zinc-500 uppercase border-l border-white/10 ml-12">
@@ -185,27 +185,19 @@
                 official: '1688 插件目前支持批量商品信息抓取及利差计算。',
                 fde: '采集只是皮毛。该 Skill 通过穿透供应商的历史成交活跃度、法人关联记录，识别冒充工厂的贸易公司，帮您锁定 15% 的供应链原始毛利。',
                 skillId: 2
-            },
-            {
-                id: 'chrome',
-                keywords: ['148', '冻结', '断连', '失效', '稳定'],
-                title: 'Chrome 148.5 后台标签页冻结修复',
-                official: '最新 Chrome 版本对后台非活跃页面有资源限制。建议保持 Accio 窗口处于前台激活状态。',
-                fde: '这根本不可行。加载我们的【M148.5 持续心跳补丁】，模拟业务层数据交互。即便在后台运行 48 小时，您的 Agent 也永远不会被 Chrome 杀掉。',
-                skillId: 3
             }
         ];
 
         const skills = [
-            { id: 1, title: 'ICBU RFQ 抢单王 (FDE版)', tag: 'ROI +45%', desc: '将质量分由 3.1 强拉至 4.8。0.8s 响应极限。', color: 'brand-orange' },
-            { id: 2, title: '1688 厂家 DNA 审计', tag: '拦截溢价', desc: '穿透股权识别贸易商，锁定源头工厂毛利。', color: 'emerald-500' },
-            { id: 5, title: 'OKKI 僵尸客户复活仪', tag: '唤醒线索', desc: '绕过 120 封限制，物理模拟物理点击，资产盘活。', color: 'purple-500' }
+            { id: 1, title: 'ICBU RFQ 抢单王 (FDE版)', tag: 'ROI +45%', desc: '将质量分由 3.1 强拉至 4.8。0.8s 响应极限。', color: 'brand-orange', link: '#' },
+            { id: 2, title: '1688 厂家 DNA 审计', tag: '拦截溢价', desc: '穿透股权识别贸易商，锁定源头工厂毛利。', color: 'emerald-500', link: 'skill_1688_audit.html' },
+            { id: 5, title: 'OKKI 僵尸客户复活仪', tag: '唤醒线索', desc: '绕过 120 封限制，物理模拟物理点击，资产盘活。', color: 'purple-500', link: 'skill_okki_revival.html' }
         ];
 
         function renderSkills() {
             const grid = document.getElementById('skills-grid');
             grid.innerHTML = skills.map(s => `
-                <div class="glass-ui p-12 rounded-[3.5rem] group border-${s.color}/10 cursor-pointer" onclick="openSkillModal('${s.id}')">
+                <div class="glass-ui p-12 rounded-[3.5rem] group border-${s.color}/10 cursor-pointer" onclick="${s.link !== '#' ? `window.location.href='${s.link}'` : `openSkillModal('${s.id}')`}">
                     <div class="flex justify-between mb-10">
                         <div class="w-16 h-16 bg-${s.color}/10 text-${s.color} rounded-[1.5rem] flex items-center justify-center text-3xl shadow-inner"><i class="fas fa-microchip"></i></div>
                         <span class="text-[10px] font-black text-emerald-500 uppercase tracking-[0.2em] border border-emerald-500/20 px-3 py-1 rounded-full">${s.tag}</span>
@@ -245,7 +237,7 @@
             document.getElementById('modal-official').innerHTML = `<p class="mb-4"><strong>问：</strong>“${data.title}”怎么解决？</p><p>${data.official}</p>`;
             document.getElementById('modal-fde').innerHTML = `<p class="mb-4 text-brand-orange italic">FDE 独家分析：</p><p>${data.fde}</p>`;
             document.getElementById('modal-action').innerHTML = `
-                <button onclick="alert('正在为您跳转至下载中心：${data.title}')" class="w-full btn-buy text-white py-5 rounded-[2rem] font-black text-xs uppercase tracking-[0.2em] shadow-2xl">立即部署针对性 Skill</button>
+                <button onclick="alert('正在为您跳转至下载中心：${data.title}')" class="w-full btn-primary text-white py-5 rounded-[2rem] font-black text-xs uppercase tracking-[0.2em] shadow-2xl">立即部署针对性 Skill</button>
             `;
             document.getElementById('smart-modal').classList.add('active');
             document.getElementById('smart-results').classList.add('hidden');
