@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accio Work 怎么用？2026 最全使用指南教程（安装/登录/国际站/1688/报错）| Accio Pioneer</title>
+<meta name="description" content="Accio Work 怎么用？这份最全使用教程手把手教你：安装登录、第一个任务、积分付费、智能体/插件/技能、阿里国际站发品回盘、OKKI获客、1688找工厂、定时任务、团队协作，以及 M144/555 常见报错排查。官方口径+FDE实战双解答。">
+<meta name="keywords" content="Accio Work怎么用,Accio Work使用教程,Accio Work上手指南,Accio Work教程,Accio Work怎么登录,Accio Work怎么安装,Accio Work国际站,Accio Work 1688,Accio Work报错,阿里国际站AI助手怎么用">
+<link rel="canonical" href="https://getquon.com/guide.html">
+<meta property="og:title" content="Accio Work 怎么用？2026 最全使用指南教程">
+<meta property="og:description" content="从安装登录到国际站/1688实战，30个高频使用问题一篇讲透。官方口径+FDE实战。">
+<meta property="og:url" content="https://getquon.com/guide.html">
+<meta property="og:type" content="article">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "HowTo",
+ "name": "Accio Work 使用指南：从入门到精通完整教程",
+ "description": "Accio Work 怎么用？这份完整使用指南覆盖安装登录、第一个任务、积分付费、智能体/插件/技能、国际站与1688实战、自动化、团队协作及常见报错排查。",
+ "step": [
+  {
+   "@type": "HowToStep",
+   "name": "Accio Work 是什么 / 产品定位",
+   "text": "Accio Work 是面向中小企业的跨境生意工作台，提供能自主做全球生意的智能体团队。三大特点：极度简单、专业性强（内置数百个认证技能）、安全可靠（沙箱环境与显式授权）。重在执行而非建议，开箱即用无须编程。",
+   "url": "https://getquon.com/q/about.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "安装与更新 / 客户端下载",
+   "text": "推荐下载桌面端（macOS 11+ / Win 10+ 64位），支持窗口置顶等独有功能。建议始终使用最新版。App 无反应时检查 Chrome 默认浏览器设置；变慢可切换模型或避开高峰，并把大任务拆成小步骤。",
+   "url": "https://getquon.com/q/install.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "登录方式与账号问题",
+   "text": "支持邮箱注册登录及阿里国际站账号登录，后续将支持更多 SSO。建议使用最新版 Chrome 并设为系统默认浏览器，避免跳转和授权失败。目前已无需邀请码。切换账号需先在浏览器中操作。",
+   "url": "https://getquon.com/q/login.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "第一个任务怎么做",
+   "text": "支持本地文件、浏览器及云端文档的任务执行。典型场景：网页调研（如分析美妆热卖品）、自动上架商品、整理本地复杂数据表。网页任务需在 Chrome 开启开发者模式并拖入特定扩展文件夹。",
+   "url": "https://getquon.com/q/start-task.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "浏览器连接 / Chrome 扩展配置",
+   "text": "处理网页任务需在 Chrome 开启开发者模式，并将指定扩展文件夹拖入扩展管理页完成加载，之后即可让 Agent 操作浏览器执行网页任务。",
+   "url": "https://getquon.com/q/browser-connect.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "积分与额度规则",
+   "text": "每个账号每 24 小时拥有 20 个基础积分，用完后自动补充、不累积。消耗与模型选择（极致>专业>标准>Auto）、任务复杂度及工具调用次数相关。Pro/Elite/Ultra 套餐对高质量模型有每 3 小时调用上限，Ultra 无限制。",
+   "url": "https://getquon.com/q/credits.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "付费、套餐与退款",
+   "text": "个人版：Pro 139元/月、Elite 699元/月、Ultra 1399元/月，年付 85 折。每日积分用完可买加油包临时补充。升级补差价即时生效，降级下一续费日生效。订阅后 7 天内且未消耗积分可申请退款（扣支付手续费）。",
+   "url": "https://getquon.com/q/billing.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "智能体 Agents 与生意助手",
+   "text": "智能体是 7x24 在线的数字化团队，可按商业需求自定义。预设助手：Accio 助手（通用任务）、国际站生意助手（店铺运营、发品、诊断）。自定义流程：定义身份-选择插件-添加技能-完善用户画像。",
+   "url": "https://getquon.com/q/agents.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "插件 Plugin / 国际站生意助手 / OKKI Shops",
+   "text": "插件是集成连接器、技能和操作指令的一站式工具包。精选：国际站生意助手（选品、发品、广告诊断）、OKKI Shops（海外社媒托管引流）。智能体是执行者，插件是工具箱。生态每周高频更新。",
+   "url": "https://getquon.com/q/plugins.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "技能 Skills 管理与启用",
+   "text": "技能是智能体的操作说明书。在 Plugins 频道切换至 Skills 标签一键启用，支持上传自定义技能包。建议避免 Skill 过载以省积分，用斜杠命令精准调用，并开启自我进化技能。",
+   "url": "https://getquon.com/q/skills.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "国际站运营自动化（选品/发品/广告/平台规范）",
+   "text": "国际站生意助手：选品洞察（站内外多维数据交叉验证，可直连 Jungle Scout API）、智能发品（解析素材包/链接，AI 批量做场景图/模特图，效率 +10 倍）、广告诊断（一句话调投放数据、自动归因、推荐高流量词）、店铺防护（扫描侵权/违规，一键生成拒付抗辩信及物流证据）。",
+   "url": "https://getquon.com/q/icbu-auto.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "ICBU RFQ 回盘 / 质量分 4.8",
+   "text": "官方建议用生意助手生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。",
+   "url": "https://getquon.com/q/icbu-reply.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "潜客分析 / 社媒营销（OKKI Shops）",
+   "text": "通过 OKKI Shops 插件实现策略规划与跨平台图文自动发布。动作集：差异化战略报告、行业情报雷达周报、社媒选题矩阵。也可对业务员撰写的帖子做 AI 审核。",
+   "url": "https://getquon.com/q/marketing.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "OKKI CRM 120 封发信限制 / 僵尸客户复活",
+   "text": "OKKI 对单一账号设有每日发信安全阈值（约 120 封）以防垃圾邮件判定，建议分批触达保障送达率；可借社媒模块查客户动态写个性化内容提升回复率。",
+   "url": "https://getquon.com/q/okki.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "1688 厂家 DNA 尽调核验",
+   "text": "识别工厂真伪官方建议：查看诚信通年限、金牌标识、验厂视频，下单前通过旺旺实地确认细节。",
+   "url": "https://getquon.com/q/1688.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "独立站 SEO 优化",
+   "text": "自动执行关键词研究、竞争对手监控、页面优化和排名跟踪。提交网址后 AI 分析对手痛点与机遇并生成可执行计划。典型应用：研究细分高意向词、优化产品页文案、设置周度效果监控。",
+   "url": "https://getquon.com/q/seo.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "定时任务 / 周期执行",
+   "text": "定时任务支持定时（如明早 9 点）或周期（如每 2 小时）执行。可在对话中直接指令设定，或在专用页面手动配置。电脑关机时不运行，开机后自动补执行。典型场景：每日新闻汇总、竞品价格监测、周报提醒。",
+   "url": "https://getquon.com/q/scheduled.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "消息渠道 / 钉钉飞书微信绑定",
+   "text": "支持钉钉、飞书、微信、Telegram、Discord 5 大渠道。钉钉/飞书支持群聊及 1:1，微信仅 1:1。接入：创建机器人获取凭证-粘贴至渠道卡片-关联智能体，状态 Online 即成功。不回复请检查：是否绑定 Agent、用户配对是否通过审批、机器人是否在线。",
+   "url": "https://getquon.com/q/channels.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "多店合规隔离 / 子账号物理隔离",
+   "text": "确保每个子账号拥有独立的 Connector 授权，不建议跨设备多点登录。所有授权可在权限设置中审计追踪。",
+   "url": "https://getquon.com/q/multistore.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Agent 记忆 / dream 整理",
+   "text": "短期记忆存于本地 SQLite，长期知识存于 Markdown 文件。dream 会提炼短期记忆、转入日记或浓缩进长期记忆并清理冗余。每个自然日首条消息会后台触发记忆整理。",
+   "url": "https://getquon.com/q/memory.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Agent 自我进化",
+   "text": "智能体能记住重要信息、学习用户偏好、积累领域知识并沉淀重复流程。加速方法：主动提供业务背景、及时反馈优劣、定期检查修正记忆。Agent 间记忆隔离，可随时查看/编辑/清除。",
+   "url": "https://getquon.com/q/evolution.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Agent Core / SOUL MEMORY USER",
+   "text": "agent-core 目录是智能体的大脑，含 SOUL.md（行为边界）、MEMORY.md（长期记忆）、USER.md（用户画像）。组装顺序：Identity-Tools/Skills-Memory-Soul。每个 Agent 配置完全独立。",
+   "url": "https://getquon.com/q/agent-core.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "权限与安全 / 授权管控",
+   "text": "权限管控分 allow、ask（每次确认）、ask_once（首次确认）、deny 四种。低风险通常允许，高风险（Shell 执行、写文件）需手动确认。授权可选单次/会话/永久有效。所有决策记录在审计日志，支持配置可信命令白名单。",
+   "url": "https://getquon.com/q/permissions.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "企业版套餐与团队积分池",
+   "text": "企业套餐：入门版（3.5 万积分）、标准版（8 万）、旗舰版（40 万）及定制版。团队成员共享统一积分池，由 Owner/Admin 分配额度。使用生意助手时优先消耗 i 豆。个人版积分无法迁移至团队。均为年付，降级次年生效。",
+   "url": "https://getquon.com/q/workspace.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "开通 / 加入团队空间",
+   "text": "点击立即开通并支付后，通过团队订阅完善企业信息。Owner/Admin 通过注册邮箱邀请成员并分配初始积分。新成员默认 Member，可被提升为 Admin。成员被邀请后需在客户端手动切换至企业空间。",
+   "url": "https://getquon.com/q/create-team.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "团队角色与权限（Owner/Admin/Member）",
+   "text": "Owner（最高权限，管财务与解散）、Admin（邀请移除成员、管理资产）、Member（使用授权资产）。Member 离职后账号回退至个人空间，无法查看团队账单。",
+   "url": "https://getquon.com/q/roles.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "企业资产管理（Agent / Skill 共享）",
+   "text": "Owner/Admin 统一管理团队 Agent、Skill 等资产。勾选全员可见后全员可用，否则仅创建者可用。本地更新/删除已设全员可见的资产只影响本地，云端不同步删除。成员移除后其团队数据资产仍归团队。",
+   "url": "https://getquon.com/q/team-assets.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "M144/M145 连接失败 / 端口握手",
+   "text": "连接类问题官方建议：确保 Chrome 为默认浏览器，完全退出 App 后重新启动以触发本地端口监听；检查桌面端/Web 端数据同步状态。",
+   "url": "https://getquon.com/q/m144.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Chrome 148 心跳回收 / 后台冻结",
+   "text": "官方建议保持 Chrome 为最新版且设为默认浏览器；遇到连接不稳定时重启 App 并检查扩展是否正常加载。",
+   "url": "https://getquon.com/q/m148.html"
+  },
+  {
+   "@type": "HowToStep",
+   "name": "Error 555 / 繁忙 / 限流",
+   "text": "提示 555 或繁忙通常是请求过多/系统繁忙触发的自我保护，官方建议稍后重试；同时可尝试切换网络或关闭 VPN。",
+   "url": "https://getquon.com/q/555.html"
+  }
+ ]
+}
+</script>
+<style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}html{scroll-behavior:smooth}</style>
+</head>
+<body class="grid-bg min-h-screen">
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+  <a href="https://getquon.com/index_cn.html" class="text-white font-black italic text-lg">Accio <span class="text-orange-500">Pioneer</span></a>
+  <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-orange-500 text-white px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">免费部署 Agent</a>
+</nav>
+
+<header class="max-w-4xl mx-auto px-6 pt-16 pb-10 text-center">
+  <span class="inline-block text-[10px] font-black bg-orange-500/10 text-orange-500 px-4 py-1.5 rounded-full border border-orange-500/20 uppercase tracking-widest mb-6">2026 最全使用指南 · 持续更新</span>
+  <h1 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">Accio Work 怎么用？<br>从入门到精通完整教程</h1>
+  <p class="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">手把手覆盖 <strong class="text-white">安装登录 → 第一个任务 → 积分付费 → 核心功能 → 国际站/1688 实战 → 自动化 → 团队协作 → 报错排查</strong> 共 9 大模块、30 个高频问题。每个问题都给<strong class="text-blue-400">官方标准口径</strong> + <strong class="text-orange-500">FDE 实战补充</strong>。</p>
+  <div class="mt-8"><a href="https://getquon.com/index_cn.html" class="inline-block bg-white text-black px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">遇到具体问题？去搜索中心一键直达 &rarr;</a></div>
+</header>
+
+<div class="max-w-6xl mx-auto px-6 pb-24 grid lg:grid-cols-[260px_1fr] gap-10">
+  <aside class="hidden lg:block">
+    <div class="sticky top-24 glass rounded-2xl p-4">
+      <div class="text-[10px] font-black text-zinc-600 uppercase tracking-widest px-4 pb-3 mb-2 border-b border-white/5">目录导航</div>
+<a href="#sec1" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">一、认识与安装</a>
+<a href="#sec2" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">二、跑通第一个任务</a>
+<a href="#sec3" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">三、积分与付费</a>
+<a href="#sec4" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">四、核心功能：智能体 / 插件 / 技能</a>
+<a href="#sec5" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">五、场景实战：阿里国际站 &amp; 跨境业务</a>
+<a href="#sec6" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">六、自动化与多渠道</a>
+<a href="#sec7" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">七、进阶：记忆 / 进化 / 权限</a>
+<a href="#sec8" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">八、团队协作（企业版）</a>
+<a href="#sec9" class="block py-2 px-4 rounded-xl hover:bg-white/5 text-zinc-400 hover:text-orange-500 transition text-sm">九、常见报错与排查</a>
+    </div>
+  </aside>
+  <main>
+    <section id="sec1" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">一、认识与安装</h2>
+      <p class="text-zinc-500 text-sm mb-8">第一次接触 Accio Work，先搞懂它是什么、怎么装、怎么登录</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Accio Work 是什么 / 产品定位</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">产品</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>Accio Work 是面向中小企业的跨境生意工作台，提供能自主做全球生意的智能体团队。三大特点：极度简单、专业性强（内置数百个认证技能）、安全可靠（沙箱环境与显式授权）。重在执行而非建议，开箱即用无须编程。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 视角：它不是聊天机器人，是数字劳动力——直接帮你跑国际站发品、OKKI 触达、1688 选品等真实业务动作。</p>
+          <a href="https://getquon.com/q/about.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">安装与更新 / 客户端下载</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">安装</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>推荐下载桌面端（macOS 11+ / Win 10+ 64位），支持窗口置顶等独有功能。建议始终使用最新版。App 无反应时检查 Chrome 默认浏览器设置；变慢可切换模型或避开高峰，并把大任务拆成小步骤。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：桌面端无反应 90% 是 Chrome 未设为默认浏览器导致本地端口未监听。先改默认浏览器再重启。</p>
+          <a href="https://getquon.com/q/install.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">登录方式与账号问题</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">账号</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>支持邮箱注册登录及阿里国际站账号登录，后续将支持更多 SSO。建议使用最新版 Chrome 并设为系统默认浏览器，避免跳转和授权失败。目前已无需邀请码。切换账号需先在浏览器中操作。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：登录卡住多为浏览器默认设置 + VPN 干扰。先把 Chrome 设为默认、关闭 VPN，再重启 App；若提示 555/繁忙，稍后重试。</p>
+          <a href="https://getquon.com/q/login.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec2" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">二、跑通第一个任务</h2>
+      <p class="text-zinc-500 text-sm mb-8">安装好后如何发起第一个任务、连接浏览器执行网页操作</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">第一个任务怎么做</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">入门</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>支持本地文件、浏览器及云端文档的任务执行。典型场景：网页调研（如分析美妆热卖品）、自动上架商品、整理本地复杂数据表。网页任务需在 Chrome 开启开发者模式并拖入特定扩展文件夹。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 上手路径：先用一句话指令跑通一个网页调研任务感受执行力，再进阶到发品/采集等连接器任务。</p>
+          <a href="https://getquon.com/q/start-task.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">浏览器连接 / Chrome 扩展配置</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">入门</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>处理网页任务需在 Chrome 开启开发者模式，并将指定扩展文件夹拖入扩展管理页完成加载，之后即可让 Agent 操作浏览器执行网页任务。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：扩展加载后务必保持 Chrome 为默认浏览器，否则任务会卡在连接浏览器环节。</p>
+          <a href="https://getquon.com/q/browser-connect.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec3" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">三、积分与付费</h2>
+      <p class="text-zinc-500 text-sm mb-8">免费额度怎么用、积分怎么算、套餐怎么选</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">积分与额度规则</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">积分</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>每个账号每 24 小时拥有 20 个基础积分，用完后自动补充、不累积。消耗与模型选择（极致&gt;专业&gt;标准&gt;Auto）、任务复杂度及工具调用次数相关。Pro/Elite/Ultra 套餐对高质量模型有每 3 小时调用上限，Ultra 无限制。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 省积分：日常任务用 Auto/标准模型，复杂调研才上专业/极致；避免堆叠过多 Skill 造成无谓消耗。</p>
+          <a href="https://getquon.com/q/credits.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">付费、套餐与退款</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">付费</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>个人版：Pro 139元/月、Elite 699元/月、Ultra 1399元/月，年付 85 折。每日积分用完可买加油包临时补充。升级补差价即时生效，降级下一续费日生效。订阅后 7 天内且未消耗积分可申请退款（扣支付手续费）。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：先用免费 20 积分跑通核心场景，确认 ROI 再升级；团队多人用直接看企业版积分池更划算。</p>
+          <a href="https://getquon.com/q/billing.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec4" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">四、核心功能：智能体 / 插件 / 技能</h2>
+      <p class="text-zinc-500 text-sm mb-8">理解 Accio Work 的三大核心概念并用起来</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">智能体 Agents 与生意助手</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>智能体是 7x24 在线的数字化团队，可按商业需求自定义。预设助手：Accio 助手（通用任务）、国际站生意助手（店铺运营、发品、诊断）。自定义流程：定义身份-选择插件-添加技能-完善用户画像。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：国际站卖家直接用国际站生意助手起步，再按需挂 OKKI Shops 等插件，不必从零自定义。</p>
+          <a href="https://getquon.com/q/agents.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">插件 Plugin / 国际站生意助手 / OKKI Shops</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>插件是集成连接器、技能和操作指令的一站式工具包。精选：国际站生意助手（选品、发品、广告诊断）、OKKI Shops（海外社媒托管引流）。智能体是执行者，插件是工具箱。生态每周高频更新。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：国际站运营 = 国际站生意助手；社媒引流获客 = OKKI Shops，两者组合覆盖 B2B 获客全链路。</p>
+          <a href="https://getquon.com/q/plugins.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">技能 Skills 管理与启用</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>技能是智能体的操作说明书。在 Plugins 频道切换至 Skills 标签一键启用，支持上传自定义技能包。建议避免 Skill 过载以省积分，用斜杠命令精准调用，并开启自我进化技能。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：只启用当前业务用得到的 Skill；高频流程沉淀为自定义 Skill，长期省时省积分。</p>
+          <a href="https://getquon.com/q/skills.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec5" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">五、场景实战：阿里国际站 &amp; 跨境业务</h2>
+      <p class="text-zinc-500 text-sm mb-8">国际站发品、回盘抢单、OKKI 获客、1688 找源头工厂</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">国际站运营自动化（选品/发品/广告/平台规范）</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">国际站</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>国际站生意助手：选品洞察（站内外多维数据交叉验证，可直连 Jungle Scout API）、智能发品（解析素材包/链接，AI 批量做场景图/模特图，效率 +10 倍）、广告诊断（一句话调投放数据、自动归因、推荐高流量词）、店铺防护（扫描侵权/违规，一键生成拒付抗辩信及物流证据）。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：发品先用 AI 批量出图省美工；广告每周用一句话指令做一次归因体检。</p>
+          <a href="https://getquon.com/q/icbu-auto.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">ICBU RFQ 回盘 / 质量分 4.8</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">国际站</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>官方建议用生意助手生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>语义对齐逻辑：纯助手生成语料易被标记为机械回复降权。FDE 方案内置二次建模，自动匹配工厂规格 PDF，0.8s 响应，强拉质量分至 4.8。</p>
+          <a href="https://getquon.com/q/icbu-reply.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">潜客分析 / 社媒营销（OKKI Shops）</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">营销</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>通过 OKKI Shops 插件实现策略规划与跨平台图文自动发布。动作集：差异化战略报告、行业情报雷达周报、社媒选题矩阵。也可对业务员撰写的帖子做 AI 审核。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：先让 AI 出社媒选题矩阵，再批量生成图文，人工只做终审，B2B 内容产能翻倍。</p>
+          <a href="https://getquon.com/q/marketing.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">OKKI CRM 120 封发信限制 / 僵尸客户复活</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">CRM</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>OKKI 对单一账号设有每日发信安全阈值（约 120 封）以防垃圾邮件判定，建议分批触达保障送达率；可借社媒模块查客户动态写个性化内容提升回复率。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 增效方案：在 OKKI 合规发信能力内，用 Accio 自动完成&quot;逐客定制&quot;——自动检索买家最新公开动态（融资/展会等）并填入开篇，把有限的每日触达额度用在最高价值的客户上，显著提升僵尸客户的回复率与复活率。建议严格遵守平台发信规范，避免触发垃圾邮件判定。</p>
+          <a href="https://getquon.com/q/okki.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">1688 厂家 DNA 尽调核验</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">采购</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>识别工厂真伪官方建议：查看诚信通年限、金牌标识、验厂视频，下单前通过旺旺实地确认细节。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 尽调方案：官方建议看验厂视频，我们再补一层&quot;工商背景核验&quot;——自动核查供应商的公开工商信息（法人关联企业数、参保人数变化等公开数据），辅助识别贸易商伪装成工厂的情况，帮你锁定源头工厂、把控采购质量与成本。所有数据均来自公开渠道。</p>
+          <a href="https://getquon.com/q/1688.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">独立站 SEO 优化</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">营销</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>自动执行关键词研究、竞争对手监控、页面优化和排名跟踪。提交网址后 AI 分析对手痛点与机遇并生成可执行计划。典型应用：研究细分高意向词、优化产品页文案、设置周度效果监控。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：先用 AI 跑一次竞品差距分析，锁定高意向长尾词，再批量优化产品页。</p>
+          <a href="https://getquon.com/q/seo.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec6" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">六、自动化与多渠道</h2>
+      <p class="text-zinc-500 text-sm mb-8">定时任务、钉钉飞书微信绑定、多店合规运营</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">定时任务 / 周期执行</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>定时任务支持定时（如明早 9 点）或周期（如每 2 小时）执行。可在对话中直接指令设定，或在专用页面手动配置。电脑关机时不运行，开机后自动补执行。典型场景：每日新闻汇总、竞品价格监测、周报提醒。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：定时任务依赖本机开机；要 7x24 不间断建议配合常开设备。</p>
+          <a href="https://getquon.com/q/scheduled.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">消息渠道 / 钉钉飞书微信绑定</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>支持钉钉、飞书、微信、Telegram、Discord 5 大渠道。钉钉/飞书支持群聊及 1:1，微信仅 1:1。接入：创建机器人获取凭证-粘贴至渠道卡片-关联智能体，状态 Online 即成功。不回复请检查：是否绑定 Agent、用户配对是否通过审批、机器人是否在线。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 排查口诀：不回复就查三连——绑定 Agent 了吗？配对审批过了吗？机器人 Online 吗？</p>
+          <a href="https://getquon.com/q/channels.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">多店合规隔离 / 子账号物理隔离</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">安全</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>确保每个子账号拥有独立的 Connector 授权，不建议跨设备多点登录。所有授权可在权限设置中审计追踪。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 合规建议：通过 Accio 的本地沙箱为每个子账号提供独立的运行环境与 Connector 授权，做到多店之间数据与配置相互隔离、规范运营，降低因环境混用导致的账号风险。建议每个店铺严格使用独立授权、遵守平台多账号管理规范。</p>
+          <a href="https://getquon.com/q/multistore.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec7" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">七、进阶：记忆 / 进化 / 权限</h2>
+      <p class="text-zinc-500 text-sm mb-8">让 Agent 越用越懂你，以及安全权限管理</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Agent 记忆 / dream 整理</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">进阶</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>短期记忆存于本地 SQLite，长期知识存于 Markdown 文件。dream 会提炼短期记忆、转入日记或浓缩进长期记忆并清理冗余。每个自然日首条消息会后台触发记忆整理。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：重要业务背景主动喂给 Agent 并定期 dream，让它越用越懂你的生意。</p>
+          <a href="https://getquon.com/q/memory.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Agent 自我进化</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">进阶</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>智能体能记住重要信息、学习用户偏好、积累领域知识并沉淀重复流程。加速方法：主动提供业务背景、及时反馈优劣、定期检查修正记忆。Agent 间记忆隔离，可随时查看/编辑/清除。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：每次任务后给一句好/不好+原因的反馈，是让 Agent 进化最快的方式。</p>
+          <a href="https://getquon.com/q/evolution.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Agent Core / SOUL MEMORY USER</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">进阶</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>agent-core 目录是智能体的大脑，含 SOUL.md（行为边界）、MEMORY.md（长期记忆）、USER.md（用户画像）。组装顺序：Identity-Tools/Skills-Memory-Soul。每个 Agent 配置完全独立。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：把行业话术与禁区写进 SOUL.md，把客户/产品资料写进 USER.md，回答质量立刻上一个台阶。</p>
+          <a href="https://getquon.com/q/agent-core.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">权限与安全 / 授权管控</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">安全</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>权限管控分 allow、ask（每次确认）、ask_once（首次确认）、deny 四种。低风险通常允许，高风险（Shell 执行、写文件）需手动确认。授权可选单次/会话/永久有效。所有决策记录在审计日志，支持配置可信命令白名单。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：高频可信操作设 ask_once 或加白名单，兼顾效率与安全；敏感操作保持 ask。</p>
+          <a href="https://getquon.com/q/permissions.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec8" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">八、团队协作（企业版）</h2>
+      <p class="text-zinc-500 text-sm mb-8">开通团队空间、角色权限、资产共享</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">企业版套餐与团队积分池</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">企业版</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>企业套餐：入门版（3.5 万积分）、标准版（8 万）、旗舰版（40 万）及定制版。团队成员共享统一积分池，由 Owner/Admin 分配额度。使用生意助手时优先消耗 i 豆。个人版积分无法迁移至团队。均为年付，降级次年生效。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：3 人以上团队优先上企业版，积分池统一管控比各买个人版更省。</p>
+          <a href="https://getquon.com/q/workspace.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">开通 / 加入团队空间</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">团队</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>点击立即开通并支付后，通过团队订阅完善企业信息。Owner/Admin 通过注册邮箱邀请成员并分配初始积分。新成员默认 Member，可被提升为 Admin。成员被邀请后需在客户端手动切换至企业空间。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：邀请后让成员务必在客户端切换空间，否则看不到团队资产。</p>
+          <a href="https://getquon.com/q/create-team.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">团队角色与权限（Owner/Admin/Member）</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">团队</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>Owner（最高权限，管财务与解散）、Admin（邀请移除成员、管理资产）、Member（使用授权资产）。Member 离职后账号回退至个人空间，无法查看团队账单。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：财务/解散权限只留给 Owner，日常管理交给 Admin，降低误操作风险。</p>
+          <a href="https://getquon.com/q/roles.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">企业资产管理（Agent / Skill 共享）</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">团队</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>Owner/Admin 统一管理团队 Agent、Skill 等资产。勾选全员可见后全员可用，否则仅创建者可用。本地更新/删除已设全员可见的资产只影响本地，云端不同步删除。成员移除后其团队数据资产仍归团队。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：把标准化 SOP 做成 Skill 设全员可见，新人入职即用，统一团队打法。</p>
+          <a href="https://getquon.com/q/team-assets.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <section id="sec9" class="mb-16 scroll-mt-24">
+      <h2 class="text-2xl md:text-3xl font-black text-white mb-2">九、常见报错与排查</h2>
+      <p class="text-zinc-500 text-sm mb-8">M144 连接失败、555 限流、Chrome 148 兼容等</p>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">M144/M145 连接失败 / 端口握手</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>连接类问题官方建议：确保 Chrome 为默认浏览器，完全退出 App 后重新启动以触发本地端口监听；检查桌面端/Web 端数据同步状态。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>底层解密：Chrome 148+ 强制 Service Worker 心跳回收（约 5s），常规重启无法根治。需部署持续心跳保活 Skill 物理级维持本地 127.0.0.1 通信链路。</p>
+          <a href="https://getquon.com/q/m144.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Chrome 148 心跳回收 / 后台冻结</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>官方建议保持 Chrome 为最新版且设为默认浏览器；遇到连接不稳定时重启 App 并检查扩展是否正常加载。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>底层解密：Chrome 148.5 强制后台标签页冻结 + 5s 心跳回收。FDE 方案用业务层 Ping 协议保活，使 Agent 在后台挂载也不掉线。</p>
+          <a href="https://getquon.com/q/m148.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Error 555 / 繁忙 / 限流</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-2"><span class="text-blue-400 font-bold text-xs">官方：</span>提示 555 或繁忙通常是请求过多/系统繁忙触发的自我保护，官方建议稍后重试；同时可尝试切换网络或关闭 VPN。</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 实战：高频采集场景下建议降低并发频率、把大任务拆小、错峰执行，遵守平台访问频率规范，可显著降低触发限流与熔断的概率。</p>
+          <a href="https://getquon.com/q/555.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看完整解答 &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="glass rounded-3xl p-10 text-center">
+      <h2 class="text-2xl font-black text-white mb-4">没找到你的问题？</h2>
+      <p class="text-zinc-400 text-sm mb-6">前往搜索中心，输入任意报错或诉求，官方口径 + FDE 实战方案一键直达。</p>
+      <a href="https://getquon.com/index_cn.html" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">打开 Accio Work 智能搜索 &rarr;</a>
+    </section>
+  </main>
+</div>
+
+<footer class="border-t border-white/5 px-6 py-8 text-center text-[10px] text-zinc-600 uppercase tracking-widest">
+  © 2026 Accio Pioneer · Accio Work 垂直使用指南与知识库 · <a href="https://getquon.com/index_cn.html" class="hover:text-orange-500">返回首页</a>
+</footer>
+</body>
+</html>
