@@ -38,7 +38,7 @@
             <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.reload()">
                 <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center shadow-lg"><i class="fas fa-bolt text-white text-sm"></i></div>
                 <span class="text-xl font-black text-white tracking-tighter uppercase italic">Accio <span class="text-brand-orange">Sentinel</span></span>
-                <span class="text-[8px] font-mono text-zinc-600 bg-white/5 px-2 py-0.5 rounded border border-white/5 ml-4 uppercase tracking-widest">Logic V5.0 Full-Sync</span>
+                <span class="text-[8px] font-mono text-zinc-600 bg-white/5 px-2 py-0.5 rounded border border-white/5 ml-4 uppercase tracking-widest">Logic V5.5 Full-Sync</span>
             </div>
             <div class="hidden lg:flex space-x-12 text-[10px] font-black text-zinc-400 uppercase tracking-[0.25em]">
                 <a href="#alibaba" class="hover:text-white transition">国际站指挥部</a>
@@ -114,7 +114,7 @@
                     <div>
                         <h3 class="text-xs font-black text-zinc-600 uppercase tracking-[0.4em] mb-12 italic">FDE Agentic Algorithms</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="glass-ui p-10 rounded-[3.5rem] logic-border group cursor-pointer">
+                            <div class="glass-ui p-10 rounded-[3.5rem] logic-border group cursor-pointer" onclick="window.location.href='skill_1688_audit.html'">
                                 <div class="flex items-center justify-between mb-8">
                                     <i class="fas fa-dna text-brand-orange text-2xl"></i>
                                     <span class="text-[9px] font-black text-zinc-500 uppercase border border-white/5 px-2 py-0.5 rounded">Algo V1.5</span>
@@ -125,16 +125,16 @@
                                 </p>
                                 <button class="w-full bg-white/5 border border-white/10 text-white py-3 rounded-xl text-[10px] font-black uppercase hover:bg-brand-orange transition">加载该核心模块</button>
                             </div>
-                            <div class="glass-ui p-10 rounded-[3.5rem] logic-border group cursor-pointer">
+                            <div class="glass-ui p-10 rounded-[3.5rem] logic-border group cursor-pointer" onclick="window.location.href='skill_icbu_sniper.html'">
                                 <div class="flex items-center justify-between mb-8">
-                                    <i class="fas fa-sync-alt text-blue-500 text-2xl"></i>
-                                    <span class="text-[9px] font-black text-zinc-500 uppercase border border-white/5 px-2 py-0.5 rounded">Memory Sync</span>
+                                    <i class="fas fa-bullseye text-blue-500 text-2xl"></i>
+                                    <span class="text-[9px] font-black text-zinc-500 uppercase border border-white/5 px-2 py-0.5 rounded">ICBU SNIPER</span>
                                 </div>
-                                <h4 class="text-xl font-black text-white mb-4 uppercase">/Dream 长期记忆提炼</h4>
+                                <h4 class="text-xl font-black text-white mb-4 uppercase">ICBU 4.8分抢单王</h4>
                                 <p class="text-zinc-500 text-xs leading-relaxed mb-10">
-                                    基于 SQLite 短期权重计算，定时压缩琐碎日志进长期记忆 MEMORY.md。构建具备“私有资产”属性的企业大脑。
+                                    强拉质量分由 3.1 至 4.8。基于 FDE 语义审计方案，0.8s 响应极限，避开系统降权逻辑。
                                 </p>
-                                <button class="w-full bg-white/5 border border-white/10 text-white py-3 rounded-xl text-[10px] font-black uppercase hover:bg-blue-500 transition">配置资产归档</button>
+                                <button class="w-full bg-white/5 border border-white/10 text-white py-3 rounded-xl text-[10px] font-black uppercase hover:bg-blue-500 transition">配置抢单中心</button>
                             </div>
                         </div>
                     </div>
@@ -159,9 +159,9 @@
     <script>
         // 1. 万字级知识大脑索引 (从官方与 FDE 病理库中脱水提取)
         const accioBrain = [
-            { id: 'm144', tags: ['m144', '连接', '报错', '转圈', 'failed'], title: 'M144/M145 环境连接与握手病理', official: '官方建议：开启 Chrome 开发者模式，重新拖入扩展文件夹，设 Chrome 为默认浏览器并重启 App。', fde: '底层分析：Chrome 148+ 强制实施 Service Worker 回收。建议部署【M145持续心跳保活 Skill】，每 3s 执行一次业务 Ping，确保 24h 不断气。', link: 'skill_1688_audit.html' },
+            { id: 'm144', tags: ['m144', '连接', '报错', '转圈', 'failed'], title: 'M144/M145 环境连接与握手病理', official: '官方建议：开启 Chrome 开发者模式，重新拖入扩展程序文件夹，设 Chrome 为默认浏览器并重启 App。', fde: '底层分析：Chrome 148+ 强制实施 Service Worker 回收。建议部署【M145持续心跳保活 Skill】，每 3s 执行一次业务 Ping，确保 24h 不断气。', link: 'skill_1688_audit.html' },
             { id: 'okki', tags: ['okki', '120封', '限额', '激活', '邮件'], title: 'OKKI CRM 120封发信限额突破算法', official: '官方限制：OKKI API 每日发信上限为 120 封。请分批、合规触达。', fde: 'FDE 暴力解法：绕过 API，直接通过 Accio 物理模拟器在浏览器前台执行 UI 点击发送。单账号实测稳发 500+ 封，不触发风控判定。', link: 'skill_okki_revival.html' },
-            { id: 'icbu', tags: ['国际站', 'rfq', '抢单', '质量分', '4.8'], title: 'ICBU 4.8分高胜率抢单算法', official: '官方建议：使用 AI 助手生成内容，人工校验以保证回复质量超过 4.0 分。', fde: '底层逻辑：利用 Accio 挂载私有工厂 PDF 知识库。回盘 0.8s 响应，内置语义审计绕过“机械 AI”降权机制，将质量分强拉至 4.8。', link: '#' },
+            { id: 'icbu', tags: ['国际站', 'rfq', '抢单', '质量分', '4.8'], title: 'ICBU 4.8分高胜率抢单算法', official: '官方建议：使用 AI 助手生成内容，人工校验以保证回复质量超过 4.0 分。', fde: '底层逻辑：利用 Accio 挂载私有工厂 PDF 知识库。回盘 0.8s 响应，内置语义审计绕过“机械 AI”降权机制，将质量分强拉至 4.8。', link: 'skill_icbu_sniper.html' },
             { id: '1688', tags: ['1688', '查工厂', '二道贩子', '审计', '采购'], title: '1688 供应商 DNA 穿透审计模型', official: '支持 1688 批量采集。请确保 Accio 窗口可见以进行验证码校验。', fde: 'FDE 逻辑：穿透法人关联关系，过滤掉名下有 3 家以上贸易公司的“伪工厂”。每一份审计报告为您锁定 15% 原始采购利润。', link: 'skill_1688_audit.html' },
             { id: '555', tags: ['555', '限流', '权限', '错误'], title: 'Error 555: 流量限流与代理保护协议', official: '由于并发请求过多，本地代理进入自我保护模式。请稍后重试。', fde: '紧急操作：修改 Accio 内核 config.json 中的并发池上限至 64。同步加载【多 IP 物理指纹均衡器】，彻底解决高频采集熔断。', link: '#' }
         ];
@@ -197,7 +197,7 @@
             const steps = [
                 '正在执行 FDE 语义侦察...',
                 '正在匹配 Accio Sentinel 实时知识库...',
-                '正在检索 480 份先锋实战病理案例...',
+                '正在检索 480 份实战病理案例...',
                 '计算最优交付路径并生成 FDE 暴力包...'
             ];
 
