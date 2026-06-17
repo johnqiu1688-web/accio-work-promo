@@ -720,7 +720,7 @@
                 </div>
             </div>
             <div class="pl-12 border-l border-white/10 ml-12 text-[9px] font-black text-zinc-500 uppercase tracking-widest">
-                Nodes: <span class="text-white">35</span> | 装机: <span class="text-white italic">492 / 1000</span> (49.2%)
+                Nodes: <span class="text-white">38</span> | 装机: <span class="text-white italic">492 / 1000</span> (49.2%)
             </div>
         </div>
     </footer>
@@ -759,6 +759,10 @@
             { id:'create-team', cat:'团队', title:'开通 / 加入团队空间', tags:['团队','团队空间','开通','加入','邀请成员','企业空间','切换空间'], aliases:['怎么建团队','邀请同事','加入团队','切换到团队'], pinyin:['tuandui','kaitong','jiaru'], official:'点击立即开通并支付后，通过团队订阅完善企业信息。Owner/Admin 通过注册邮箱邀请成员并分配初始积分。新成员默认 Member，可被提升为 Admin。成员被邀请后需在客户端手动切换至企业空间。', fde:'FDE 提示：邀请后让成员务必在客户端切换空间，否则看不到团队资产。', links:[{t:'官方·加入团队空间',s:'Help',u:DOC+'help-create-team'}], skill:'#', action:'查看团队开通' },
             { id:'roles', cat:'团队', title:'团队角色与权限（Owner/Admin/Member）', tags:['角色','权限','owner','admin','member','管理员','成员','离职'], aliases:['角色有哪些','owner能干嘛','admin权限','成员离职怎么办'], pinyin:['jiaose','quanxian','owner'], official:'Owner（最高权限，管财务与解散）、Admin（邀请移除成员、管理资产）、Member（使用授权资产）。Member 离职后账号回退至个人空间，无法查看团队账单。', fde:'FDE 建议：财务/解散权限只留给 Owner，日常管理交给 Admin，降低误操作风险。', links:[{t:'官方·团队角色介绍&管理',s:'Help',u:DOC+'help-role-management'}], skill:'#', action:'查看角色管理' },
             { id:'team-assets', cat:'团队', title:'企业资产管理（Agent / Skill 共享）', tags:['资产','企业资产','共享','全员可见','agent共享','skill共享','团队资产'], aliases:['怎么共享agent','全员可见','团队skill','资产管理'], pinyin:['zichan','gongxiang','quanyuankejian'], official:'Owner/Admin 统一管理团队 Agent、Skill 等资产。勾选全员可见后全员可用，否则仅创建者可用。本地更新/删除已设全员可见的资产只影响本地，云端不同步删除。成员移除后其团队数据资产仍归团队。', fde:'FDE 建议：把标准化 SOP 做成 Skill 设全员可见，新人入职即用，统一团队打法。', links:[{t:'官方·企业资产管理',s:'Help',u:DOC+'help-team-assets'}], skill:'#', action:'查看资产管理' }
+,
+            { id:'find-similar', cat:'国际站', title:'Sourcing 找相似商品怎么用', tags:['找相似', '相似商品', 'sourcing', '选品', '找同款', '相似', '货源'], aliases:['怎么找相似商品', '找类似产品', '相似款', 'sourcing找相似'], pinyin:[], official:'官方 v0.16.0 (2026.06.11) 更新：Sourcing 新增「找相似商品」能力。用户可从已有的商品信息继续发起"发现相似商品"的指令，相似商品会在侧边抽屉中展示详情，可在抽屉内继续探索更多相关商品。', fde:'详见实战手册：症状自查、官方口径、FDE分步操作与预防建议。', links:[{t:'官方·更新日志 v0.16.0',s:'Help',u:'https://www.accio-ai.com/work/doc?slug=changelog'}], skill:'q/find-similar.html', action:'查看实战手册' },
+            { id:'model-select', cat:'功能', title:'Accio Work 模型怎么选(Qwen3/Kimi/GLM)', tags:['模型', 'model', 'qwen', 'qwen3', 'kimi', 'glm', 'minimax', '选模型', '极致', '专业', '标准', 'auto'], aliases:['用哪个模型', '模型怎么选', 'qwen3怎么选', '哪个模型好', '模型区别'], pinyin:[], official:'Accio Work 支持 Qwen 3 Max、Qwen 3.6 Plus、GLM-5、Kimi K2.5、MiniMax M2.5 等主流大模型。可在创建/编辑 Agent 时为不同 Agent 分配不同模型。模式区别：Auto(智能匹配,日常任务,成本低)、标准(均衡通用,消耗中)、专业(能力更强,关键任务,消耗高)、极致(最强推理,复杂任务,消耗极高)。', fde:'详见实战手册：症状自查、官方口径、FDE分步操作与预防建议。', links:[{t:'官方·积分与额度',s:'Help',u:'https://www.accio-ai.com/work/doc?slug=help-credits'}], skill:'q/model-select.html', action:'查看实战手册' },
+            { id:'team-canvas', cat:'团队', title:'Team 画布(团队协作可视化)怎么用', tags:['画布', 'canvas', 'team画布', '团队协作', '可视化', '看板', '信息组织'], aliases:['团队画布', '画布怎么用', '可视化协作', 'team canvas'], pinyin:[], official:'官方 v0.16.0 (2026.06.11) 更新：Team 新增画布能力，提升多人协作场景下的信息组织与查看体验。画布支持图片上传、预览、编辑与放大(部分能力 v0.7.8 已上线,v0.16.0 升级至团队协作场景)。', fde:'详见实战手册：症状自查、官方口径、FDE分步操作与预防建议。', links:[{t:'官方·更新日志 v0.16.0',s:'Help',u:'https://www.accio-ai.com/work/doc?slug=changelog'}], skill:'q/team-canvas.html', action:'查看实战手册' }
         ];
 
         // ====== 召回引擎 (归一化 + 分词 + 同义词 + 拼音 + 模糊 + 零空屏兜底) ======
