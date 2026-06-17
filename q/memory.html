@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">Agent 记忆 / dream 整理</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">Accio 的记忆分<strong class="text-emerald-400">短期(本地SQLite)和长期(Markdown)</strong>。Agent"记不住"时，<strong class="text-emerald-400">主动把重要背景喂给它、并定期用 /dream 整理</strong>，它就会越用越懂你的生意。每个自然日首条消息会自动触发一次记忆整理。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你的记忆困扰</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>Agent 老是忘记之前说过的背景</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>每次都要重复交代同样的信息</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>不知道 /dream 是干嘛的</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>想让 Agent 长期记住我的偏好</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">短期记忆存于本地 SQLite，长期知识存于 Markdown 文件。dream 会提炼短期记忆、转入日记或浓缩进长期记忆并清理冗余。每个自然日首条消息会后台触发记忆整理。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 建议：重要业务背景主动喂给 Agent 并定期 dream，让它越用越懂你的生意。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-agent-memory" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·Agent 记忆 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">了解记忆机制 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">短期记忆存于本地 SQLite，长期知识存于 Markdown 文件。记忆=偏好与背景的记录；进化=能力随使用的长期提升。/dream 会提炼短期记忆、转入日记或浓缩进长期记忆并清理冗余。每个自然日首条消息会后台触发记忆整理。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-agent-memory" target="_blank" class="text-blue-400 hover:underline">官方·Agent 记忆</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：让 Agent 记住你</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">主动喂关键背景</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">别指望它自己猜。把你的产品线、客户特点、常用规则一次性讲清，它会记进去。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">定期用 /dream 整理</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">输入 <code class="bg-black/40 px-1.5 py-0.5 rounded text-orange-300 text-xs">/dream</code> 让它把短期记忆提炼、浓缩进长期记忆并清冗余，记忆更精准。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">重要结论让它记长期</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">关键的、要反复用的结论，明确告诉它"记住这个"，会进长期记忆。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">善用每日自动整理</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">每天第一条消息会触发后台记忆整理，保持记忆新鲜。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 记忆隔离按 Agent 独立，可随时查看/编辑/清除。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么维护好记忆</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>重要业务背景主动、完整地喂给 Agent</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>定期 /dream 保持记忆精炼</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>过时信息及时清除，避免误导</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>关键偏好明确要求长期记住</li></ul>
     </section>
   </article>
 
