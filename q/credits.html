@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">积分与额度规则</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">Accio Work 每天 20 个免费积分<strong class="text-emerald-400">用完会自动补充、不累积</strong>。觉得不够用，多半不是量太少，而是<strong class="text-emerald-400">模型选太高、任务拆太碎、Skill 堆太多</strong>。学会"按需选模型 + 合并任务"，免费额度就能覆盖绝大多数日常工作。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：积分为什么不够用</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>日常简单任务也用了"极致/专业"高消耗模型</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>一个大任务反复试错，每次都重新跑</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>启用了一堆用不上的 Skill，每次调用都耗积分</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>不清楚积分到底花在哪</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">每个账号每 24 小时拥有 20 个基础积分，用完后自动补充、不累积。消耗与模型选择（极致&gt;专业&gt;标准&gt;Auto）、任务复杂度及工具调用次数相关。Pro/Elite/Ultra 套餐对高质量模型有每 3 小时调用上限，Ultra 无限制。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 省积分：日常任务用 Auto/标准模型，复杂调研才上专业/极致；避免堆叠过多 Skill 造成无谓消耗。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-credits" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·积分与额度 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">查看积分规则 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">每个账号每 24 小时拥有 20 个基础积分，用完后自动补充、不累积。消耗与模型选择（极致>专业>标准>Auto）、任务复杂度及工具调用次数相关。Pro/Elite/Ultra 套餐对高质量模型有每 3 小时调用上限，Ultra 无限制。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-credits" target="_blank" class="text-blue-400 hover:underline">官方·积分与额度</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：把免费积分用出双倍价值</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">按任务难度选模型，别一律用最贵的</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">日常对话、整理、简单查询用 <strong class="text-white">Auto/标准</strong> 模型；只有复杂调研、深度分析才上 <strong class="text-white">专业/极致</strong>。这一步最省积分。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">一次把需求说清，减少反复试错</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">下指令前想清楚要什么，一次给足背景和要求，避免来回多轮消耗。复杂任务可先让 Agent 列计划，确认后再执行。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">只启用当前用得到的 Skill</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">在 Plugins→Skills 里关掉用不上的 Skill。Skill 过载会增加无谓的工具调用和积分消耗。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">额度不够再考虑套餐/加油包</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">先用上面的方法压消耗；确实高频重度使用，再对比 Pro/Elite/Ultra 或加油包，按真实 ROI 决定。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 官方积分规则可能随版本调整，请以 App 内左下角实时额度与官方文档为准（本站为使用建议，非计费承诺）。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么长期不为积分发愁</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>养成"先选对模型再发指令"的习惯</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>把高频流程做成 Skill，一次配置长期省力</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>定期清理不用的 Skill，保持 Agent 轻量</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>重度团队用户优先评估企业版积分池，比各买个人版更划算</li></ul>
     </section>
   </article>
 

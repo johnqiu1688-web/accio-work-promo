@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">登录方式与账号问题</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">Accio Work 登录不上，<strong class="text-emerald-400">90% 是浏览器默认设置或 VPN 干扰</strong>，不是账号问题。把 Chrome 设为系统默认浏览器、关掉全局代理、用最新版重试，绝大多数登录卡顿/跳转失败都能解决。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你是哪种登录问题</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>点登录后一直跳转/转圈，回不到 App</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>授权页打不开或一片空白</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>提示 555 / 系统繁忙</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>换了账号但登录态没切过来</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">支持邮箱注册登录及阿里国际站账号登录，后续将支持更多 SSO。建议使用最新版 Chrome 并设为系统默认浏览器，避免跳转和授权失败。目前已无需邀请码。切换账号需先在浏览器中操作。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 提示：登录卡住多为浏览器默认设置 + VPN 干扰。先把 Chrome 设为默认、关闭 VPN，再重启 App；若提示 555/繁忙，稍后重试。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-login" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·登录与账号问题 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">查看官方登录指南 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">支持邮箱注册登录及阿里国际站账号登录，后续将支持更多 SSO。建议使用最新版 Chrome 并设为系统默认浏览器，避免跳转和授权失败。目前已无需邀请码。切换账号需先在浏览器中操作（登录状态与浏览器联动）。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-login" target="_blank" class="text-blue-400 hover:underline">官方·登录与账号问题</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：分情况解决登录</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">把 Chrome 设为系统默认浏览器</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">登录依赖默认浏览器完成授权跳转。Windows：设置→应用→默认应用→Web浏览器选 Chrome；macOS：系统设置→默认网页浏览器选 Chrome。设完彻底退出 App 重开。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">关闭 VPN / 全局代理</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">全局代理会拦截授权回调导致登录失败。临时关 VPN，或把 localhost/127.0.0.1 加入代理白名单，再重试登录。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">遇到 555/繁忙：稍等重试</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">提示 555 或系统繁忙是服务端自我保护，通常稍后即恢复，可换网络或过几分钟再试，不必反复点。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">切换账号：先在浏览器操作</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">登录态与浏览器联动。要换账号，先在 Chrome 里退出/切换对应账号，再回 App 登录，避免登录态串号。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 若以上都试过仍登录失败，可能是服务端波动或账号异常，建议稍后重试或查官方帮助中心最新公告（本站为实战排查建议）。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么避免反复登录出问题</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>固定用 Chrome 作默认浏览器，别频繁切换</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>常用网络下把 localhost 加入代理直连白名单</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>保持 Chrome 与 App 为最新版本</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>多账号用户规范切换，避免登录态混乱</li></ul>
     </section>
   </article>
 

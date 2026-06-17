@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">ICBU RFQ 回盘 / 质量分 4.8</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">ICBU 回盘质量分上不去，核心原因是<strong class="text-emerald-400">回复太"模板化"被系统判定为机械回复而降权</strong>。提分关键不是回得快，而是<strong class="text-emerald-400">每一封都精准命中买家的具体需求点（规格/认证/交期/市场），并体现差异化卖点</strong>。用 Accio 提取需求+结合工厂资料生成，既快又准。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你的回盘是不是这样</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>回盘内容大同小异，换个客户名就能复用</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>质量分长期卡在 3.x，RFQ 抢不到好询盘</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>回复里缺规格、认证、交期等买家最在意的硬信息</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>回得很快但回复率低，像在走流程</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">官方建议用生意助手生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">语义对齐逻辑：纯助手生成语料易被标记为机械回复降权。FDE 方案内置二次建模，自动匹配工厂规格 PDF，0.8s 响应，强拉质量分至 4.8。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-general-automation" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·国际站运营自动化 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">查看 4.8 分方案 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">官方建议用"生意助手"生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-general-automation" target="_blank" class="text-blue-400 hover:underline">官方·国际站运营自动化</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：把回盘质量分拉到 4.8</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">先拆解买家需求，别急着套模板</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">把 RFQ 原文发给 Accio，让它提取买家的核心关注点。可复制指令：<code class="bg-black/40 px-1.5 py-0.5 rounded text-orange-300 text-xs">提取这条RFQ里买家的核心需求：规格、数量、认证要求、交期、目标市场，逐项列出</code></p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">用工厂真实资料"对齐"每个需求点</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">针对买家每个关注点，用你的工厂规格书/产品参数逐条回应，而不是泛泛而谈。让 Accio 把工厂资料和买家需求做"语义对齐"，确保不漏点、不答非所问。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">加差异化卖点，避开机械判定</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">在覆盖硬信息的基础上，加 1-2 个差异化卖点（如认证齐全、可定制、交期优势），让回盘有"人味"和针对性，避开系统对模板化回复的降权。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">人工终审再发</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">Accio 生成后务必人工过一遍，确认规格/交期/报价准确无误。质量分是长期信用，错误信息伤分更狠。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> <strong class="text-white">经验参考</strong>：覆盖买家全部关注点 + 差异化表达的回盘，质量分通常显著优于模板群发。"4.8分""0.8s"为实战目标值，非官方承诺指标。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么稳定维持高质量分</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>建立分行业的工厂规格资料库，喂给 Accio 复用</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>把高分回盘沉淀成 Skill/模板，团队统一打法</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>定期看 RFQ 数据，复盘哪些回盘转化高</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>始终人工终审，杜绝错误信息伤信用分</li></ul>
     </section>
   </article>
 
