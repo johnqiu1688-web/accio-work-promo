@@ -281,6 +281,42 @@
  ]
 }
     </script>
+    <!-- ===== 数据埋点 (需求验证) ===== -->
+    <!-- 【百度统计】登录 tongji.baidu.com 新增站点 getquon.com 后,把专属 hm.js?后面的ID 填到下面 BAIDU_ID,即生效 -->
+    <script>
+    var BAIDU_ID = ""; // ← 在这里粘贴百度统计的站点ID(形如 a1b2c3d4...)
+    (function(){
+      if(BAIDU_ID){
+        var hm=document.createElement("script");
+        hm.src="https://hm.baidu.com/hm.js?"+BAIDU_ID;
+        var s0=document.getElementsByTagName("script")[0]; s0.parentNode.insertBefore(hm,s0);
+      }
+    })();
+    // 轻量事件埋点: 上报百度统计(_hmt) + 本地兜底(localStorage),用于看用户真实行为
+    window.ACCIO_ANALYTICS = true;
+    window._hmt = window._hmt || [];
+    function trackEvent(category, action, label){
+      try{
+        if(window._hmt) window._hmt.push(['_trackEvent', category, action, label||'']);
+        // 本地兜底: 记录最近100条事件,F12 console 输入 accioStats() 可随时查看
+        var k='accio_events', arr=JSON.parse(localStorage.getItem(k)||'[]');
+        arr.push({t:new Date().toISOString(), c:category, a:action, l:label||''});
+        if(arr.length>100) arr=arr.slice(-100);
+        localStorage.setItem(k, JSON.stringify(arr));
+      }catch(e){}
+    }
+    // 控制台快捷查看本地统计
+    window.accioStats=function(){
+      var arr=JSON.parse(localStorage.getItem('accio_events')||'[]');
+      var searches=arr.filter(function(e){return e.a==='search'}).map(function(e){return e.l});
+      var zero=arr.filter(function(e){return e.a==='zero_result'}).map(function(e){return e.l});
+      console.log('=== 总事件:'+arr.length+' ===');
+      console.log('搜索词('+searches.length+'):', searches);
+      console.log('零结果词('+zero.length+'):', zero);
+      console.table(arr);
+      return arr;
+    };
+    </script>
 </head>
 <body class="grid-bg min-h-screen">
 
@@ -807,6 +843,8 @@
             panel.classList.remove('hidden');
             const matches = recall(q);
             const header = panel.querySelector('div');
+            // 埋点: 去抖记录搜索词(2字以上),零结果单独标记
+            if(q.length>=2){ clearTimeout(window.__st); window.__st=setTimeout(function(){ trackEvent('search', matches.length>0?'search':'zero_result', q); },800); }
             if(matches.length > 0){
                 if(header) header.innerText = '为「'+q+'」找到 '+matches.length+' 条结果';
                 list.innerHTML = matches.slice(0,12).map(m => `
@@ -849,6 +887,7 @@
         function showDiagnosis(id){
             const data = MASTER_KB.find(i => i.id === id);
             if(!data) return;
+            trackEvent('node', 'open', id);
             const progress = document.getElementById('inference-progress');
             progress.style.width = '0%';
             setTimeout(() => progress.style.width = '100%', 100);
