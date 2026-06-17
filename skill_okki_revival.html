@@ -130,6 +130,50 @@
             </div>
         </section>
 
+        
+        <!-- 真实 FDE 配置方案 (基于官方 Skills 机制, 非伪造安装包) -->
+        <section id="fde-config-module" class="mb-32">
+            <div class="glass-ui rounded-[2.5rem] p-10 border border-emerald-500/20">
+                <div class="flex items-center space-x-3 mb-3">
+                    <i class="fas fa-circle-check text-emerald-500 text-xl"></i>
+                    <h2 class="text-xl font-black text-white">如何在你的 Accio Work 里用起来（真实可操作）</h2>
+                </div>
+                <p class="text-zinc-500 text-xs mb-8">本方案不依赖任何第三方安装包，完全基于 Accio Work 官方 Skills 机制。<a href="https://www.accio-ai.com/work/doc?slug=help-skills" target="_blank" class="text-blue-400 hover:underline">官方·技能管理文档 &rarr;</a></p>
+                <div class="space-y-3 text-zinc-300 text-sm leading-relaxed">
+            <div class="flex items-start"><span class="w-5 h-5 rounded-full bg-blue-500 text-white text-[10px] font-black flex items-center justify-center mr-3 shrink-0 mt-0.5">1</span><span>打开 Accio Work，进入 <strong class="text-white">Plugins</strong> 频道，左上角切换到 <strong class="text-white">Skills</strong> 标签。</span></div>
+            <div class="flex items-start"><span class="w-5 h-5 rounded-full bg-blue-500 text-white text-[10px] font-black flex items-center justify-center mr-3 shrink-0 mt-0.5">2</span><span>新建一个 Agent（或选已有 Agent），把下方 FDE 配置指令<strong class="text-white">复制进对话框</strong>，让 Agent 按此方案执行。</span></div>
+            <div class="flex items-start"><span class="w-5 h-5 rounded-full bg-blue-500 text-white text-[10px] font-black flex items-center justify-center mr-3 shrink-0 mt-0.5">3</span><span>进阶：把它沉淀为自定义 Skill——按官方格式创建 Skill 文件夹，用 <strong class="text-white">Install Local Skill</strong> 加载，之后用 <code class="bg-black/40 px-1 rounded text-orange-300">/</code> 命令随时精准调用。</span></div>
+          </div>
+                <div class="mt-8">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-[10px] font-black text-emerald-500 uppercase tracking-widest">FDE 配置指令（复制粘贴给 Agent 即可）</span>
+                        <button onclick="copyFDE()" class="text-[10px] font-black bg-white text-black px-4 py-1.5 rounded-lg uppercase tracking-widest hover:bg-emerald-500 hover:text-white transition"><i class="fas fa-copy mr-1"></i>一键复制</button>
+                    </div>
+                    <pre id="fde-prompt" class="bg-black/50 border border-white/10 rounded-2xl p-5 text-zinc-300 text-xs leading-relaxed whitespace-pre-wrap font-mono">请扮演我的外贸客户复活助手。当我提供一个公海/僵尸客户的公司名和联系人时，请：
+1. 检索该买家及其公司在公开网络上的最新动态（如融资、参展、新品、招聘信号）；
+2. 基于这些动态，帮我撰写 3 封不同角度、个性化的破冰开发信，开头要自然引用买家的最新动态；
+3. 内容需符合平台发信规范，避免被判定为垃圾邮件。
+请把每封信的"切入钩子"单独标注出来。</pre>
+                </div>
+                <div class="mt-6 p-4 rounded-2xl bg-blue-500/5 border border-blue-500/15">
+                    <p class="text-zinc-400 text-xs leading-relaxed"><i class="fas fa-circle-info text-blue-400 mr-1"></i> 提示：这是一段可直接执行的实战指令，复制到 Accio Work 对话框即可让你的 Agent 按 FDE 方案工作。需要更深度的定制（如对接你的工厂 PDF、专属话术库），可点下方按钮联系部署。</p>
+                </div>
+            </div>
+        </section>
+        <script>
+        function copyFDE(){
+            const t=`请扮演我的外贸客户复活助手。当我提供一个公海/僵尸客户的公司名和联系人时，请：
+1. 检索该买家及其公司在公开网络上的最新动态（如融资、参展、新品、招聘信号）；
+2. 基于这些动态，帮我撰写 3 封不同角度、个性化的破冰开发信，开头要自然引用买家的最新动态；
+3. 内容需符合平台发信规范，避免被判定为垃圾邮件。
+请把每封信的"切入钩子"单独标注出来。`;
+            navigator.clipboard.writeText(t).then(()=>{
+                const b=event.target.closest('button'); const o=b.innerHTML;
+                b.innerHTML='<i class="fas fa-check mr-1"></i>已复制'; setTimeout(()=>b.innerHTML=o,2000);
+            });
+        }
+        </script>
+
         <!-- 外链资源 -->
         <section class="mb-32">
             <h3 class="text-xs font-black text-zinc-600 uppercase tracking-[0.4em] mb-12 italic">CRM Optimization Sources</h3>
