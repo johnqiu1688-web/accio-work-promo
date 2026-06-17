@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">安装与更新 / 客户端下载</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">Accio Work 推荐用<strong class="text-emerald-400">桌面端</strong>（macOS 11+ / Win 10+ 64位），功能最全。装好后<strong class="text-emerald-400">App 无反应/打不开，90% 是 Chrome 没设为系统默认浏览器</strong>导致本地端口没起来——先改默认浏览器再重启，绝大多数问题就没了。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你遇到的是哪种</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>不知道该下桌面端还是用网页版</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>App 装好了但打开无反应、白屏或卡在启动</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>用着用着变慢、卡顿</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>不确定是不是最新版，担心有 bug</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">推荐下载桌面端（macOS 11+ / Win 10+ 64位），支持窗口置顶等独有功能。建议始终使用最新版。App 无反应时检查 Chrome 默认浏览器设置；变慢可切换模型或避开高峰，并把大任务拆成小步骤。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 提示：桌面端无反应 90% 是 Chrome 未设为默认浏览器导致本地端口未监听。先改默认浏览器再重启。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-install" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·安装与更新 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">查看安装指南 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">推荐下载桌面端（macOS 11+ / Win 10+ 64位），支持窗口置顶等独有功能。建议始终使用最新版（App 内更新或官网下载）。App 无反应时检查 Chrome 默认浏览器设置；变慢可切换模型或避开高峰，并把大任务拆成小步骤。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-install" target="_blank" class="text-blue-400 hover:underline">官方·安装与更新</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：安装与启动排查</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">优先装桌面端</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">桌面端支持窗口置顶等独有能力，体验比网页版完整。从官网下载对应系统版本（macOS 11+ / Win 10+ 64位）。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">App 无反应？先改默认浏览器</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">这是最高频的坑。Win：设置→应用→默认应用→Web浏览器选 Chrome；macOS：系统设置→默认网页浏览器选 Chrome。改完<strong class="text-white">彻底退出 App（结束进程）</strong>再重开。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">变慢卡顿？换模型+拆任务</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">高峰期或大任务易卡。可切换到更轻的模型（Auto/标准）、避开高峰，并把一个大任务拆成几步小任务执行。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">始终用最新版</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">旧版本可能有已修复的 bug。App 内检查更新或去官网下最新版，遇到莫名问题先升级再排查。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 不同系统/版本表现略有差异，以官方最新安装包与文档为准（本站为实战排查建议）。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么避免装好又出问题</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>固定 Chrome 为默认浏览器，别频繁切换</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>开启 App 自动更新，保持最新版</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>大任务习惯性拆小，减少卡顿</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>低配机器避开高消耗模型常驻</li></ul>
     </section>
   </article>
 

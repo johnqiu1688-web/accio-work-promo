@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">消息渠道 / 钉钉飞书微信绑定</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">Accio Work 支持钉钉/飞书/微信/Telegram/Discord 绑定，让你在 IM 里直接指挥 Agent。<strong class="text-emerald-400">绑定后机器人不回复，90% 是"三连"没做全</strong>：是否绑定了 Agent、用户配对是否审批通过、机器人是否 Online——挨个查一遍基本就好。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你卡在哪一步</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>不知道支持哪些 IM、怎么开始绑</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>机器人建好了但发消息不回</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>群里能用但 1:1 不行（或反过来）</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>配对申请发了没反应</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">支持钉钉、飞书、微信、Telegram、Discord 5 大渠道。钉钉/飞书支持群聊及 1:1，微信仅 1:1。接入：创建机器人获取凭证-粘贴至渠道卡片-关联智能体，状态 Online 即成功。不回复请检查：是否绑定 Agent、用户配对是否通过审批、机器人是否在线。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 排查口诀：不回复就查三连——绑定 Agent 了吗？配对审批过了吗？机器人 Online 吗？</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-channels" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·消息渠道 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">配置消息渠道 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">支持钉钉、飞书、微信、Telegram、Discord 5 大渠道。钉钉/飞书支持群聊及 1:1，微信仅 1:1。接入：创建机器人获取凭证→粘贴至渠道卡片→关联智能体，状态 Online 即成功。不回复请检查：是否绑定 Agent、用户配对是否通过审批、机器人是否在线。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-channels" target="_blank" class="text-blue-400 hover:underline">官方·消息渠道</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：绑定与排障</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">按标准流程接入</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">在对应 IM 创建机器人→拿到凭证→粘贴到 Accio 渠道卡片→关联一个 Agent。卡片状态显示 <strong class="text-white">Online</strong> 才算成功。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">不回复就查"三连"</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">①这个渠道有没有关联 Agent？②给你发消息的用户，配对申请审批通过了吗？③机器人状态是不是 Online？三个全 yes 基本就能回。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">分清群聊/1:1 能力</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">钉钉、飞书支持群聊和 1:1；微信仅支持 1:1。用错场景会"没反应"，对照能力表确认。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">配对没反应？查审批</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">新用户首次对话需配对审批。去后台看有没有待审批的配对申请，通过后即可对话。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 各 IM 平台机器人创建方式略有差异，以官方消息渠道文档的对应指引为准。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么让 IM 协作稳定</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>团队成员统一走配对审批，避免漏审</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>绑定后先自测一条，确认 Online 再推广</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>按 IM 能力选群聊/1:1 场景</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>机器人凭证妥善保管，变更及时更新</li></ul>
     </section>
   </article>
 

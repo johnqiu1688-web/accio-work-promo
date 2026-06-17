@@ -42,21 +42,37 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">定时任务 / 周期执行</h1>
 
   <article class="space-y-10">
-    <section class="glass rounded-3xl p-8">
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">定时任务能让 Accio <strong class="text-emerald-400">按时间自动干活</strong>（如每早 9 点出竞品日报、每 2 小时监测价格）。但要记住一条铁律：<strong class="text-emerald-400">它依赖本机开机才跑</strong>——关机时不执行，开机后自动补做。要 7×24 不间断，得配常开设备。</p>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你想实现什么</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>想每天定时自动出报告/汇总</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>想周期性监测（竞品价格、关键词排名）</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>设了定时任务但到点没执行</li><li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>想 7×24 全自动但电脑会关机</li></ul>
+    </section>    <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">定时任务支持定时（如明早 9 点）或周期（如每 2 小时）执行。可在对话中直接指令设定，或在专用页面手动配置。电脑关机时不运行，开机后自动补执行。典型场景：每日新闻汇总、竞品价格监测、周报提醒。</p>
-    </section>
-    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">FDE 提示：定时任务依赖本机开机；要 7x24 不间断建议配合常开设备。</p>
-    </section>
-    <section>
-      <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
-      <div class="space-y-3"><a href="https://www.accio-ai.com/work/doc?slug=help-scheduled-tasks" target="_blank" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-white text-xs font-bold">官方·定时任务 <i class="fas fa-arrow-up-right-from-square text-[8px] opacity-50 ml-1"></i></span><span class="text-[8px] text-zinc-600 uppercase font-black">Help</span></a></div>
-    </section>
-    <section class="glass rounded-3xl p-8 text-center">
-      <p class="text-zinc-400 text-sm mb-5">需要把 Accio Work 真正部署到你的跨境业务里？</p>
-      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">设置定时任务 &rarr;</a>
+      <p class="text-zinc-300 leading-relaxed">定时任务是基于时间的执行规则，支持定时（如明早 9 点）或周期（如每 2 小时）执行。可在对话中直接指令设定，或在专用页面手动配置。电脑关机时不运行，开机后自动补执行。典型场景：每日新闻汇总、竞品价格监测、周报提醒。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-scheduled-tasks" target="_blank" class="text-blue-400 hover:underline">官方·定时任务</a></p>
+    </section>    <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：设好定时任务</h2>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">对话里直接说，最快</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">不用进设置，直接对 Agent 说。例如：<code class="bg-black/40 px-1.5 py-0.5 rounded text-orange-300 text-xs">每天早上9点帮我汇总[竞品]的最新动态并发我</code>，Agent 会自动建定时任务。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">周期任务这样描述</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">周期执行说清间隔，例如"每 2 小时监测一次[关键词]排名变化"。需要精细配置可去专用页面手动调。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">到点没执行？先看是否开机</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">最常见原因：到点时电脑关机/休眠了。定时任务依赖本机运行，关机不跑、开机自动补执行。确认执行时段电脑是开着的。</p>
+        </div>        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">要 7×24 就配常开设备</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">日报、监控类要全天候不间断，建议放在一台常开的电脑/设备上跑，避免漏执行。</p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20"><p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> 定时任务的执行依赖本机状态，云端无人值守需结合常开设备方案（本站为使用建议）。</p></div>
+    </section>    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么让定时任务可靠</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed"><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>把全天候任务放常开设备，避免关机漏跑</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>关键任务设好后先手动触发一次验证</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>周期任务定期检查输出是否正常</li><li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>重要日报加 IM 推送，结果直达不漏看</li></ul>
     </section>
   </article>
 
