@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿里国际站 (ICBU) 怎么用？Accio Work 实战解答 + Skills 下载 | Accio Pioneer</title>
+<meta name="description" content="阿里国际站 (ICBU)场景下的 Accio Work 全部问题：报错排查、业务增效、Skills 下载一站解决。店铺运营、回盘抢单、发品与风控的全链路提效。官方口径+FDE实战双解答。">
+<meta name="keywords" content="Accio Work,阿里国际站 (ICBU),阿里国际站 (ICBU)怎么用,Accio Work 阿里国际站 (ICBU),外贸AI助手,Skills下载">
+<link rel="canonical" href="https://getquon.com/scene/icbu.html">
+<meta property="og:title" content="阿里国际站 (ICBU) - Accio Work 实战解答 + Skills 下载">
+<meta property="og:url" content="https://getquon.com/scene/icbu.html">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}</style>
+</head>
+<body class="grid-bg min-h-screen">
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+  <a href="https://getquon.com/index_cn.html" class="text-white font-black italic text-lg">Accio <span class="text-orange-500">Pioneer</span></a>
+  <div class="flex items-center gap-4 text-[10px] font-black text-zinc-400 uppercase tracking-widest">
+    <a href="https://getquon.com/index_cn.html" class="hover:text-white">搜索中心</a>
+    <a href="https://getquon.com/guide.html" class="hover:text-white">使用指南</a>
+    <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded-full">免费部署</a>
+  </div>
+</nav>
+
+<header class="max-w-5xl mx-auto px-6 pt-14 pb-8">
+  <nav class="text-[11px] text-zinc-600 mb-6"><a href="https://getquon.com/index_cn.html" class="hover:text-orange-500">首页</a> / <span class="text-zinc-400">按场景找</span> / <span class="text-white">阿里国际站 (ICBU)</span></nav>
+  <div class="flex items-center gap-5 mb-5">
+    <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shrink-0" style="background:#3b82f61a;color:#3b82f6"><i class="fas fa-store"></i></div>
+    <div>
+      <h1 class="text-3xl md:text-4xl font-black text-white">阿里国际站 (ICBU)</h1>
+      <p class="text-zinc-400 text-sm mt-1">店铺运营、回盘抢单、发品与风控的全链路提效</p>
+    </div>
+  </div>
+  <!-- 场景内搜索 -->
+  <div class="relative mt-6">
+    <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500"></i>
+    <input type="text" onkeydown="if(event.key==='Enter')location.href='https://getquon.com/index_cn.html'" placeholder="在 阿里国际站 (ICBU) 场景内搜索问题，或回搜索中心一键直达…" class="w-full bg-[#0f0f11] border border-white/10 rounded-2xl py-4 pl-12 pr-4 text-white outline-none focus:border-orange-500 text-sm">
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pb-24">
+  <div class="flex flex-wrap gap-3 mb-8 p-2 glass rounded-3xl w-fit">
+<button onclick="switchTab('diag')" id="btn-diag" class="tab-btn px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition bg-white text-black"><i class="fas fa-bug mr-2"></i>报错排查</button>
+<button onclick="switchTab('boost')" id="btn-boost" class="tab-btn px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition text-zinc-400 hover:text-white"><i class="fas fa-rocket mr-2"></i>业务增效</button>
+<button onclick="switchTab('skills')" id="btn-skills" class="tab-btn px-6 py-3 rounded-2xl font-black text-xs uppercase tracking-widest transition text-zinc-400 hover:text-white"><i class="fas fa-cube mr-2"></i>Skills 下载</button>
+  </div>
+      <div id="panel-diag" class="tab-panel ">
+        <p class="text-zinc-500 text-sm mb-6"><i class="fas fa-bug text-orange-500 mr-2"></i>遇到连接/登录/限流问题，快速定位与解决</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">M144/M145 连接失败 / 端口握手</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>连接类问题官方建议：确保 Chrome 为默认浏览器，完全退出 App 后重新启动以触发本地端口监听；检查桌面端/Web 端数据同步状态。…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>底层解密：Chrome 148+ 强制 Service Worker 心跳回收（约 5s），常规重启无法根治。需部署持续心跳保活 Skill 物理级维持本地 127.0.0.1 通…</p>
+          <a href="https://getquon.com/skill_1688_audit.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看 Skill &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Chrome 148 心跳回收 / 后台冻结</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>官方建议保持 Chrome 为最新版且设为默认浏览器；遇到连接不稳定时重启 App 并检查扩展是否正常加载。…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>底层解密：Chrome 148.5 强制后台标签页冻结 + 5s 心跳回收。FDE 方案用业务层 Ping 协议保活，使 Agent 在后台挂载也不掉线。…</p>
+          <a href="https://getquon.com/skill_1688_audit.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看 Skill &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">Error 555 / 繁忙 / 限流</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">报错</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>提示 555 或繁忙通常是请求过多/系统繁忙触发的自我保护，官方建议稍后重试；同时可尝试切换网络或关闭 VPN。…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 实战：高频采集场景下建议降低并发频率、把大任务拆小、错峰执行，遵守平台访问频率规范，可显著降低触发限流与熔断的概率。…</p>
+          <a href="https://getquon.com/q/555.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">登录方式与账号问题</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">账号</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>支持邮箱注册登录及阿里国际站账号登录，后续将支持更多 SSO。建议使用最新版 Chrome 并设为系统默认浏览器，避免跳转和授权失败。目前已无需邀请码。切换账号…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 提示：登录卡住多为浏览器默认设置 + VPN 干扰。先把 Chrome 设为默认、关闭 VPN，再重启 App；若提示 555/繁忙，稍后重试。…</p>
+          <a href="https://getquon.com/q/login.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        </div>
+      </div>
+      <div id="panel-boost" class="tab-panel hidden">
+        <p class="text-zinc-500 text-sm mb-6"><i class="fas fa-rocket text-orange-500 mr-2"></i>用 Accio Work 把核心业务跑得更快更稳</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">国际站运营自动化（选品/发品/广告/平台规范）</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">国际站</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>国际站生意助手：选品洞察（站内外多维数据交叉验证，可直连 Jungle Scout API）、智能发品（解析素材包/链接，AI 批量做场景图/模特图，效率 +1…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：发品先用 AI 批量出图省美工；广告每周用一句话指令做一次归因体检。…</p>
+          <a href="https://getquon.com/q/icbu-auto.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">ICBU RFQ 回盘 / 质量分 4.8</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">国际站</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>官方建议用生意助手生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>语义对齐逻辑：纯助手生成语料易被标记为机械回复降权。FDE 方案内置二次建模，自动匹配工厂规格 PDF，0.8s 响应，强拉质量分至 4.8。…</p>
+          <a href="https://getquon.com/skill_icbu_sniper.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看 Skill &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">独立站 SEO 优化</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">营销</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>自动执行关键词研究、竞争对手监控、页面优化和排名跟踪。提交网址后 AI 分析对手痛点与机遇并生成可执行计划。典型应用：研究细分高意向词、优化产品页文案、设置周度…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：先用 AI 跑一次竞品差距分析，锁定高意向长尾词，再批量优化产品页。…</p>
+          <a href="https://getquon.com/q/seo.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">积分与额度规则</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">积分</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>每个账号每 24 小时拥有 20 个基础积分，用完后自动补充、不累积。消耗与模型选择（极致&gt;专业&gt;标准&gt;Auto）、任务复杂度及工具调用次数相关。Pro/Eli…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 省积分：日常任务用 Auto/标准模型，复杂调研才上专业/极致；避免堆叠过多 Skill 造成无谓消耗。…</p>
+          <a href="https://getquon.com/q/credits.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        </div>
+      </div>
+      <div id="panel-skills" class="tab-panel hidden">
+        <p class="text-zinc-500 text-sm mb-6"><i class="fas fa-cube text-orange-500 mr-2"></i>即取即用的 FDE 实战技能包</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">ICBU RFQ 回盘 / 质量分 4.8</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">国际站</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>官方建议用生意助手生成回盘内容并人工审核，确保包含规格及交期，质量分维持在 4.0 以上。…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>语义对齐逻辑：纯助手生成语料易被标记为机械回复降权。FDE 方案内置二次建模，自动匹配工厂规格 PDF，0.8s 响应，强拉质量分至 4.8。…</p>
+          <a href="https://getquon.com/skill_icbu_sniper.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看 Skill &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">技能 Skills 管理与启用</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>技能是智能体的操作说明书。在 Plugins 频道切换至 Skills 标签一键启用，支持上传自定义技能包。建议避免 Skill 过载以省积分，用斜杠命令精准调…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：只启用当前业务用得到的 Skill；高频流程沉淀为自定义 Skill，长期省时省积分。…</p>
+          <a href="https://getquon.com/q/skills.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        <div class="glass rounded-2xl p-6 flex flex-col">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-white font-bold text-base">插件 Plugin / 国际站生意助手 / OKKI Shops</h3>
+            <span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase shrink-0 ml-2">功能</span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-3 flex-1"><span class="text-blue-400 font-bold text-xs">官方：</span>插件是集成连接器、技能和操作指令的一站式工具包。精选：国际站生意助手（选品、发品、广告诊断）、OKKI Shops（海外社媒托管引流）。智能体是执行者，插件是工…</p>
+          <p class="text-zinc-300 text-sm leading-relaxed mb-4"><span class="text-orange-500 font-bold text-xs">实战：</span>FDE 建议：国际站运营 = 国际站生意助手；社媒引流获客 = OKKI Shops，两者组合覆盖 B2B 获客全链路。…</p>
+          <a href="https://getquon.com/q/plugins.html" class="text-orange-500 text-xs font-black uppercase tracking-widest">查看解答 &rarr;</a>
+        </div>
+        </div>
+      </div>
+
+  <section class="glass rounded-3xl p-10 text-center mt-12">
+    <h2 class="text-2xl font-black text-white mb-3">没找到你的 阿里国际站 (ICBU) 问题？</h2>
+    <p class="text-zinc-400 text-sm mb-6">回到搜索中心，输入任意报错或诉求，官方口径 + FDE 实战方案一键直达。</p>
+    <a href="https://getquon.com/index_cn.html" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">打开智能搜索 &rarr;</a>
+  </section>
+</main>
+
+<footer class="border-t border-white/5 px-6 py-8 text-center text-[10px] text-zinc-600 uppercase tracking-widest">
+  © 2026 Accio Pioneer · Accio Work 垂直知识库 · <a href="https://getquon.com/index_cn.html" class="hover:text-orange-500">返回首页</a>
+</footer>
+<script>
+function switchTab(tk){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.add('hidden'));
+  document.getElementById('panel-'+tk).classList.remove('hidden');
+  document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('bg-white','text-black');b.classList.add('text-zinc-400');});
+  var ab=document.getElementById('btn-'+tk); ab.classList.add('bg-white','text-black'); ab.classList.remove('text-zinc-400');
+}
+</script>
+</body>
+</html>
