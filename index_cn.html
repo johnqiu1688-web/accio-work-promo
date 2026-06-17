@@ -317,7 +317,7 @@
             <!-- 真正能召回的搜索框 -->
             <div class="relative max-w-3xl mx-auto z-[8000] group">
                 <i class="fas fa-terminal absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500 text-xl group-focus-within:text-brand-orange transition"></i>
-                <input type="text" id="smart-search-input" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')triggerSearch()" placeholder="输入报错(如M144)、业务(如120封发信)、或问题(如怎么登录)..."
+                <input type="text" id="smart-search-input" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')triggerSearch()" placeholder="输入报错(M144)、Qwen3怎么选、Sourcing找相似..."
                        class="w-full bg-[#0f0f11] border border-white/10 rounded-[2.5rem] py-7 pl-16 pr-40 text-lg md:text-xl text-white outline-none focus:border-brand-orange transition-all shadow-2xl font-mono">
                 <button onclick="triggerSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-black px-8 py-4 rounded-2xl font-black text-xs uppercase hover:bg-brand-orange hover:text-white transition shadow-lg shadow-white/5">立即问诊</button>
 
@@ -330,10 +330,8 @@
 
             <div class="mt-10 flex flex-wrap justify-center gap-3">
                 <span onclick="applyTag('M144 连接不上')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#M144连接修复</span>
-                <span onclick="applyTag('积分不够用')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#积分额度</span>
-                <span onclick="applyTag('120 封发信')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#OKKI发信限额</span>
-                <span onclick="applyTag('4.8 分回盘')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#ICBU回盘4.8分</span>
-                <span onclick="applyTag('怎么登录')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#登录账号</span>
+                <span onclick="applyTag('Sourcing 找相似')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-emerald-500 hover:text-emerald-400 cursor-pointer transition uppercase tracking-widest">#Sourcing找相似</span>
+                <span onclick="applyTag('Qwen3 怎么选')" class="px-4 py-1.5 bg-white/5 border border-white/5 rounded-full text-[9px] font-black text-zinc-500 hover:text-brand-orange cursor-pointer transition uppercase tracking-widest">#Qwen3模型选择</span>
             </div>
             <div id="guide-cta" class="mt-8"><a href="guide.html" class="inline-flex items-center space-x-2 text-zinc-400 hover:text-orange-500 transition text-sm font-bold"><i class="fas fa-book-open"></i><span>不知从何问起？查看《Accio Work 怎么用 · 完整使用指南》</span><i class="fas fa-arrow-right text-xs"></i></a></div>
             </div>
@@ -681,12 +679,12 @@
         <div class="flex items-center justify-between">
             <div class="flex-1 overflow-hidden h-6">
                 <div class="flex items-center space-x-20 animate-marquee whitespace-nowrap text-zinc-600 text-[9px] font-black uppercase tracking-widest">
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 知识库已同步: 官方帮助中心 22 篇文档全量映射 (登录/积分/付费/渠道/权限/国际站...)</span>
-                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 召回引擎: 分词 + 同义词 + 拼音容错 + 零空屏兜底，输入任意词都有结果</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 知识库已同步: 官方 v0.16.0 找相似商品、Team 画布协作及 Qwen 3 全系模型接入</span>
+                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 巡航预警: 🔴 Accio Sentinel 监测到全网因频繁切换 VPN 导致的 IP 漂移封号风险增加</span>
                 </div>
             </div>
             <div class="pl-12 border-l border-white/10 ml-12 text-[9px] font-black text-zinc-500 uppercase tracking-widest">
-                Nodes: <span class="text-white">30</span> | 装机: <span class="text-white italic">480 / 1000</span>
+                Nodes: <span class="text-white">35</span> | 装机: <span class="text-white italic">480 / 1000</span>
             </div>
         </div>
     </footer>
