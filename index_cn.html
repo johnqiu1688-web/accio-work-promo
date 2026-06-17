@@ -295,7 +295,8 @@
             <div class="hidden lg:flex space-x-12 text-[10px] font-black text-zinc-400 uppercase tracking-[0.25em]">
                 <a href="#lab" class="hover:text-white transition">作战地图</a>
                 <a href="#store" class="hover:text-white transition">Skills 商场</a>
-                <a href="#alibaba" class="hover:text-white transition">国际站专区</a>
+                <a href="scene/icbu.html" class="hover:text-white transition">国际站专区</a>
+                <a href="#scene-entry" class="hover:text-white transition">按场景找</a>
                 <a href="guide.html" class="hover:text-white transition">使用指南</a>
             </div>
             <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-brand-orange text-white px-8 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">立即部署 Agent</a>
@@ -335,6 +336,40 @@
             </div>
             <div id="guide-cta" class="mt-8"><a href="guide.html" class="inline-flex items-center space-x-2 text-zinc-400 hover:text-orange-500 transition text-sm font-bold"><i class="fas fa-book-open"></i><span>不知从何问起？查看《Accio Work 怎么用 · 完整使用指南》</span><i class="fas fa-arrow-right text-xs"></i></a></div>
             </div>
+    </section>
+
+    <!-- 按场景找 (双入口之二) -->
+    <section id="scene-entry" class="max-w-[1100px] mx-auto px-8 pb-20">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-black text-white italic uppercase tracking-tighter">或 · 按业务场景找答案</h2>
+        <p class="text-zinc-500 text-sm mt-2">选你的战场，直达该场景的报错排查 / 业务增效 / Skills 下载</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="scene/icbu.html" class="glass-ui rounded-3xl p-7 group hover:border-blue-500/40 transition block">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-store"></i></div>
+          <h3 class="text-white font-black text-lg mb-2">阿里国际站</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">回盘抢单·发品·广告诊断·店铺风控</p>
+          <span class="text-blue-400 text-[10px] font-black uppercase tracking-widest">进入场景 &rarr;</span>
+        </a>
+        <a href="scene/okki.html" class="glass-ui rounded-3xl p-7 group hover:border-purple-500/40 transition block">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-address-book"></i></div>
+          <h3 class="text-white font-black text-lg mb-2">OKKI CRM 获客</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">僵尸客户复活·合规触达·社媒引流</p>
+          <span class="text-purple-400 text-[10px] font-black uppercase tracking-widest">进入场景 &rarr;</span>
+        </a>
+        <a href="scene/1688.html" class="glass-ui rounded-3xl p-7 group hover:border-emerald-500/40 transition block">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-industry"></i></div>
+          <h3 class="text-white font-black text-lg mb-2">1688 跨境采购</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">源头工厂核验·剔除贸易商·锁利润</p>
+          <span class="text-emerald-400 text-[10px] font-black uppercase tracking-widest">进入场景 &rarr;</span>
+        </a>
+        <a href="scene/global.html" class="glass-ui rounded-3xl p-7 group hover:border-orange-500/40 transition block">
+          <div class="w-14 h-14 rounded-2xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-2xl mb-5"><i class="fas fa-globe"></i></div>
+          <h3 class="text-white font-black text-lg mb-2">通用跨境运营</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">安装上手·自动化·团队·账号安全</p>
+          <span class="text-orange-400 text-[10px] font-black uppercase tracking-widest">进入场景 &rarr;</span>
+        </a>
+      </div>
     </section>
 
     <main class="max-w-[1600px] mx-auto px-8 pb-40">
@@ -679,12 +714,13 @@
         <div class="flex items-center justify-between">
             <div class="flex-1 overflow-hidden h-6">
                 <div class="flex items-center space-x-20 animate-marquee whitespace-nowrap text-zinc-600 text-[9px] font-black uppercase tracking-widest">
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 知识库已同步: 官方 v0.16.0 找相似商品、Team 画布协作及 Qwen 3 全系模型接入</span>
-                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 巡航预警: 🔴 Accio Sentinel 监测到全网因频繁切换 VPN 导致的 IP 漂移封号风险增加</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 官方动态: Accio Work v0.16.0 深度优化内存管理与 Qwen 3 模型适配</span>
+                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 社区热议: CSDN 针对“Accio vs OpenClaw”物理沙箱安全性对比的技术讨论</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 实战反馈: 义乌外贸团反馈通过 M144 修复方案显著提升了团队部署效率</span>
                 </div>
             </div>
             <div class="pl-12 border-l border-white/10 ml-12 text-[9px] font-black text-zinc-500 uppercase tracking-widest">
-                Nodes: <span class="text-white">35</span> | 装机: <span class="text-white italic">480 / 1000</span>
+                Nodes: <span class="text-white">35</span> | 装机: <span class="text-white italic">492 / 1000</span> (49.2%)
             </div>
         </div>
     </footer>
