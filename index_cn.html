@@ -374,6 +374,33 @@
       </div>
     </section>
 
+    <!-- ===== 留存模块: 本周更新 + 留资 + 收藏 ===== -->
+    <section id="retention" class="max-w-[1100px] mx-auto px-8 pb-20">
+      <div class="flex items-center justify-between mb-8 flex-wrap gap-4">
+        <div>
+          <h2 class="text-2xl font-black text-white italic uppercase tracking-tighter"><i class="fas fa-bolt text-brand-orange mr-2"></i>Accio Work 情报动态</h2>
+          <p class="text-zinc-500 text-sm mt-1">领先官方的 FDE 情报站 · 每次来都有新东西 · <span class="text-zinc-400 cursor-pointer hover:text-brand-orange" onclick="addBookmark()">⌘+D 收藏本站</span></p>
+        </div>
+        <span class="text-[9px] font-black text-emerald-500 uppercase tracking-widest border border-emerald-500/20 px-3 py-1.5 rounded-full"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-1 animate-pulse"></span>持续更新中</span>
+      </div>
+      <div id="updates-list" class="grid md:grid-cols-2 gap-4 mb-10"></div>
+
+      <!-- 留资: 留邮箱获取更新 -->
+      <div class="glass-ui rounded-3xl p-8 border-brand-orange/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-white font-black text-lg mb-1"><i class="fas fa-envelope-open-text text-brand-orange mr-2"></i>第一时间获取 Accio Work 新情报</h3>
+          <p class="text-zinc-500 text-xs">官方功能更新、报错修复、实战 Skills——有新内容第一时间通知你,不错过。</p>
+        </div>
+        <form onsubmit="subscribeUpdate(event)" class="flex gap-2 w-full md:w-auto shrink-0">
+          <input type="email" id="sub-email" required placeholder="你的邮箱" class="bg-[#0f0f11] border border-white/10 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-brand-orange w-full md:w-56">
+          <button type="submit" class="bg-brand-orange text-white px-6 py-3 rounded-xl font-black text-xs uppercase tracking-widest whitespace-nowrap hover:bg-orange-600 transition">订阅更新</button>
+        </form>
+      </div>
+      <p id="sub-msg" class="text-emerald-400 text-xs mt-3 hidden"><i class="fas fa-check mr-1"></i>订阅成功!有新情报会第一时间通知你。</p>
+    </section>
+
+
+
     <main class="max-w-[1600px] mx-auto px-8 pb-40">
         <!-- 2. 可视化作战地图 -->
         <section id="lab" class="mb-40 pt-20 border-t border-white/5">
@@ -888,6 +915,41 @@
                 <button class="w-full bg-white text-black py-4 rounded-2xl font-black text-xs uppercase hover:bg-brand-orange hover:text-white transition tracking-widest">查看解决方案</button>
             </div>
         `).join('');
-    </script>
+    
+        // ===== 留存模块 JS =====
+        // 渲染本周更新动态
+        fetch('/updates.json').then(function(r){return r.json();}).then(function(data){
+          var el=document.getElementById('updates-list'); if(!el) return;
+          var tagColor={'官方更新':'emerald','实战手册':'orange','技术预警':'red','社区热议':'blue'};
+          el.innerHTML=data.items.map(function(u){
+            var c=tagColor[u.tag]||'zinc';
+            return '<a href="'+u.link+'" onclick="trackEvent(\'retention\',\'update_click\',u.link)" class="glass-ui rounded-2xl p-5 block hover:border-brand-orange/40 transition group">'
+              +'<div class="flex items-center justify-between mb-2"><span class="text-[8px] font-black bg-'+c+'-500/10 text-'+c+'-400 px-2 py-0.5 rounded uppercase">'+u.tag+'</span><span class="text-[9px] text-zinc-600">'+u.date+'</span></div>'
+              +'<h4 class="text-white font-bold text-sm mb-1 group-hover:text-brand-orange transition">'+u.title+'</h4>'
+              +'<p class="text-zinc-500 text-xs leading-relaxed">'+u.desc+'</p></a>';
+          }).join('');
+        }).catch(function(e){});
+
+        // 留资订阅(无后端: 存本地+埋点上报,后续可对接邮件服务)
+        function subscribeUpdate(e){
+          e.preventDefault();
+          var email=document.getElementById('sub-email').value;
+          try{
+            var subs=JSON.parse(localStorage.getItem('accio_subs')||'[]');
+            subs.push({email:email,t:new Date().toISOString()});
+            localStorage.setItem('accio_subs',JSON.stringify(subs));
+          }catch(err){}
+          trackEvent('retention','subscribe',email);
+          document.getElementById('sub-msg').classList.remove('hidden');
+          document.getElementById('sub-email').value='';
+        }
+
+        // 收藏引导
+        function addBookmark(){
+          trackEvent('retention','bookmark_click','home');
+          alert('按 ' + (navigator.platform.indexOf('Mac')>-1?'⌘(Command)+D':'Ctrl+D') + ' 即可收藏 getquon.com,下次直接回来看最新情报!');
+        }
+
+        </script>
 </body>
 </html>

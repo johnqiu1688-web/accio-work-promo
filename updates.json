@@ -1,0 +1,38 @@
+{
+  "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
+  "updated": "2026-06-22",
+  "items": [
+    {
+      "date": "2026-06-11",
+      "tag": "官方更新",
+      "title": "Accio Work v0.16.0:Sourcing 新增「找相似商品」",
+      "desc": "选品/采购可从已有商品发起'发现相似商品',侧边抽屉对比探索。",
+      "link": "q/find-similar.html",
+      "verified": true
+    },
+    {
+      "date": "2026-06-11",
+      "tag": "官方更新",
+      "title": "模型扩容:Qwen3 Max / Kimi K2.5 / GLM-5 已接入",
+      "desc": "可为不同 Agent 分配不同模型,Auto/标准/专业/极致按任务选,省积分。",
+      "link": "q/model-select.html",
+      "verified": true
+    },
+    {
+      "date": "2026-06-11",
+      "tag": "官方更新",
+      "title": "Team 画布:团队协作可视化上线",
+      "desc": "多人在画布组织信息,支持图片上传/预览/编辑/放大。",
+      "link": "q/team-canvas.html",
+      "verified": true
+    },
+    {
+      "date": "2026-06-22",
+      "tag": "实战手册",
+      "title": "M144 连接报错:完整实战排查手册更新",
+      "desc": "从 Chrome 148 Service Worker 回收机制讲透,4步可照做解决。",
+      "link": "q/m144.html",
+      "verified": true
+    }
+  ]
+}
