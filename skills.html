@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accio Work 技能商店 - 免费下载 FDE 实战 Skills | Accio Pioneer</title>
+<meta name="description" content="Accio Work 垂直技能商店:1688工厂核验、OKKI客户复活、ICBU回盘等FDE实战Skills,全部免费下载、可复制即用。也欢迎提交你的Skill。">
+<meta name="keywords" content="Accio Work 技能,Accio Work Skill下载,FDE技能,1688核验,OKKI复活,ICBU回盘,免费skill">
+<link rel="canonical" href="https://getquon.com/skills.html">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="/analytics.js"></script>
+<style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}</style>
+</head>
+<body class="grid-bg min-h-screen">
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+  <a href="/index_cn.html" class="text-white font-black italic text-lg">Accio <span class="text-orange-500">Pioneer</span></a>
+  <div class="flex items-center gap-4 text-[10px] font-black text-zinc-400 uppercase tracking-widest">
+    <a href="/index_cn.html" class="hover:text-white">搜索中心</a>
+    <a href="/guide.html" class="hover:text-white">使用指南</a>
+    <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded-full">免费部署</a>
+  </div>
+</nav>
+
+<header class="max-w-5xl mx-auto px-6 pt-14 pb-8 text-center">
+  <span class="inline-block text-[10px] font-black bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full border border-emerald-500/20 uppercase tracking-widest mb-6">全部免费 · 可复制即用 · 持续上新</span>
+  <h1 class="text-3xl md:text-5xl font-black text-white mb-5">Accio Work 技能商店</h1>
+  <p class="text-zinc-400 text-base max-w-2xl mx-auto leading-relaxed">精选 FDE 实战 Skills,覆盖国际站 / OKKI / 1688 核心场景。<strong class="text-white">下载 SKILL.md 或复制指令</strong>,粘贴给你的 Accio Work Agent 即可用。</p>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 pb-16">
+  <div id="skills-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+  <!-- 提交你的Skill -->
+  <section class="glass rounded-3xl p-10 text-center mt-12">
+    <h2 class="text-2xl font-black text-white mb-3"><i class="fas fa-upload text-orange-500 mr-2"></i>提交你的 Skill</h2>
+    <p class="text-zinc-400 text-sm mb-6 max-w-xl mx-auto">你也有好用的 Accio Work 实战技能?提交到我们的开放库,署名展示,让更多外贸人用到。我们会用 GEO 能力帮你的 Skill 获得曝光。</p>
+    <a href="https://github.com/johnqiu1688-web/accio-work-promo/issues/new?title=提交Skill:&body=Skill名称:%0A适用场景:%0A作者署名:%0A指令内容:%0A" target="_blank" onclick="trackEvent('contribute','submit_click','skills_page')" class="inline-block bg-white text-black px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-orange-500 hover:text-white transition">提交 Skill (GitHub) &rarr;</a>
+  </section>
+</main>
+
+<footer class="border-t border-white/5 px-6 py-8 text-center text-[10px] text-zinc-600 uppercase tracking-widest">© 2026 Accio Pioneer · Accio Work 开放技能生态 · <a href="/index_cn.html" class="hover:text-orange-500">返回首页</a></footer>
+
+<script>
+fetch('/skills_registry/skills.json').then(r=>r.json()).then(function(data){
+  var sceneColor={'1688采购':'emerald','OKKI CRM':'purple','阿里国际站':'blue'};
+  document.getElementById('skills-grid').innerHTML = data.skills.map(function(s){
+    var c=sceneColor[s.scene]||'orange';
+    return '<div class="glass rounded-3xl p-7 flex flex-col">'
+      +'<div class="flex items-center justify-between mb-4"><div class="w-12 h-12 rounded-2xl bg-'+c+'-500/10 text-'+c+'-400 flex items-center justify-center text-xl"><i class="fas fa-cube"></i></div>'
+      +'<span class="text-[8px] font-black bg-'+c+'-500/10 text-'+c+'-400 px-2 py-1 rounded uppercase">'+s.scene+'</span></div>'
+      +'<h3 class="text-white font-black text-lg mb-2">'+s.name+'</h3>'
+      +'<p class="text-zinc-500 text-xs leading-relaxed mb-3 flex-1">'+s.summary+'</p>'
+      +'<div class="text-[9px] text-zinc-600 mb-4 uppercase tracking-widest">by '+s.author+' · '+s.license+'</div>'
+      +'<div class="flex gap-2">'
+      +'<a href="/skills_registry/'+s.pack+'" download onclick="trackEvent(\'convert\',\'skill_download\',\''+s.id+'\')" class="flex-1 text-center bg-orange-500 text-white py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-orange-600 transition"><i class="fas fa-download mr-1"></i>下载 Skill</a>'
+      +'<a href="/'+s.detail+'" class="px-4 py-2.5 rounded-xl border border-white/10 text-zinc-300 text-[10px] font-black uppercase tracking-widest hover:border-orange-500 hover:text-orange-500 transition">详情</a>'
+      +'</div></div>';
+  }).join('');
+}).catch(function(e){
+  document.getElementById('skills-grid').innerHTML='<p class="text-zinc-500 text-sm col-span-3 text-center">技能库加载中…</p>';
+});
+</script>
+</body>
+</html>

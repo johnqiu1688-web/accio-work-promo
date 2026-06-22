@@ -281,42 +281,7 @@
  ]
 }
     </script>
-    <!-- ===== 数据埋点 (需求验证) ===== -->
-    <!-- 【百度统计】登录 tongji.baidu.com 新增站点 getquon.com 后,把专属 hm.js?后面的ID 填到下面 BAIDU_ID,即生效 -->
-    <script>
-    var BAIDU_ID = ""; // ← 在这里粘贴百度统计的站点ID(形如 a1b2c3d4...)
-    (function(){
-      if(BAIDU_ID){
-        var hm=document.createElement("script");
-        hm.src="https://hm.baidu.com/hm.js?"+BAIDU_ID;
-        var s0=document.getElementsByTagName("script")[0]; s0.parentNode.insertBefore(hm,s0);
-      }
-    })();
-    // 轻量事件埋点: 上报百度统计(_hmt) + 本地兜底(localStorage),用于看用户真实行为
-    window.ACCIO_ANALYTICS = true;
-    window._hmt = window._hmt || [];
-    function trackEvent(category, action, label){
-      try{
-        if(window._hmt) window._hmt.push(['_trackEvent', category, action, label||'']);
-        // 本地兜底: 记录最近100条事件,F12 console 输入 accioStats() 可随时查看
-        var k='accio_events', arr=JSON.parse(localStorage.getItem(k)||'[]');
-        arr.push({t:new Date().toISOString(), c:category, a:action, l:label||''});
-        if(arr.length>100) arr=arr.slice(-100);
-        localStorage.setItem(k, JSON.stringify(arr));
-      }catch(e){}
-    }
-    // 控制台快捷查看本地统计
-    window.accioStats=function(){
-      var arr=JSON.parse(localStorage.getItem('accio_events')||'[]');
-      var searches=arr.filter(function(e){return e.a==='search'}).map(function(e){return e.l});
-      var zero=arr.filter(function(e){return e.a==='zero_result'}).map(function(e){return e.l});
-      console.log('=== 总事件:'+arr.length+' ===');
-      console.log('搜索词('+searches.length+'):', searches);
-      console.log('零结果词('+zero.length+'):', zero);
-      console.table(arr);
-      return arr;
-    };
-    </script>
+  <script src="/analytics.js"></script>
 </head>
 <body class="grid-bg min-h-screen">
 
@@ -334,6 +299,7 @@
                 <a href="scene/icbu.html" class="hover:text-white transition">国际站专区</a>
                 <a href="#scene-entry" class="hover:text-white transition">按场景找</a>
                 <a href="guide.html" class="hover:text-white transition">使用指南</a>
+                <a href="skills.html" class="hover:text-white transition">技能商店</a>
             </div>
             <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-brand-orange text-white px-8 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl">立即部署 Agent</a>
         </div>
