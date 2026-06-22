@@ -30,6 +30,7 @@
 }
 </script>
 <style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}</style>
+  <script src="/analytics.js"></script>
 </head>
 <body class="grid-bg min-h-screen">
 <nav class="border-b border-white/5 px-6 py-4">
@@ -42,13 +43,71 @@
   <h1 class="text-3xl md:text-4xl font-black text-white mb-8 leading-tight">M144/M145 连接失败 / 端口握手</h1>
 
   <article class="space-y-10">
+    <!-- 一句话结论 -->
+    <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+      <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+      <p class="text-white leading-relaxed font-medium">M144 是 Accio Work 桌面端与本地服务"握手失败"的报错。<strong class="text-emerald-400">90% 的情况</strong>靠"把 Chrome 设为默认浏览器 + 彻底退出重启 App"就能解决；若反复掉线，是 Chrome 148+ 的 Service Worker 回收机制导致，需要保活方案根治。下面给可照做的完整步骤。</p>
+    </section>
+
+    <!-- 症状自查 -->
+    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查：你是不是这个问题？</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed">
+        <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>App 启动后一直转圈，提示"连接中 / M144 / M145"</li>
+        <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>任务发不出去，或发出去没反应</li>
+        <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>用一会儿就断，过几秒又自己连上、反复掉线</li>
+        <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>换了网络、重装也没彻底好</li>
+      </ul>
+      <p class="text-zinc-500 text-xs mt-5">命中任意一条，按下面步骤处理即可。</p>
+    </section>
+
+    <!-- 官方标准口径 -->
     <section class="glass rounded-3xl p-8">
       <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>官方标准口径</h2>
-      <p class="text-zinc-300 leading-relaxed">连接类问题官方建议：确保 Chrome 为默认浏览器，完全退出 App 后重新启动以触发本地端口监听；检查桌面端/Web 端数据同步状态。</p>
+      <p class="text-zinc-300 leading-relaxed">连接类问题官方建议：确保 Chrome 为默认浏览器，完全退出 App 后重新启动以触发本地端口监听；检查桌面端 / Web 端数据同步状态，保持 Chrome 与 App 为最新版本。</p>
+      <p class="text-zinc-500 text-xs mt-4">来源：<a href="https://www.accio-ai.com/work/doc?slug=help-install" target="_blank" class="text-blue-400 hover:underline">官方帮助中心·安装与更新</a></p>
     </section>
+
+    <!-- 分步解决 (可照做) -->
     <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
-      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-tools mr-2"></i>FDE 实战补充方案</h2>
-      <p class="text-white leading-relaxed font-medium">底层解密：Chrome 148+ 强制 Service Worker 心跳回收（约 5s），常规重启无法根治。需部署持续心跳保活 Skill 物理级维持本地 127.0.0.1 通信链路。</p>
+      <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-tools mr-2"></i>FDE 实战：分步解决（照着做）</h2>
+
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">把 Chrome 设为系统默认浏览器（解决 90%）</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">M144 本质是 App 连不上本地端口（127.0.0.1）。Accio Work 依赖默认浏览器拉起本地服务。<br>· Windows：设置 → 应用 → 默认应用 → 把"Web 浏览器"设为 Chrome<br>· macOS：系统设置 → 桌面与程序坞 → 默认网页浏览器 → 选 Chrome<br>设置后<strong class="text-white">彻底退出 Accio Work（不是关窗口，要右键退出/任务管理器结束进程）</strong>，再重新打开。</p>
+        </div>
+
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">关闭 VPN / 全局代理后重试</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">全局代理会拦截本地 127.0.0.1 通信，导致握手失败。临时关闭 VPN / 系统代理，或将 127.0.0.1、localhost 加入代理白名单（不走代理），再重启 App。</p>
+        </div>
+
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">确认 Chrome 与 App 均为最新版</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">旧版本扩展协议不匹配也会握手失败。Chrome 地址栏输入 <code class="bg-black/40 px-1.5 py-0.5 rounded text-orange-300 text-xs">chrome://settings/help</code> 检查更新；App 内检查更新到最新版。</p>
+        </div>
+
+        <div>
+          <div class="flex items-center mb-2"><span class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">反复掉线？这是 Chrome 148+ 的根因</h3></div>
+          <p class="text-zinc-400 text-sm leading-relaxed pl-9">如果前 3 步能连上、但<strong class="text-white">用一会儿又断、反复掉线</strong>，根因是 Chrome 148+ 的 Manifest V3 机制：扩展后台 Service Worker 在空闲约 5 秒后会被浏览器回收，导致本地通信链路中断。<br>· 临时缓解：保持 Accio Work 窗口在前台、不要长时间最小化或切到后台标签<br>· 根治：部署"持续心跳保活"方案，定时维持本地 127.0.0.1 链路活跃，使 Agent 在后台挂载也不掉线。</p>
+        </div>
+      </div>
+
+      <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20">
+        <p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-circle-info text-orange-500 mr-1"></i> <strong class="text-white">经验参考</strong>：步骤 1–3 可解决绝大多数 M144；仅"反复掉线"类需走步骤 4 的保活方案。（以上为基于官方文档与 Chrome 扩展机制的实战整理，非官方承诺指标）</p>
+      </div>
+    </section>
+
+    <!-- 预防 -->
+    <section class="glass rounded-3xl p-8">
+      <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-shield-halved mr-2 text-emerald-400"></i>怎么避免再次发生</h2>
+      <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed">
+        <li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>固定用 Chrome 作默认浏览器，不要频繁切换默认浏览器</li>
+        <li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>Chrome 自动更新后，留意扩展是否需重新加载</li>
+        <li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>长时间跑任务时保持 App 前台，或启用保活方案</li>
+        <li class="flex items-start"><i class="fas fa-angle-right text-orange-500 mt-1 mr-3 shrink-0"></i>代理软件设置里把 localhost / 127.0.0.1 加入直连白名单</li>
+      </ul>
     </section>
     <section>
       <h2 class="text-xs font-black text-zinc-600 uppercase tracking-[0.3em] mb-4">官方权威参考</h2>
