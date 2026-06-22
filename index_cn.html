@@ -354,7 +354,7 @@
             <!-- 真正能召回的搜索框 -->
             <div class="relative max-w-3xl mx-auto z-[8000] group">
                 <i class="fas fa-terminal absolute left-6 top-1/2 -translate-y-1/2 text-zinc-500 text-xl group-focus-within:text-brand-orange transition"></i>
-                <input type="text" id="smart-search-input" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')triggerSearch()" placeholder="输入报错(M144)、Qwen3怎么选、Sourcing找相似..."
+                <input type="text" id="smart-search-input" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')triggerSearch()" placeholder="输入报错(M144)、技能收获(SkillHarvest)、自动插件..."
                        class="w-full bg-[#0f0f11] border border-white/10 rounded-[2.5rem] py-7 pl-16 pr-40 text-lg md:text-xl text-white outline-none focus:border-brand-orange transition-all shadow-2xl font-mono">
                 <button onclick="triggerSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-black px-8 py-4 rounded-2xl font-black text-xs uppercase hover:bg-brand-orange hover:text-white transition shadow-lg shadow-white/5">立即问诊</button>
 
@@ -750,13 +750,13 @@
         <div class="flex items-center justify-between">
             <div class="flex-1 overflow-hidden h-6">
                 <div class="flex items-center space-x-20 animate-marquee whitespace-nowrap text-zinc-600 text-[9px] font-black uppercase tracking-widest">
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 官方动态: Accio Work v0.16.0 深度优化内存管理与 Qwen 3 模型适配</span>
-                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 社区热议: CSDN 针对“Accio vs OpenClaw”物理沙箱安全性对比的技术讨论</span>
-                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 实战反馈: 义乌外贸团反馈通过 M144 修复方案显著提升了团队部署效率</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 巡航情报: 官方文档进入静默期，已深度解析 v0.16.0 隐藏的 SkillHarvest 自动技能收获机制</span>
+                    <span><span class="w-1.5 h-1.5 bg-brand-orange rounded-full inline-block mr-2 animate-pulse"></span> 技术预警: 确认 Chrome 148+ 关于 Manifest V3 的严格执行逻辑，本地保活包已同步适配</span>
+                    <span><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block mr-2 animate-pulse"></span> 场景同步: 团队版“自动创建插件”规范已纳入 FDE 诊断库，支持 10+ 店铺一键分发</span>
                 </div>
             </div>
             <div class="pl-12 border-l border-white/10 ml-12 text-[9px] font-black text-zinc-500 uppercase tracking-widest">
-                Nodes: <span class="text-white">38</span> | 装机: <span class="text-white italic">492 / 1000</span> (49.2%)
+                Nodes: <span class="text-white">42</span> | 装机: <span class="text-white italic">498 / 1000</span> (49.8%)
             </div>
         </div>
     </footer>
