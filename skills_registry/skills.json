@@ -1,0 +1,49 @@
+{
+  "_comment": "Accio Pioneer 开放技能库索引。downloads/rating 为真实统计,初始0,不注水。新增技能走GitHub PR提交packs/下的SKILL.md并在此登记。",
+  "version": "1.0",
+  "updated": "2026-06-22",
+  "skills": [
+    {
+      "id": "1688-factory-audit",
+      "name": "1688 工厂尽调核验",
+      "scene": "1688采购",
+      "author": "Accio Pioneer (FDE)",
+      "summary": "基于公开工商信息辅助识别工厂vs贸易商,锁定源头利润。",
+      "pack": "packs/1688-factory-audit.SKILL.md",
+      "detail": "q/1688.html",
+      "type": "SKILL.md",
+      "license": "免费可商用",
+      "official_aligned": true,
+      "downloads": 0,
+      "rating": 0
+    },
+    {
+      "id": "okki-lead-revival",
+      "name": "OKKI 僵尸客户复活",
+      "scene": "OKKI CRM",
+      "author": "Accio Pioneer (FDE)",
+      "summary": "合规发信内逐客定制破冰,提升僵尸客户回复率。",
+      "pack": "packs/okki-lead-revival.SKILL.md",
+      "detail": "q/okki.html",
+      "type": "SKILL.md",
+      "license": "免费可商用",
+      "official_aligned": true,
+      "downloads": 0,
+      "rating": 0
+    },
+    {
+      "id": "icbu-rfq-reply",
+      "name": "ICBU RFQ 高分回盘",
+      "scene": "阿里国际站",
+      "author": "Accio Pioneer (FDE)",
+      "summary": "拆解买家需求+差异化卖点,避开机械回复降权。",
+      "pack": "packs/icbu-rfq-reply.SKILL.md",
+      "detail": "q/icbu-reply.html",
+      "type": "SKILL.md",
+      "license": "免费可商用",
+      "official_aligned": true,
+      "downloads": 0,
+      "rating": 0
+    }
+  ]
+}
