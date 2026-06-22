@@ -2,7 +2,7 @@
  * 用户拿到百度统计ID后,只需改下面这一行 BAIDU_ID,全站所有页面自动生效。
  * 获取ID: 登录 tongji.baidu.com → 新增网站 getquon.com → 复制 hm.js?后面那串ID
  */
-var BAIDU_ID = ""; // ← 在此粘贴百度统计ID(形如 a1b2c3d4e5f6...),留空则统计不启用
+var BAIDU_ID = "38f3b457e7f06d1c863f244afdc0ba2e"; // getquon.com 百度统计ID(已接入)
 
 (function () {
   // 1) 百度统计
