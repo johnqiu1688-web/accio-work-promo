@@ -1,7 +1,47 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-06-22",
+  "updated": "2026-07-02",
   "items": [
+    {
+      "date": "2026-07-02",
+      "tag": "实战手册",
+      "title": "义乌/广州卖家:1688 自动寻源 3 步 SOP",
+      "desc": "图搜比价 → 工商核验 → 英文卖点重写,全部合规、可复制指令,配套 1688 尽调 Skill 免费下载。",
+      "link": "q/yiwu-sourcing.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-02",
+      "tag": "技能实验室",
+      "title": "Skills Lab 上线:3 已发布 + 5 内测中",
+      "desc": "公开 Roadmap 和招募计划,把你的 SOP 沉淀成 Skill,GEO 帮你曝光。",
+      "link": "skills_lab.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-01",
+      "tag": "官方更新",
+      "title": "Accio Work v0.20.0:企业版知识库 + 插件中心改版",
+      "desc": "新增企业版知识库支持、插件中心全新改版,桌面客户端冷启动速度显著提升。",
+      "link": "https://www.accio-ai.com/work/doc?slug=changelog",
+      "verified": true
+    },
+    {
+      "date": "2026-06-26",
+      "tag": "官方更新",
+      "title": "Accio Work v0.19.0:视频生成 Beta + 企业微信接入",
+      "desc": "引入 Beta 版视频生成能力,支持企业微信渠道接入,建站工作台深度升级。",
+      "link": "https://www.accio-ai.com/work/doc?slug=changelog",
+      "verified": true
+    },
+    {
+      "date": "2026-06-23",
+      "tag": "官方更新",
+      "title": "Accio Work v0.18.0:Windows 支持 ZIP 格式 Skill 上传",
+      "desc": "Windows 客户端支持上传 ZIP 压缩包格式的 Agent Skill,品商卡片加载速度优化。",
+      "link": "https://www.accio-ai.com/work/doc?slug=changelog",
+      "verified": true
+    },
     {
       "date": "2026-06-11",
       "tag": "官方更新",
