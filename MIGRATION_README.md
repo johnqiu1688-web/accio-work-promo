@@ -7,7 +7,8 @@
 | 主站域名 | getquon.com |
 | GitHub 仓库 | https://github.com/johnqiu1688-web/accio-work-promo |
 | 百度统计 ID | 38f3b457e7f06d1c863f244afdc0ba2e |
-| 当前装机 | 499 / 1000（49.9%） |
+| 当前装机 | 492 / 1000（49.2%） |
+| 独立站运营规模 | 50+ 站（Pioneer 战地实测口径） |
 | 知识节点 | 42 个 |
 | 转化按钮统一指向 | https://www.accio.com/invite-center?src=f_desktop |
 
