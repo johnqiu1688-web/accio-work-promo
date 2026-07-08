@@ -30,6 +30,16 @@
         .rank-number { font-size: 2.5rem; font-weight: 800; font-style: italic; background: linear-gradient(180deg, #333 0%, transparent 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         @keyframes scroll { 0% { transform: translateY(0); } 100% { transform: translateY(-100px); } }
         .animate-scroll { animation: scroll 20s linear infinite; }
+
+        /* ===== 移动端专属修复(P0)===== */
+        @media (max-width: 768px) {
+            nav.fixed.top-0 { padding: 12px 16px !important; }
+            nav.fixed.top-0 .max-w-\[1500px\] { flex-wrap: wrap; gap: 8px; }
+            nav.fixed.top-0 a[href*="invite-center"] { display: none !important; }
+            .hero-mesh h1 { font-size: 44px !important; line-height: 1 !important; }
+            .mobile-hero-cta { display: block !important; }
+        }
+        .mobile-hero-cta { display: none; }
     </style>
 </head>
 <body class="min-h-screen hero-mesh">
