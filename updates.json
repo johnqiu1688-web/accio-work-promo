@@ -1,7 +1,23 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-07-02",
+  "updated": "2026-07-08",
   "items": [
+    {
+      "date": "2026-07-08",
+      "tag": "评测导航",
+      "title": "Skill Radar 上线:Top 20 独立评测 + 新手/团队/进阶 配单",
+      "desc": "独立第三方视角评点官方 AgentHub Top 20 Skill,给出 3 件套 / 5 件套 / 8 件套 三档配单建议,由 50+ 独立站运营战地实测校准。",
+      "link": "skill-radar.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-08",
+      "tag": "跨平台上架",
+      "title": "1688 → Shopify / Amazon / Shopee 三合一流水线",
+      "desc": "3 段可复制指令 + 三平台差异化 checklist + Skill 沉淀教程,单款 4 小时压到 40 分钟,50+ 站实测数据。",
+      "link": "1688-to-shopify.html",
+      "verified": true
+    },
     {
       "date": "2026-07-02",
       "tag": "实战手册",
