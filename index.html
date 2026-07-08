@@ -31,13 +31,20 @@
         @keyframes scroll { 0% { transform: translateY(0); } 100% { transform: translateY(-100px); } }
         .animate-scroll { animation: scroll 20s linear infinite; }
 
-        /* ===== 移动端专属修复(P0)===== */
+        /* ===== 移动端专属修复(P0 · UX 实测发现)===== */
         @media (max-width: 768px) {
-            nav.fixed.top-0 { padding: 12px 16px !important; }
-            nav.fixed.top-0 .max-w-\[1500px\] { flex-wrap: wrap; gap: 8px; }
+            nav.fixed.top-0 { padding: 10px 14px !important; }
+            nav.fixed.top-0 .max-w-\[1500px\] { flex-wrap: wrap; gap: 6px; }
             nav.fixed.top-0 a[href*="invite-center"] { display: none !important; }
             .hero-mesh h1 { font-size: 44px !important; line-height: 1 !important; }
-            .mobile-hero-cta { display: block !important; }
+            section.pt-48 { padding-top: 96px !important; padding-bottom: 40px !important; }
+            .search-input { padding: 20px 100px 20px 48px !important; font-size: 15px !important; }
+            .search-input + button { padding: 10px 14px !important; font-size: 11px !important; }
+            /* 底部两版切换 · 关键修复 */
+            .footer-desktop-only { display: none !important; }
+            .footer-mobile-only { display: block !important; }
+            body { padding-bottom: 60px !important; }
+            .mobile-hero-cta { display: grid !important; }
         }
         .mobile-hero-cta { display: none; }
     </style>
