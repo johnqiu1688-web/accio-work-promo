@@ -748,8 +748,8 @@
         </div>
     </div>
 
-    <!-- 底部状态栏 -->
-    <footer class="fixed bottom-0 w-full bg-black/95 border-t border-white/5 py-4 px-10 z-[10000] overflow-hidden">
+    <!-- 底部状态栏 · 桌面版 -->
+    <footer class="fixed bottom-0 w-full bg-black/95 border-t border-white/5 py-4 px-10 z-[10000] overflow-hidden footer-desktop-only">
         <div class="flex items-center justify-between">
             <div class="flex-1 overflow-hidden h-6">
                 <div class="flex items-center space-x-20 animate-marquee whitespace-nowrap text-zinc-600 text-[9px] font-black uppercase tracking-widest">
@@ -761,6 +761,17 @@
             <div class="pl-12 border-l border-white/10 ml-12 text-[9px] font-black text-zinc-500 uppercase tracking-widest">
                 Nodes: <span class="text-white">44</span> | 装机: <span class="text-white italic">492 / 1000</span> (49.2%) | 独立站: <span class="text-white italic">50+</span>
             </div>
+        </div>
+    </footer>
+
+    <!-- 底部状态栏 · 移动版 -->
+    <footer class="fixed bottom-0 w-full bg-black/95 border-t border-white/5 py-3 px-4 z-[10000] footer-mobile-only" style="display:none">
+        <div class="text-center text-[10px] font-black text-zinc-400 uppercase tracking-widest whitespace-nowrap overflow-x-auto">
+            <span class="text-emerald-500">●</span> 装机 <span class="text-white">492/1000</span>
+            <span class="text-zinc-700 mx-2">·</span>
+            节点 <span class="text-white">44</span>
+            <span class="text-zinc-700 mx-2">·</span>
+            独立站 <span class="text-white">50+</span>
         </div>
     </footer>
 

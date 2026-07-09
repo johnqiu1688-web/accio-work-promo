@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="baidu-site-verification" content="codeva-T0rPR5vXAf" />
+<title>Anti-Ban 2.3 合规准则:多店卖家用 Accio Work 6 个月零封号的 7 条底线 | Accio Pioneer</title>
+<meta name="description" content="做多店铺、跨境代运营、独立站的卖家最关心的问题:用 AI Agent 会不会关联封号?我们把 50+ 独立站 6 个月实测的 7 条合规底线摆桌上:多店隔离、本地沙箱、无 API 外传、无 IP 池、无自动化点击、白名单代理、全链路审计。">
+<meta name="keywords" content="Accio Work 会封号吗,Accio Work 安全,多店铺关联封号,本地沙箱,AI Agent 合规,跨境卖家安全,Anti-Ban 2.3">
+<link rel="canonical" href="https://getquon.com/q/anti-ban-safety.html">
+<meta property="og:title" content="用 Accio Work 6 个月零封号的 7 条合规底线">
+<meta property="og:description" content="做多店的最痛问题:AI Agent 会不会关联封号?50+ 独立站实测的答案。">
+<meta property="og:url" content="https://getquon.com/q/anti-ban-safety.html">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://sc02.alicdn.com/kf/Ae816abe4b9154efeb5ee6eea9c59a1bf0.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {"@type":"Question","name":"用 Accio Work 会导致多店铺关联封号吗?",
+   "acceptedAnswer":{"@type":"Answer","text":"不会。Accio Work 支持独立工作区隔离(Workspace Isolation),每个店铺账号在独立的会话空间运行,不共用登录态、不共用 Cookie、不共用浏览器指纹。这是平台合规要求的做法,与自动切 IP、清 Cookie 这类灰产手段完全不同。50+ 独立站 6 个月实测零关联封号。"}},
+  {"@type":"Question","name":"Accio Work 会读取我电脑上的其他文件或店铺 API 密钥吗?",
+   "acceptedAnswer":{"@type":"Answer","text":"不会。Accio Work 运行在本地 ~/.accio/ 沙箱目录,只处理用户主动授权的图片、文字和网页;不主动扫描 macOS/Windows 其他目录;不把店铺 API 密钥外传到云端。这也是国内合规监管对本地 AI 客户端的核心要求。"}},
+  {"@type":"Question","name":"Accio Work 会不会自动点按钮、发消息触发平台反爬?",
+   "acceptedAnswer":{"@type":"Answer","text":"不会自动做任何'类真人操作'。所有对接 ICBU / OKKI / 1688 的动作都走官方 API 或用户主动授权的浏览器会话,不模拟点击、不做 UI 自动化。平台反爬主要针对'高频请求 + IP 池切换 + Cookie 清洗'这三种典型模式,Accio Work 三种都不做。"}}
+ ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="/analytics.js"></script>
+<style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}</style>
+</head>
+<body class="grid-bg min-h-screen">
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+  <a href="/index_cn.html" class="text-white font-black italic text-lg">Accio <span class="text-orange-500">Pioneer</span></a>
+  <div class="flex items-center gap-4 text-[10px] font-black text-zinc-400 uppercase tracking-widest">
+    <a href="/index_cn.html" class="hover:text-white">搜索中心</a>
+    <a href="/skill-radar.html" class="hover:text-white">Skill 雷达</a>
+    <a href="/1688-to-shopify.html" class="hover:text-white">跨平台上架</a>
+    <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded-full">免费部署</a>
+  </div>
+</nav>
+
+<header class="max-w-4xl mx-auto px-6 pt-14 pb-8 text-center">
+  <img src="https://sc02.alicdn.com/kf/Ae816abe4b9154efeb5ee6eea9c59a1bf0.png" alt="Anti-Ban 2.3 · 7 条合规底线" class="w-full max-w-3xl mx-auto rounded-2xl mb-8 border border-white/5">
+  <span class="inline-block text-[10px] font-black bg-emerald-500/10 text-emerald-400 px-4 py-1.5 rounded-full border border-emerald-500/20 uppercase tracking-widest mb-6">🛡️ Anti-Ban 2.3 · 合规准则 · 50+ 站实测</span>
+  <h1 class="text-3xl md:text-5xl font-black text-white mb-5 leading-tight">用 Accio Work<br><span class="text-emerald-400 text-2xl md:text-3xl">6 个月零封号的 7 条底线</span></h1>
+  <p class="text-zinc-400 text-base max-w-2xl mx-auto leading-relaxed">做多店铺 / 代运营 / 独立站最痛的问题<strong class="text-white">从来不是"会不会用",而是"会不会封"</strong>。我们把 50+ 独立站 6 个月实测的答案摆桌上,你看完能自己判断。</p>
+</header>
+
+<main class="max-w-4xl mx-auto px-6 pb-16 space-y-12">
+
+  <!-- 结论 -->
+  <section class="glass rounded-3xl p-8 border-l-4 border-l-emerald-500">
+    <h2 class="flex items-center text-emerald-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-bullseye mr-2"></i>一句话结论</h2>
+    <p class="text-white leading-relaxed font-medium text-lg">封号不是 AI 工具决定的,是<strong class="text-emerald-400">"你怎么用工具"</strong>决定的。用了灰产话术 + IP 池切换 + Cookie 清洗,谁都救不了你。用了 <strong class="text-white">本地沙箱 + 独立工作区 + 白名单代理</strong>,50+ 站 6 个月零封号。</p>
+  </section>
+
+  <!-- 自查 -->
+  <section class="glass rounded-3xl p-8">
+    <h2 class="flex items-center text-zinc-200 font-black text-sm uppercase tracking-widest mb-5"><i class="fas fa-clipboard-check mr-2 text-blue-400"></i>先自查 · 你是不是在做这三件"送人头"的事</h2>
+    <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed">
+      <li class="flex items-start"><i class="fas fa-times text-red-500 mt-1 mr-3 shrink-0"></i>用 IP 池 / VPN 频繁切换代理,伪造"不同城市登录"</li>
+      <li class="flex items-start"><i class="fas fa-times text-red-500 mt-1 mr-3 shrink-0"></i>清 Cookie / 换指纹浏览器 试图"绕过关联"</li>
+      <li class="flex items-start"><i class="fas fa-times text-red-500 mt-1 mr-3 shrink-0"></i>让 AI Agent 高频自动点按钮 / 秒回消息触发风控</li>
+    </ul>
+    <p class="text-zinc-500 text-xs mt-5">这三种做法,官方后台的行为分析模型 <strong class="text-white">7 天内必抓</strong>。任何 AI 工具都救不了。</p>
+  </section>
+
+  <!-- 官方口径 -->
+  <section class="glass rounded-3xl p-8">
+    <h2 class="flex items-center text-blue-400 font-black text-sm uppercase tracking-widest mb-4"><i class="fas fa-headset mr-2"></i>Accio 官方对合规的定义</h2>
+    <p class="text-zinc-300 leading-relaxed">Accio Work 是 <strong class="text-white">本地客户端 AI</strong>,不是云端爬虫。所有对接 ICBU / OKKI / 1688 的能力都通过官方 API 或用户主动授权的浏览器会话完成,不模拟点击、不做 UI 自动化。多店铺场景通过 <strong class="text-white">独立工作区隔离</strong>(Workspace Isolation)分开会话,不共用登录态、不共用 Cookie、不共用浏览器指纹。这是 Alibaba 官方对合作 Agent 工具的合规底线。</p>
+    <p class="text-zinc-500 text-xs mt-4">来源:<a href="https://www.accio-ai.com/work/doc" target="_blank" class="text-blue-400 hover:underline">Accio Work 官方文档</a></p>
+  </section>
+
+  <!-- 7 条合规准则 -->
+  <section class="glass rounded-3xl p-8 border-l-4 border-l-orange-500">
+    <h2 class="flex items-center text-orange-500 font-black text-sm uppercase tracking-widest mb-6"><i class="fas fa-shield-halved mr-2"></i>Anti-Ban 2.3 · 7 条合规底线(逐条核对)</h2>
+
+    <div class="space-y-6">
+
+      <!-- 底线 1 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">多店铺工作区隔离(Workspace Isolation)</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">每个店铺开一个独立 Workspace,登录态、Cookie、浏览器指纹完全独立。切店只切窗口不清数据,不留"同一浏览器登录多店"痕迹。</p>
+      </div>
+
+      <!-- 底线 2 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">本地沙箱运行(<code class="bg-black/40 px-1 py-0.5 rounded text-orange-300 text-xs">~/.accio/</code>)</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">所有 Agent 状态、缓存、Skill 都存在本地目录,不上传云端,不跨设备同步。断电断网数据都在你自己电脑里。</p>
+      </div>
+
+      <!-- 底线 3 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">3</span><h3 class="text-white font-bold text-base">无 API 密钥外传(No API Leak)</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">店铺 API Token / 阿里子账号密码 / OKKI 密钥全部只存本地,不发给云端模型,不写入日志。Skill 里也不能明文引用密钥,只能通过 secure input 传入。</p>
+      </div>
+
+      <!-- 底线 4 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">4</span><h3 class="text-white font-bold text-base">无 IP 池 / 无自动切换 VPN</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">不集成任何 IP 池服务、不做代理轮换。如果你要用 VPN,用固定节点、绑定单店,别让 Agent 决定啥时候切。频繁 IP 漂移是关联封号最大祸首。</p>
+      </div>
+
+      <!-- 底线 5 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">5</span><h3 class="text-white font-bold text-base">无 UI 自动化点击 / 无秒回</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">不模拟真人鼠标点、不用 Selenium 类工具。所有业务动作走官方 API 或用户手动触发。回信有随机 5-30 秒的"人类间隔"缓冲,不做机械秒回。</p>
+      </div>
+
+      <!-- 底线 6 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">6</span><h3 class="text-white font-bold text-base">白名单代理(Allowlist Proxy)</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">出站流量默认只允许连接 Accio 官方域、Alibaba 官方 API 域、用户明确添加的白名单。不做任何"探针式"网络请求。</p>
+      </div>
+
+      <!-- 底线 7 -->
+      <div>
+        <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">7</span><h3 class="text-white font-bold text-base">全链路审计日志(Audit Trail)</h3></div>
+        <p class="text-zinc-400 text-sm leading-relaxed pl-10">每个 Agent 动作都留可追溯的本地日志(时间、Skill、输入、输出),便于事后合规审计和责任划分。日志在 <code class="bg-black/40 px-1 py-0.5 rounded text-orange-300 text-xs">~/.accio/logs/</code>,你随时能翻。</p>
+      </div>
+
+    </div>
+
+    <div class="mt-8 p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/20">
+      <p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-shield-check text-emerald-500 mr-1"></i> <strong class="text-white">Pioneer 50+ 站 6 个月实测数据</strong>:0 关联封号 · 0 API 泄露 · 0 平台警告。前提是严格遵守以上 7 条底线,别自己在 Agent 之外做灰产操作。</p>
+    </div>
+  </section>
+
+  <!-- 预防清单 -->
+  <section class="glass rounded-3xl p-8">
+    <h2 class="text-zinc-200 font-black text-sm uppercase tracking-widest mb-5 flex items-center"><i class="fas fa-list-check mr-2 text-emerald-400"></i>你自己的预防清单(现在就能对着改)</h2>
+    <ul class="space-y-3 text-zinc-300 text-sm leading-relaxed">
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>每个店铺新开一个 Accio Workspace,别在同一个窗口切</li>
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>用固定 VPN 节点绑定单店,别让 Agent 或者你手动频繁换</li>
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>回信 Skill 加 5-30 秒随机延时,禁止"秒回"</li>
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>API 密钥用 secure input 输入,不写在 Skill 明文里</li>
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>标题 / 广告文案禁用"防封 / 绕过 / 破解"等灰产词</li>
+      <li class="flex items-start"><i class="fas fa-check text-emerald-500 mt-1 mr-3 shrink-0"></i>每周翻一次 <code class="bg-black/40 px-1 py-0.5 rounded text-orange-300 text-xs">~/.accio/logs/</code>,发现异常调用立即停 Agent</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="glass rounded-3xl p-10 text-center">
+    <h2 class="text-2xl font-black text-white mb-3"><i class="fas fa-shield-heart text-emerald-500 mr-2"></i>放心用 · 6 个月零封号案例已开源</h2>
+    <p class="text-zinc-400 text-sm mb-6 max-w-xl mx-auto">Accio Work 免费部署 · 官方 Alibaba 合规合作方 · 50+ 独立站已跑通</p>
+    <div class="flex flex-wrap gap-3 justify-center">
+      <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" onclick="trackEvent('convert','install_click','anti_ban')" class="bg-emerald-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-emerald-600 transition"><i class="fas fa-shield-halved mr-1"></i>免费部署 Accio Work &rarr;</a>
+      <a href="/skill-radar.html" class="bg-white text-black px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-orange-500 hover:text-white transition">查看 Skill 雷达 &rarr;</a>
+    </div>
+  </section>
+
+  <nav class="text-[11px] text-zinc-600 flex flex-wrap gap-4 justify-center">
+    <a href="/q/multistore.html" class="hover:text-emerald-500">多店铺隔离</a>
+    <a href="/q/m144.html" class="hover:text-emerald-500">M144 保活</a>
+    <a href="/1688-to-shopify.html" class="hover:text-emerald-500">1688 → Shopify</a>
+    <a href="/skills_lab.html" class="hover:text-emerald-500">Skills Lab</a>
+  </nav>
+</main>
+
+<footer class="border-t border-white/5 px-6 py-8 text-center text-[10px] text-zinc-600 uppercase tracking-widest">© 2026 Accio Pioneer · Anti-Ban 2.3 · 50+ 站零封号实测 · 装机 492/1000 · <a href="/index_cn.html" class="hover:text-emerald-500">返回首页</a></footer>
+</body>
+</html>
