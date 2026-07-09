@@ -33,6 +33,42 @@
         .animate-marquee { animation: marquee 25s linear infinite; }
         .custom-scroll::-webkit-scrollbar { width: 3px; }
         .custom-scroll::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+
+        /* ===== 移动端专属修复 v5 · 高特异性 · 压过 Tailwind utility ===== */
+        @media (max-width: 768px) {
+            body nav.fixed { padding: 10px 14px !important; }
+            /* 顶栏"立即部署 Agent"移动端隐藏 · 直接 body 高特异性覆盖 */
+            body nav a[href*="invite-center"] { display: none !important; }
+            /* Hero 大字压到 44px · 覆盖 text-6xl md:text-[100px] */
+            body section.pt-48 h1 { font-size: 44px !important; line-height: 1 !important; }
+            body section.pt-48 { padding-top: 96px !important; padding-bottom: 40px !important; }
+            /* 搜索输入框 + 内嵌按钮 */
+            body #smart-search-input { padding: 20px 100px 20px 48px !important; font-size: 15px !important; }
+            body #smart-search-input ~ button { padding: 10px 14px !important; font-size: 11px !important; }
+            /* 底部两版切换 */
+            body .footer-desktop-only { display: none !important; }
+            body .footer-mobile-only { display: block !important; }
+            body { padding-bottom: 60px !important; }
+            /* 拇指区双 CTA · 严格 grid */
+            body .mobile-hero-cta { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+            /* sticky 合规入口移动端右下 */
+            body .sticky-compliance-cta { bottom: 76px !important; right: 12px !important; padding: 10px 14px !important; font-size: 11px !important; }
+        }
+        .mobile-hero-cta { display: none; }
+
+        /* ===== Sticky 合规增效入口 · 全站悬浮 ===== */
+        .sticky-compliance-cta {
+            position: fixed; bottom: 32px; right: 32px; z-index: 9999;
+            background: rgba(16,185,129,.95); color: #fff;
+            padding: 14px 20px; border-radius: 999px;
+            font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+            box-shadow: 0 10px 40px rgba(16,185,129,.35), 0 0 0 1px rgba(16,185,129,.4);
+            backdrop-filter: blur(10px);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .sticky-compliance-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(16,185,129,.5), 0 0 0 1px rgba(16,185,129,.6); }
+        .sticky-compliance-cta::before { content: "🛡️"; font-size: 14px; }
     </style>
     <script type="application/ld+json">
 {
@@ -324,6 +360,12 @@
                 <input type="text" id="smart-search-input" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')triggerSearch()" placeholder="输入报错(M144)、技能收获(SkillHarvest)、自动插件..."
                        class="w-full bg-[#0f0f11] border border-white/10 rounded-[2.5rem] py-7 pl-16 pr-40 text-lg md:text-xl text-white outline-none focus:border-brand-orange transition-all shadow-2xl font-mono">
                 <button onclick="triggerSearch()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-black px-8 py-4 rounded-2xl font-black text-xs uppercase hover:bg-brand-orange hover:text-white transition shadow-lg shadow-white/5">立即问诊</button>
+
+                <!-- 移动端拇指区双 CTA · 桌面隐藏 -->
+                <div class="mobile-hero-cta mt-6 max-w-md mx-auto">
+                    <a href="/skill-radar.html" class="bg-white text-black px-4 py-3 rounded-2xl font-black text-[11px] uppercase tracking-widest text-center shadow-lg">看 Skill 雷达</a>
+                    <a href="https://www.accio.com/invite-center?src=f_desktop" target="_blank" onclick="trackEvent&&trackEvent('convert','install_click','cn_mobile_hero')" class="bg-brand-orange text-white px-4 py-3 rounded-2xl font-black text-[11px] uppercase tracking-widest text-center shadow-lg shadow-brand-orange/20">免费部署 Agent</a>
+                </div>
 
                 <!-- 实时联想面板 -->
                 <div id="results-panel" class="hidden absolute top-[110%] w-full glass-ui rounded-3xl p-4 text-left shadow-[0_30px_100px_rgba(0,0,0,0.8)] border-brand-orange/20">
