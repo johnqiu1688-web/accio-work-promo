@@ -45,8 +45,23 @@
             .footer-mobile-only { display: block !important; }
             body { padding-bottom: 60px !important; }
             .mobile-hero-cta { display: grid !important; }
+            .sticky-compliance-cta { bottom: 76px !important; right: 12px !important; padding: 10px 14px !important; font-size: 11px !important; }
         }
         .mobile-hero-cta { display: none; }
+
+        /* ===== Sticky Anti-Ban Compliance CTA ===== */
+        .sticky-compliance-cta {
+            position: fixed; bottom: 32px; right: 32px; z-index: 9999;
+            background: rgba(16,185,129,.95); color: #fff;
+            padding: 14px 20px; border-radius: 999px;
+            font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+            box-shadow: 0 10px 40px rgba(16,185,129,.35), 0 0 0 1px rgba(16,185,129,.4);
+            backdrop-filter: blur(10px);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .sticky-compliance-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(16,185,129,.5), 0 0 0 1px rgba(16,185,129,.6); }
+        .sticky-compliance-cta::before { content: "🛡️"; font-size: 14px; }
     </style>
 </head>
 <body class="min-h-screen hero-mesh">
@@ -228,6 +243,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Sticky Anti-Ban Compliance CTA -->
+    <a href="/q/anti-ban-safety.html" class="sticky-compliance-cta" onclick="trackEvent&&trackEvent('nav','sticky_compliance_click','en_index')">Anti-Ban Safety</a>
 
     <!-- Footer · Desktop -->
     <footer class="fixed bottom-0 w-full bg-black/90 border-t border-white/5 py-4 px-10 z-50 overflow-hidden footer-desktop-only">

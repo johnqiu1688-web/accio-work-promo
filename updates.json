@@ -1,7 +1,15 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-07-08",
+  "updated": "2026-07-09",
   "items": [
+    {
+      "date": "2026-07-09",
+      "tag": "合规底线",
+      "title": "Anti-Ban 2.3 · 7 条合规底线上线",
+      "desc": "解答多店卖家最痛问题:AI Agent 会不会关联封号? 50+ 站 6 个月零封号实测,7 条底线逐条摆桌上。",
+      "link": "q/anti-ban-safety.html",
+      "verified": true
+    },
     {
       "date": "2026-07-08",
       "tag": "评测导航",
