@@ -790,6 +790,9 @@
         </div>
     </div>
 
+    <!-- Sticky Skill Radar 入口 · 帮用户选 Skill -->
+    <a href="/skill-radar.html" class="sticky-radar-cta" onclick="trackEvent&&trackEvent('nav','sticky_radar_click','cn_index')">Skill 雷达</a>
+
     <!-- Sticky 合规增效入口 · 义乌卖家最痛的封号顾虑 -->
     <a href="/q/anti-ban-safety.html" class="sticky-compliance-cta" onclick="trackEvent&&trackEvent('nav','sticky_compliance_click','cn_index')">合规增效方案</a>
 
@@ -1029,6 +1032,19 @@
         // #155: 渲染常驻热门问题(取高频节点)
         (function(){
           var hotIds=['m144','credits','okki','1688','icbu-reply','channels','model-select','find-similar'];
+          var el=document.getElementById('hot-grid'); if(!el) return;
+          el.innerHTML=hotIds.map(function(id){
+            var n=MASTER_KB.find(function(x){return x.id===id}); if(!n) return '';
+            return '<div onclick="showDiagnosis(\''+id+'\');trackEvent(\'activate\',\'hot_click\',id)" class="glass-ui rounded-2xl px-4 py-3 cursor-pointer hover:border-brand-orange/40 transition group flex items-center justify-between">'
+              +'<span class="text-xs font-bold text-zinc-300 group-hover:text-brand-orange transition truncate">'+n.title+'</span>'
+              +'<i class="fas fa-arrow-right text-[9px] text-zinc-700 group-hover:text-brand-orange shrink-0 ml-2"></i></div>';
+          }).join('');
+        })();
+
+        </script>
+</body>
+</html>
+      var hotIds=['m144','credits','okki','1688','icbu-reply','channels','model-select','find-similar'];
           var el=document.getElementById('hot-grid'); if(!el) return;
           el.innerHTML=hotIds.map(function(id){
             var n=MASTER_KB.find(function(x){return x.id===id}); if(!n) return '';

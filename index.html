@@ -62,6 +62,23 @@
         }
         .sticky-compliance-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(16,185,129,.5), 0 0 0 1px rgba(16,185,129,.6); }
         .sticky-compliance-cta::before { content: "🛡️"; font-size: 14px; }
+
+        /* ===== Sticky Skill Radar CTA (EN) ===== */
+        .sticky-radar-cta {
+            position: fixed; bottom: 32px; right: 210px; z-index: 9999;
+            background: rgba(249,115,22,.95); color: #fff;
+            padding: 14px 20px; border-radius: 999px;
+            font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+            box-shadow: 0 10px 40px rgba(249,115,22,.35), 0 0 0 1px rgba(249,115,22,.4);
+            backdrop-filter: blur(10px);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .sticky-radar-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(249,115,22,.5), 0 0 0 1px rgba(249,115,22,.6); }
+        .sticky-radar-cta::before { content: "🎯"; font-size: 14px; }
+        @media (max-width: 768px) {
+            body .sticky-radar-cta { bottom: 76px !important; right: 155px !important; padding: 10px 14px !important; font-size: 11px !important; }
+        }
     </style>
 </head>
 <body class="min-h-screen hero-mesh">
