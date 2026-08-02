@@ -1,7 +1,15 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-07-09",
+  "updated": "2026-08-02",
   "items": [
+    {
+      "date": "2026-08-02",
+      "tag": "技能商店",
+      "title": "3 个 Skill 正式 ZIP 打包 · Skills Lab 变真下载",
+      "desc": "1688 工厂尽调 / OKKI 僵尸客户复活 / M144 环境诊断 三个 Skill 全部 ZIP 化, 适配 Accio Work v0.18+ Windows 端直接上传, MIT 免费可商用。",
+      "link": "skills_lab.html",
+      "verified": true
+    },
     {
       "date": "2026-07-09",
       "tag": "英文出海",
