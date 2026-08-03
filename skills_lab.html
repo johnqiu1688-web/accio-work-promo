@@ -56,6 +56,41 @@
     </div>
   </section>
 
+  <!-- 安装指引 · 对齐 v0.26.0 -->
+  <section class="glass rounded-3xl p-8">
+    <div class="flex items-center flex-wrap gap-3 mb-2">
+      <h2 class="text-white font-black text-xl flex items-center"><i class="fas fa-box-open text-emerald-400 mr-3"></i>三步装上：ZIP 下载后怎么用</h2>
+      <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-[10px] font-black uppercase tracking-widest">已对齐 v0.26.0</span>
+    </div>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-6">下面流程按 Accio Work <strong class="text-white">v0.26.0(2026-07-24)</strong> 的 Agent Hub 改版校准。如果你还在更老的版本，建议先升级 —— 老版本要手动补插件依赖，很多人卡在这一步。</p>
+    <div class="space-y-5">
+      <div class="flex items-start">
+        <span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-4 shrink-0 mt-0.5">1</span>
+        <div>
+          <h3 class="text-white font-bold text-sm mb-1">下载 ZIP，不要解压</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">点上面任意卡片直接拿到 <code class="bg-black/40 px-1 py-0.5 rounded text-orange-300 text-xs">.zip</code>。Accio Work 自 <strong class="text-zinc-200">v0.18.0(2026-06-23)</strong> 起 Windows 端支持 ZIP 格式 Skill 直传，解压反而传不上去。</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-4 shrink-0 mt-0.5">2</span>
+        <div>
+          <h3 class="text-white font-bold text-sm mb-1">Agent Hub 上传 —— 插件依赖已自动化</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">进 Agent Hub 上传 ZIP 即可。<strong class="text-zinc-200">v0.26.0 起，Skill 所需的插件依赖会自动拉取安装</strong>，不再需要你事先手动装齐。这是相对早期版本最省事的一处改动。</p>
+        </div>
+      </div>
+      <div class="flex items-start">
+        <span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-4 shrink-0 mt-0.5">3</span>
+        <div>
+          <h3 class="text-white font-bold text-sm mb-1">跑一遍，顺手看 Credits 面板</h3>
+          <p class="text-zinc-400 text-sm leading-relaxed">v0.26.0 新增 Credits 用量面板，能看清每个模型的消耗结构。第一次跑新 Skill 建议对着面板确认成本，别等月底才发现某个模型吃掉大半额度。搭配 <strong class="text-zinc-200">v0.25.0 的模型推理强度选择器</strong>，简单任务调低强度可显著省钱。</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 p-4 rounded-2xl bg-orange-500/5 border border-orange-500/20">
+      <p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-triangle-exclamation text-orange-400 mr-1"></i> <strong class="text-white">多店卖家注意</strong>：每个店铺请在独立 Workspace 里装 Skill。v0.23.0 已实现多账号切换数据隔离，但前提是你真的分开建了 Workspace。详见 <a href="/q/anti-ban-safety.html" class="text-orange-400 hover:underline">Anti-Ban 2.3 合规底线</a>。</p>
+    </div>
+  </section>
+
   <section>
     <h2 class="text-white font-black text-xl mb-6 flex items-center"><i class="fas fa-flask text-orange-400 mr-3"></i>内测中 · Roadmap 公开</h2>
     <div class="grid md:grid-cols-2 gap-5">

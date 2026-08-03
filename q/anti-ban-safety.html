@@ -86,6 +86,7 @@
       <div>
         <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">多店铺工作区隔离(Workspace Isolation)</h3></div>
         <p class="text-zinc-400 text-sm leading-relaxed pl-10">每个店铺开一个独立 Workspace,登录态、Cookie、浏览器指纹完全独立。切店只切窗口不清数据,不留"同一浏览器登录多店"痕迹。</p>
+        <p class="text-emerald-400/90 text-xs leading-relaxed pl-10 mt-2"><i class="fas fa-certificate mr-1"></i><strong>官方已印证</strong>:Accio Work v0.23.0(2026-07-09)正式实现「多账号切换数据隔离」。这条底线不再只是我们的实践建议,而是官方在架构层给出的同向答案。</p>
       </div>
 
       <!-- 底线 2 -->
@@ -129,6 +130,39 @@
     <div class="mt-8 p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/20">
       <p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-shield-check text-emerald-500 mr-1"></i> <strong class="text-white">Pioneer 50+ 站 6 个月实测数据</strong>:0 关联封号 · 0 API 泄露 · 0 平台警告。前提是严格遵守以上 7 条底线,别自己在 Agent 之外做灰产操作。</p>
     </div>
+  </section>
+
+  <!-- 官方版本印证 -->
+  <section class="glass rounded-3xl p-8">
+    <h2 class="text-zinc-200 font-black text-sm uppercase tracking-widest mb-2 flex items-center"><i class="fas fa-certificate mr-2 text-emerald-400"></i>官方版本印证:这些不是我们自说自话</h2>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 最早是我们 50+ 站踩坑总结出来的实践底线。到 2026 年 7 月,官方连续两个版本从产品架构层给出了同向答案 —— 这说明合规隔离不是"卖家自己小心点"的问题,而是工具方该承担的责任。</p>
+    <div class="space-y-4">
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.23.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-09</span>
+          <h3 class="text-white font-bold text-sm">多账号切换数据隔离</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">官方明确实现多账号切换时的数据完全隔离。<strong class="text-zinc-200">对应本页底线 1</strong> —— 多店卖家最担心的"切店留痕"从此有产品级保障,而不只靠人工纪律。</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.21.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-03</span>
+          <h3 class="text-white font-bold text-sm">发布前安全检测 + 风控提示</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">建站/发布链路新增发布前安全检测与风控提示。<strong class="text-zinc-200">对应本页底线 5、6</strong> —— 合规校验被前置到动作发生之前,而不是出事后再补救。</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.25.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-22</span>
+          <h3 class="text-white font-bold text-sm">Team 定时任务 + Webhook</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">多店批量运营终于有了正规的调度入口。<strong class="text-zinc-200">合规提醒</strong>:定时任务请错峰排班,不要把多个店的动作压在同一分钟,那本身就是关联特征。</p>
+      </div>
+    </div>
+    <p class="text-zinc-500 text-xs mt-5 leading-relaxed">以上版本信息来自 Accio Work 官方更新日志,由 Pioneer Sentinel 每日巡航核实并同步。我们不代表官方,只做独立第三方的记录与解读。</p>
   </section>
 
   <!-- 预防清单 -->

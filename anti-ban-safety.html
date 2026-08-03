@@ -75,6 +75,7 @@
       <div>
         <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">1</span><h3 class="text-white font-bold text-base">Multi-Store Workspace Isolation</h3></div>
         <p class="text-zinc-400 text-sm leading-relaxed pl-10">Each store runs in its own Workspace: independent login state, cookies, and browser fingerprint. Switch stores by switching windows — never clear data or share sessions.</p>
+        <p class="text-emerald-400/90 text-xs leading-relaxed pl-10 mt-2"><i class="fas fa-certificate mr-1"></i><strong>Officially confirmed</strong>: Accio Work v0.23.0 (2026-07-09) shipped full data isolation on multi-account switching. This principle is no longer just our field practice — it's an architectural guarantee from the vendor.</p>
       </div>
       <div>
         <div class="flex items-center mb-2"><span class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-black flex items-center justify-center mr-3 shrink-0">2</span><h3 class="text-white font-bold text-base">Local Sandbox Runtime (<code class="bg-black/40 px-1 py-0.5 rounded text-orange-300 text-xs">~/.accio/</code>)</h3></div>
@@ -105,6 +106,39 @@
     <div class="mt-8 p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/20">
       <p class="text-zinc-300 text-xs leading-relaxed"><i class="fas fa-shield-check text-emerald-500 mr-1"></i> <strong class="text-white">Pioneer 50+ Sites, 6-Month Production Data</strong>: 0 cross-account bans · 0 API leaks · 0 platform warnings. Provided you follow these 7 principles and don't run grey-hat operations outside the Agent.</p>
     </div>
+  </section>
+
+  <!-- Official version evidence -->
+  <section class="glass rounded-3xl p-8">
+    <h2 class="text-zinc-200 font-black text-sm uppercase tracking-widest mb-2 flex items-center"><i class="fas fa-certificate mr-2 text-emerald-400"></i>Official Version Evidence — Not Just Our Opinion</h2>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 started as field-tested discipline from 50+ sites. Through July 2026, the vendor shipped architectural answers pointing the same direction — proof that compliance isolation is a tooling responsibility, not just "seller be careful".</p>
+    <div class="space-y-4">
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.23.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-09</span>
+          <h3 class="text-white font-bold text-sm">Multi-account switching data isolation</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">Full data isolation when switching accounts. <strong class="text-zinc-200">Maps to Principle 1</strong> — the "switch residue" that multi-store sellers fear most now has product-level protection instead of relying on manual discipline.</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.21.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-03</span>
+          <h3 class="text-white font-bold text-sm">Pre-publish safety checks + risk-control prompts</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">Safety detection moved ahead of the publish action. <strong class="text-zinc-200">Maps to Principles 5 &amp; 6</strong> — compliance is validated before the action fires, not patched after an incident.</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.25.0</span>
+          <span class="text-zinc-500 text-xs">2026-07-22</span>
+          <h3 class="text-white font-bold text-sm">Team scheduled tasks + Webhook</h3>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">A legitimate scheduling entry point for multi-store operations at last. <strong class="text-zinc-200">Compliance note</strong>: stagger your schedules. Firing actions for several stores in the same minute is itself a correlation signal.</p>
+      </div>
+    </div>
+    <p class="text-zinc-500 text-xs mt-5 leading-relaxed">Version data sourced from the official Accio Work changelog, verified and synced daily by Pioneer Sentinel. We are an independent third party, not the vendor.</p>
   </section>
 
   <section class="glass rounded-3xl p-8">
