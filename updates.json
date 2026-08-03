@@ -1,6 +1,6 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "items": [
     {
       "date": "2026-08-02",
@@ -8,6 +8,46 @@
       "title": "3 个 Skill 正式 ZIP 打包 · Skills Lab 变真下载",
       "desc": "1688 工厂尽调 / OKKI 僵尸客户复活 / M144 环境诊断 三个 Skill 全部 ZIP 化, 适配 Accio Work v0.18+ Windows 端直接上传, MIT 免费可商用。",
       "link": "skills_lab.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-29",
+      "tag": "官方更新",
+      "title": "Accio Work v0.27.0 · 团队空间 Skill 自动提炼默认开启",
+      "desc": "团队空间新增「自动提炼 Skill」并默认开启,协作过程沉淀可复用技能;Shopify 专家 Agent 完成迁移。对多人运营团队意味着 Skill 资产开始自动累积,选型标准更需要第三方参照。",
+      "link": "skill-radar.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-24",
+      "tag": "官方更新",
+      "title": "Accio Work v0.26.0 · Agent Hub 改版 + 插件依赖自动安装",
+      "desc": "Agent Hub 整体改版,安装 Agent 时自动拉取所需插件依赖,不再手动补装;新增 Credits 用量面板,可看清每个模型的消耗结构。",
+      "link": "skills_lab.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-22",
+      "tag": "官方更新",
+      "title": "Accio Work v0.25.0 · 模型推理强度可调 + Team 定时任务/Webhook",
+      "desc": "模型新增推理强度选择器,可按任务复杂度控制成本;Team 空间支持定时任务与 Webhook 触发,分享页新增只读卡片。对多店批量运营是关键的调度能力补齐。",
+      "link": "q/anti-ban-safety.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-15",
+      "tag": "官方更新",
+      "title": "Accio Work v0.24.0 · HTML 画布可视化编辑 + 图片多格式下载",
+      "desc": "建站画布支持直接可视化编辑 HTML,图片支持多格式导出,文件预览可分享。独立站装修链路从「生成」走向「可改」。",
+      "link": "index_cn.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-09",
+      "tag": "官方更新",
+      "title": "Accio Work v0.23.0 · 多账号切换数据隔离",
+      "desc": "多账号切换时数据完全隔离,文件拖拽与 HTML 预览滚动体验优化。这一条直接对应 Anti-Ban 2.3 第 1 条「多店 Workspace 进程级隔离」——官方在架构层面给出了同向答案。",
+      "link": "q/anti-ban-safety.html",
       "verified": true
     },
     {
@@ -40,6 +80,22 @@
       "title": "1688 → Shopify / Amazon / Shopee 三合一流水线",
       "desc": "3 段可复制指令 + 三平台差异化 checklist + Skill 沉淀教程,单款 4 小时压到 40 分钟,50+ 站实测数据。",
       "link": "1688-to-shopify.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-07",
+      "tag": "官方更新",
+      "title": "Accio Work v0.22.0 · 建站画布编辑二次确认 + SKU 可视化卡片",
+      "desc": "建站画布改动前增加确认环节防误操作,商品 SKU 以可视化卡片呈现,Alibaba.com 店铺编辑器改版。",
+      "link": "1688-to-shopify.html",
+      "verified": true
+    },
+    {
+      "date": "2026-07-03",
+      "tag": "官方更新",
+      "title": "Accio Work v0.21.0 · Design Studio 上线 + 云端配置同步",
+      "desc": "Design Studio 正式上线,侧边栏支持悬停预览,配置可云端同步;发布前新增安全检测与风控提示。合规前置化的一步。",
+      "link": "q/anti-ban-safety.html",
       "verified": true
     },
     {
@@ -83,6 +139,14 @@
       "verified": true
     },
     {
+      "date": "2026-06-22",
+      "tag": "实战手册",
+      "title": "M144 连接报错:完整实战排查手册更新",
+      "desc": "从 Chrome 148 Service Worker 回收机制讲透,4步可照做解决。",
+      "link": "q/m144.html",
+      "verified": true
+    },
+    {
       "date": "2026-06-11",
       "tag": "官方更新",
       "title": "Accio Work v0.16.0:Sourcing 新增「找相似商品」",
@@ -104,14 +168,6 @@
       "title": "Team 画布:团队协作可视化上线",
       "desc": "多人在画布组织信息,支持图片上传/预览/编辑/放大。",
       "link": "q/team-canvas.html",
-      "verified": true
-    },
-    {
-      "date": "2026-06-22",
-      "tag": "实战手册",
-      "title": "M144 连接报错:完整实战排查手册更新",
-      "desc": "从 Chrome 148 Service Worker 回收机制讲透,4步可照做解决。",
-      "link": "q/m144.html",
       "verified": true
     }
   ]
