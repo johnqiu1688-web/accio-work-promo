@@ -82,6 +82,42 @@
     <div class="grid gap-3"><a href="https://getquon.com/q/roles.html" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-zinc-300 text-xs font-bold">团队角色与权限（Owner/Admin/Member）</span><i class="fas fa-chevron-right text-[10px] text-zinc-700"></i></a><a href="https://getquon.com/q/team-assets.html" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-zinc-300 text-xs font-bold">企业资产管理（Agent / Skill 共享）</span><i class="fas fa-chevron-right text-[10px] text-zinc-700"></i></a><a href="https://getquon.com/q/login.html" class="glass rounded-2xl p-4 flex justify-between items-center hover:border-orange-500/40 transition"><span class="text-zinc-300 text-xs font-bold">登录方式与账号问题</span><i class="fas fa-chevron-right text-[10px] text-zinc-700"></i></a></div>
   </section>
 </main>
+<style>
+.acc-cv{max-width:960px;margin:44px auto 8px;padding:0 20px;font-family:system-ui,-apple-system,"PingFang SC",sans-serif}
+.acc-cv-in{border-top:1px solid rgba(255,255,255,.07);padding-top:28px}
+.acc-cv-head{font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:#f97316;margin-bottom:16px}
+.acc-cv-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.acc-cv-dl{display:block;padding:20px;border-radius:18px;background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.22);text-decoration:none;transition:.18s}
+.acc-cv-dl:hover{background:rgba(16,185,129,.11);border-color:rgba(16,185,129,.45);transform:translateY(-2px)}
+.acc-cv-tag{font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#10b981;margin-bottom:8px}
+.acc-cv-t{color:#fff;font-weight:800;font-size:16px;margin-bottom:6px}
+.acc-cv-d{color:#a1a1aa;font-size:12.5px;line-height:1.6;margin-bottom:14px}
+.acc-cv-b{color:#10b981;font-weight:900;font-size:12px}
+.acc-cv-side{display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07)}
+.acc-cv-st{font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#71717a;margin-bottom:2px}
+.acc-cv-l{color:#d4d4d8;font-size:12.5px;text-decoration:none;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);transition:.16s}
+.acc-cv-l:last-child{border-bottom:none}
+.acc-cv-l:hover{color:#f97316;padding-left:5px}
+@media(max-width:768px){.acc-cv-grid{grid-template-columns:1fr}.acc-cv{margin:32px auto 4px}}
+</style>
+<section class="acc-cv">
+  <div class="acc-cv-in">
+    <div class="acc-cv-head">下一步</div>
+    <div class="acc-cv-grid">
+      <a href="/skills_registry/packs/m144-diagnostic.zip" data-skill="m144-diagnostic" class="acc-cv-dl" onclick="trackEvent&&trackEvent('download','skill_zip','m144-diagnostic')">
+        <div class="acc-cv-tag">免费下载 · MIT</div>
+        <div class="acc-cv-t">M144 / Chrome 148 诊断</div>
+        <div class="acc-cv-d">多店运行前先确认环境干净，避免异常触发风控</div>
+        <div class="acc-cv-b">下载 ZIP &darr;</div>
+      </a>
+      <div class="acc-cv-side">
+        <div class="acc-cv-st">相关深度内容</div>
+        <a href="/q/anti-ban-safety.html" class="acc-cv-l" onclick="trackEvent&&trackEvent('nav','cv_link','q_create-team')">Anti-Ban 2.3 · 多店合规底线</a><a href="/skill-radar.html" class="acc-cv-l" onclick="trackEvent&&trackEvent('nav','cv_link','q_create-team')">Skill 选型雷达 · Top 20 独立评测</a>
+        <a href="/skills_lab.html" class="acc-cv-l" onclick="trackEvent&&trackEvent('nav','cv_link','q_create-team_lab')">全部 3 个免费 Skill &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="border-t border-white/5 px-6 py-6 text-center text-[10px] text-zinc-600 uppercase tracking-widest">
   © 2026 Accio Pioneer · Accio Work 垂直知识库 · <a href="https://getquon.com/index_cn.html" class="hover:text-orange-500">返回搜索中心</a>
 </footer>
