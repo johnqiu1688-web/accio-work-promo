@@ -112,8 +112,18 @@
   <!-- Official version evidence -->
   <section class="glass rounded-3xl p-8">
     <h2 class="text-zinc-200 font-black text-sm uppercase tracking-widest mb-2 flex items-center"><i class="fas fa-certificate mr-2 text-emerald-400"></i>Official Version Evidence — Not Just Our Opinion</h2>
-    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 started as field-tested discipline from 50+ sites. Through July 2026, the vendor shipped architectural answers pointing the same direction — proof that compliance isolation is a tooling responsibility, not just "seller be careful".</p>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 started as field-tested discipline from 50+ sites. Across July and August 2026, the vendor shipped four releases pointing the same direction — proof that compliance isolation is a tooling responsibility, not just "seller be careful".</p>
     <div class="space-y-4">
+      <div class="p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/25">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-black">v0.29.0</span>
+          <span class="text-zinc-500 text-xs">2026-08-12</span>
+          <h3 class="text-white font-bold text-sm">Multi-store account management + per-store task execution</h3>
+          <span class="px-2 py-0.5 rounded-md bg-orange-500/15 text-orange-400 text-[10px] font-black">LATEST</span>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">Clearer multi-store account management, and collaborative tasks can now <strong class="text-zinc-200">execute against a specific store</strong>. <strong class="text-zinc-200">Maps to Principle 1</strong> — the second time the vendor has doubled down on multi-store governance after v0.23.0: from "switching leaks no data" to "the task itself is bound to a store identity". Store isolation is shifting from user discipline to product default.</p>
+        <p class="text-zinc-500 text-xs leading-relaxed mt-2">The same release added external-browser automation. <strong class="text-zinc-400">Note</strong>: that is not a license for UI click simulation — Principle 5 still holds. Automate through business events, never fake user input.</p>
+      </div>
       <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
         <div class="flex items-center flex-wrap gap-2 mb-2">
           <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.23.0</span>
@@ -137,6 +147,7 @@
           <h3 class="text-white font-bold text-sm">Team scheduled tasks + Webhook</h3>
         </div>
         <p class="text-zinc-400 text-sm leading-relaxed">A legitimate scheduling entry point for multi-store operations at last. <strong class="text-zinc-200">Compliance note</strong>: stagger your schedules. Firing actions for several stores in the same minute is itself a correlation signal.</p>
+        <p class="text-zinc-500 text-xs leading-relaxed mt-2">Follow-up: as of <strong class="text-zinc-400">v0.30.0 (2026-08-19)</strong>, successful scheduled-task results can be pushed straight to DingTalk / Lark / WeCom. Multi-store operators can finally "run and get reported to" instead of logging into each backend to verify — one fewer login is one fewer multi-store footprint.</p>
       </div>
     </div>
     <p class="text-zinc-500 text-xs mt-5 leading-relaxed">Version data sourced from the official Accio Work changelog, verified and synced daily by Pioneer Sentinel. We are an independent third party, not the vendor.</p>

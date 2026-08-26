@@ -136,8 +136,18 @@
   <!-- 官方版本印证 -->
   <section class="glass rounded-3xl p-8">
     <h2 class="text-zinc-200 font-black text-sm uppercase tracking-widest mb-2 flex items-center"><i class="fas fa-certificate mr-2 text-emerald-400"></i>官方版本印证:这些不是我们自说自话</h2>
-    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 最早是我们 50+ 站踩坑总结出来的实践底线。到 2026 年 7 月,官方连续两个版本从产品架构层给出了同向答案 —— 这说明合规隔离不是"卖家自己小心点"的问题,而是工具方该承担的责任。</p>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-5">Anti-Ban 2.3 最早是我们 50+ 站踩坑总结出来的实践底线。从 2026 年 7 月到 8 月,官方连续四个版本从产品架构层给出了同向答案 —— 这说明合规隔离不是"卖家自己小心点"的问题,而是工具方该承担的责任。</p>
     <div class="space-y-4">
+      <div class="p-4 rounded-2xl bg-emerald-500/5 border border-emerald-500/25">
+        <div class="flex items-center flex-wrap gap-2 mb-2">
+          <span class="px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-black">v0.29.0</span>
+          <span class="text-zinc-500 text-xs">2026-08-12</span>
+          <h3 class="text-white font-bold text-sm">多店铺账号管理升级 · 任务按店铺执行</h3>
+          <span class="px-2 py-0.5 rounded-md bg-orange-500/15 text-orange-400 text-[10px] font-black">最新</span>
+        </div>
+        <p class="text-zinc-400 text-sm leading-relaxed">多店铺账号支持更清晰的管理与展示,协作任务可<strong class="text-zinc-200">按对应店铺执行</strong>。<strong class="text-zinc-200">对应本页底线 1</strong> —— 这是继 v0.23.0 数据隔离之后,官方第二次在多店治理上加码:从"切店不串数据"进一步到"任务本身就绑定店铺身份"。多店隔离正在从使用纪律变成产品默认形态。</p>
+        <p class="text-zinc-500 text-xs leading-relaxed mt-2">同版本还支持连接外部浏览器做自动化。<strong class="text-zinc-400">注意</strong>:这不等于可以做 UI 脚本模拟点击 —— 底线 5 依然成立,自动化要走业务接口和真实事件,不要伪造用户操作。</p>
+      </div>
       <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
         <div class="flex items-center flex-wrap gap-2 mb-2">
           <span class="px-2 py-0.5 rounded-md bg-emerald-500/15 text-emerald-400 text-xs font-black">v0.23.0</span>
@@ -161,6 +171,7 @@
           <h3 class="text-white font-bold text-sm">Team 定时任务 + Webhook</h3>
         </div>
         <p class="text-zinc-400 text-sm leading-relaxed">多店批量运营终于有了正规的调度入口。<strong class="text-zinc-200">合规提醒</strong>:定时任务请错峰排班,不要把多个店的动作压在同一分钟,那本身就是关联特征。</p>
+        <p class="text-zinc-500 text-xs leading-relaxed mt-2">延伸:<strong class="text-zinc-400">v0.30.0(2026-08-19)</strong> 起,定时任务的成功结果可直接推送到钉钉 / 飞书 / 企业微信。多店运营终于能"跑完自动汇报",不必登录后台逐店核对 —— 少一次登录,就少一次多店操作痕迹。</p>
       </div>
     </div>
     <p class="text-zinc-500 text-xs mt-5 leading-relaxed">以上版本信息来自 Accio Work 官方更新日志,由 Pioneer Sentinel 每日巡航核实并同步。我们不代表官方,只做独立第三方的记录与解读。</p>
