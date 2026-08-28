@@ -177,6 +177,40 @@
     <p class="text-zinc-500 text-xs mt-5 leading-relaxed">另:v0.27.0 同期完成了 Shopify 专家 Agent 迁移,如果你在做 1688→Shopify 链路,可参考我们的 <a href="/1688-to-shopify.html" class="text-emerald-400 hover:underline">三步上架 SOP</a>。</p>
   </section>
 
+  <!-- 知识库上线后的重新分工 -->
+  <section class="glass rounded-3xl p-8 border-l-4 border-l-sky-500">
+    <div class="flex items-center flex-wrap gap-3 mb-3">
+      <h2 class="text-white font-black text-xl flex items-center"><i class="fas fa-book text-sky-400 mr-3"></i>知识库上线后,一半的「Skill 需求」其实不该装 Skill</h2>
+      <span class="px-2 py-0.5 rounded-md bg-sky-500/15 text-sky-400 text-[10px] font-black uppercase tracking-widest">v0.28.1 · 2026-08-06</span>
+    </div>
+    <p class="text-zinc-400 text-sm leading-relaxed mb-6">v0.28.1 上线了<strong class="text-white">个人知识库与团队知识库</strong>,v0.30.0 又补上了<strong class="text-white">文件上传同步与本地预览</strong>。这件事对选型的影响比它看起来大 —— 因为在此之前,很多团队是<strong class="text-zinc-200">拿 Skill 当资料库用的</strong>:把报价单、话术模板、品类参数硬塞进 Skill 描述里。现在这条路该改了。</p>
+    <div class="grid md:grid-cols-2 gap-4 mb-5">
+      <div class="p-4 rounded-2xl bg-sky-500/5 border border-sky-500/25">
+        <h3 class="text-sky-400 font-bold text-sm mb-2"><i class="fas fa-gears mr-2 text-xs"></i>该做成 Skill 的:动作</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">有<strong class="text-zinc-200">明确输入输出、可重复执行</strong>的流程。比如「抓后台最近 20 个品 → 套模板出主图 → 生成发品表」。判断标准:你能说清「跑一次它做了什么」。</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <h3 class="text-zinc-300 font-bold text-sm mb-2"><i class="fas fa-file-lines mr-2 text-xs"></i>该放知识库的:事实</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">会变、要查、不执行的内容。报价区间、认证清单、客户偏好、历史成交记录。判断标准:你只是想让 Agent「知道」,而不是「做」。</p>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <h3 class="text-white font-bold text-sm mb-1.5"><i class="fas fa-1 text-sky-400 mr-2 text-xs"></i>把资料塞进 Skill,维护成本会在三个月后爆发</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">Skill 描述里写死的报价、政策、参数,改一次就要动一次 Skill,还要重新验证它没被改坏。放知识库则是<strong class="text-zinc-200">改文件即生效</strong>,不触碰执行逻辑。这是「动作」和「事实」必须分开的根本原因 —— 它们的变更频率差一个数量级。</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <h3 class="text-white font-bold text-sm mb-1.5"><i class="fas fa-2 text-sky-400 mr-2 text-xs"></i>重新审一遍你现有的 Skill 列表</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">如果某个 Skill 的主体是一大段固定文本(话术库、参数表、FAQ),它大概率是知识库的活。<strong class="text-zinc-200">拆出来之后 Skill 会变薄,但触发准确率会上升</strong> —— 描述越聚焦动作,匹配越准。这一条对已经开了自动提炼的团队尤其值得做。</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-black/30 border border-zinc-800">
+        <h3 class="text-white font-bold text-sm mb-1.5"><i class="fas fa-3 text-sky-400 mr-2 text-xs"></i>多店团队:知识库的隔离要单独确认一次</h3>
+        <p class="text-zinc-400 text-sm leading-relaxed">团队知识库是<strong class="text-zinc-200">共享</strong>的。把 A 店的客户名单、成交价传进去,B 店的协作任务同样能读到。这跟 Skill 夹带店铺数据是同一类风险,但更隐蔽 —— 因为上传文件时没人会觉得那是在「配置权限」。上传前先问一句:这份文件是否所有店都该看见?详见 <a href="/q/anti-ban-safety.html" class="text-sky-400 hover:underline">Anti-Ban 2.3 合规底线</a>。</p>
+      </div>
+    </div>
+    <p class="text-zinc-500 text-xs mt-5 leading-relaxed">一句话:<strong class="text-zinc-400">Skill 装能力,知识库装上下文。</strong>这轮分家做完,再回头看 Top 20 的配单,你会发现要装的比原来更少。</p>
+  </section>
+
   <!-- 补位:官方空档 -->
   <section class="glass rounded-3xl p-8 border-l-4 border-l-pink-500">
     <h2 class="text-pink-400 font-black text-base mb-5 flex items-center"><i class="fas fa-triangle-exclamation mr-2"></i>Top 20 忽略的两大空档(我们在补)</h2>
