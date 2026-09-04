@@ -148,6 +148,7 @@
         </div>
         <p class="text-zinc-400 text-sm leading-relaxed">A legitimate scheduling entry point for multi-store operations at last. <strong class="text-zinc-200">Compliance note</strong>: stagger your schedules. Firing actions for several stores in the same minute is itself a correlation signal.</p>
         <p class="text-zinc-500 text-xs leading-relaxed mt-2">Follow-up: as of <strong class="text-zinc-400">v0.30.0 (2026-08-19)</strong>, successful scheduled-task results can be pushed straight to DingTalk / Lark / WeCom. Multi-store operators can finally "run and get reported to" instead of logging into each backend to verify — one fewer login is one fewer multi-store footprint.</p>
+        <p class="text-zinc-500 text-xs leading-relaxed mt-2"><strong class="text-zinc-400">v0.32.0 (2026-09-02)</strong> adds a fix that is easy to overlook but matters here: <strong class="text-zinc-300">scheduled tasks are no longer lost after a version upgrade</strong>. Previously an upgrade could silently kill your schedule — and once staggering breaks, multi-store actions collapse back into the same time window, which is exactly the correlation signal to avoid. The same release also lets you create scheduled tasks inside group chats.</p>
       </div>
     </div>
     <p class="text-zinc-500 text-xs mt-5 leading-relaxed">Version data sourced from the official Accio Work changelog, verified and synced daily by Pioneer Sentinel. We are an independent third party, not the vendor.</p>
