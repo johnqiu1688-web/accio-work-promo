@@ -21,6 +21,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <script src="/analytics.js"></script>
+<script src="/feedback.js"></script>
 <style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}</style>
 
     <script type="application/ld+json">
@@ -97,7 +98,7 @@ fetch('/skills_registry/skills.json').then(r=>r.json()).then(function(data){
       +'<p class="text-zinc-500 text-xs leading-relaxed mb-3 flex-1">'+s.summary+'</p>'
       +'<div class="text-[9px] text-zinc-600 mb-4 uppercase tracking-widest">by '+s.author+' · '+s.license+'</div>'
       +'<div class="flex gap-2">'
-      +'<a href="/skills_registry/'+s.pack+'" download onclick="trackEvent(\'convert\',\'skill_download\',\''+s.id+'\')" class="flex-1 text-center bg-orange-500 text-white py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-orange-600 transition"><i class="fas fa-download mr-1"></i>下载 Skill</a>'
+      +'<a href="/skills_registry/'+s.pack+'" download data-skill="'+s.id+'" onclick="trackEvent(\'convert\',\'skill_download\',\''+s.id+'\')" class="flex-1 text-center bg-orange-500 text-white py-2.5 rounded-xl font-black text-[10px] uppercase tracking-widest hover:bg-orange-600 transition"><i class="fas fa-download mr-1"></i>下载 Skill</a>'
       +'<a href="/'+s.detail+'" class="px-4 py-2.5 rounded-xl border border-white/10 text-zinc-300 text-[10px] font-black uppercase tracking-widest hover:border-orange-500 hover:text-orange-500 transition">详情</a>'
       +'</div></div>';
   }).join('');

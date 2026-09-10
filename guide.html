@@ -205,6 +205,7 @@
 </script>
 <style>body{background:#050505;color:#e4e4e7;font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased}.grid-bg{background-image:radial-gradient(#1e1e20 1px,transparent 1px);background-size:30px 30px}.glass{background:rgba(17,17,18,.85);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06)}html{scroll-behavior:smooth}</style>
   <script src="/analytics.js"></script>
+  <script src="/feedback.js"></script>
 </head>
 <body class="grid-bg min-h-screen">
 <nav class="sticky top-0 z-50 border-b border-white/5 bg-[#050505]/90 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
@@ -560,10 +561,39 @@
       </div>
     </section>
 
+    <section class="glass rounded-3xl p-8 md:p-10 mb-8 border border-emerald-500/20">
+      <div class="text-center mb-7">
+        <span class="inline-block text-[9px] font-black bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full uppercase tracking-widest mb-3">看完指南 · 直接带走</span>
+        <h2 class="text-2xl font-black text-white mb-3">3 个 FDE 实战 Skill，免费下载安装</h2>
+        <p class="text-zinc-400 text-sm">不用注册、不留邮箱，ZIP 约 2KB，MIT 免费可商用。下载后页面会追问一次是否装成功，帮我们持续改进。</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="/skills_registry/packs/m144-diagnostic.zip" download data-skill="m144-diagnostic" onclick="trackEvent&&trackEvent('convert','skill_download','guide_m144')" class="block rounded-2xl p-5 bg-orange-500/5 border border-orange-500/20 hover:border-orange-500/50 hover:-translate-y-1 transition">
+          <div class="text-[9px] text-orange-400 font-black uppercase tracking-widest mb-2">Chrome / 连接报错</div>
+          <h3 class="text-white font-black mb-2">M144 环境诊断</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">5 步自查 + 三档保活方案，定位浏览器连接与后台冻结问题。</p>
+          <span class="text-orange-400 text-xs font-black">下载 ZIP ↓</span>
+        </a>
+        <a href="/skills_registry/packs/1688-factory-audit.zip" download data-skill="1688-factory-audit" onclick="trackEvent&&trackEvent('convert','skill_download','guide_1688')" class="block rounded-2xl p-5 bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500/50 hover:-translate-y-1 transition">
+          <div class="text-[9px] text-emerald-400 font-black uppercase tracking-widest mb-2">1688 / 工厂核验</div>
+          <h3 class="text-white font-black mb-2">1688 工厂尽调</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">用公开工商信息辅助识别源头工厂与贸易商，降低采购风险。</p>
+          <span class="text-emerald-400 text-xs font-black">下载 ZIP ↓</span>
+        </a>
+        <a href="/skills_registry/packs/okki-zombie-revival.zip" download data-skill="okki-zombie-revival" onclick="trackEvent&&trackEvent('convert','skill_download','guide_okki')" class="block rounded-2xl p-5 bg-purple-500/5 border border-purple-500/20 hover:border-purple-500/50 hover:-translate-y-1 transition">
+          <div class="text-[9px] text-purple-400 font-black uppercase tracking-widest mb-2">OKKI / 客户激活</div>
+          <h3 class="text-white font-black mb-2">僵尸客户复活仪</h3>
+          <p class="text-zinc-500 text-xs leading-relaxed mb-4">结合客户公开动态生成个性化开篇，减少机械群发。</p>
+          <span class="text-purple-400 text-xs font-black">下载 ZIP ↓</span>
+        </a>
+      </div>
+      <div class="text-center mt-6"><a href="/skills_lab.html" onclick="trackEvent&&trackEvent('nav','guide_to_lab','all_skills')" class="text-emerald-400 text-xs font-black hover:text-white transition">查看安装说明与全部 Skill →</a></div>
+    </section>
+
     <section class="glass rounded-3xl p-10 text-center">
       <h2 class="text-2xl font-black text-white mb-4">没找到你的问题？</h2>
       <p class="text-zinc-400 text-sm mb-6">前往搜索中心，输入任意报错或诉求，官方口径 + FDE 实战方案一键直达。</p>
-      <a href="https://getquon.com/index_cn.html" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">打开 Accio Work 智能搜索 &rarr;</a>
+      <a href="https://getquon.com/index_cn.html" onclick="trackEvent&&trackEvent('nav','guide_to_search','bottom')" class="inline-block bg-orange-500 text-white px-8 py-3 rounded-2xl font-black text-xs uppercase tracking-widest">打开 Accio Work 智能搜索 &rarr;</a>
     </section>
   </main>
 </div>
