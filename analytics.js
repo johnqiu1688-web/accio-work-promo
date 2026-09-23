@@ -19,6 +19,11 @@ window._hmt = window._hmt || [];
 window.ACCIO_ANALYTICS = true;
 function trackEvent(category, action, label) {
   try {
+    // 兼容旧页面的 download / skill_zip 口径，统一归入下载转化事件。
+    if (category === "download" && action === "skill_zip") {
+      category = "convert";
+      action = "skill_download";
+    }
     if (window._hmt) window._hmt.push(["_trackEvent", category, action, label || ""]);
     var k = "accio_events", arr = JSON.parse(localStorage.getItem(k) || "[]");
     arr.push({ t: new Date().toISOString(), p: location.pathname, c: category, a: action, l: label || "" });
@@ -36,7 +41,10 @@ function trackEvent(category, action, label) {
     var a = e.target.closest && e.target.closest('a[href*="invite-center"]');
     if (a) trackEvent("convert", "deploy_click", location.pathname);
     var dl = e.target.closest && e.target.closest('a[href$=".zip"], a[data-skill]');
-    if (dl) trackEvent("convert", "skill_download", dl.getAttribute("data-skill") || dl.getAttribute("href") || "");
+    // 旧页面已有内联 trackEvent 时由内联逻辑负责上报；这里只补齐无内联埋点的下载链接，避免单击记两次。
+    if (dl && !(dl.getAttribute("onclick") || "").includes("trackEvent")) {
+      trackEvent("convert", "skill_download", dl.getAttribute("data-skill") || dl.getAttribute("href") || "");
+    }
   });
 })();
 
