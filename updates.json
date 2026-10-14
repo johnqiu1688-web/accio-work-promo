@@ -1,13 +1,70 @@
 {
   "_comment": "Accio Work 情报动态,由 Sentinel 巡航维护。只放已核实的真实更新,不编造。用于主站'本周更新'留存模块,培养用户回访习惯。",
-  "updated": "2026-08-26",
+  "updated": "2026-10-14",
   "items": [
+    {
+      "date": "2026-10-11",
+      "tag": "官方更新",
+      "title": "Accio Work v0.34.4 · 首页商家应用 + 会话内店铺切换",
+      "desc": "首页新增商家应用入口；单专家会话可随时查看和切换已授权店铺，1688 店铺改为单选；新增专家分类导航与本地插件开发目录链接，并提升插件、授权、图片生成和浏览器任务稳定性。",
+      "link": "q/multistore.html",
+      "verified": true
+    },
+    {
+      "date": "2026-10-08",
+      "tag": "官方更新",
+      "title": "Accio Work v0.34.3 · 画布与长会话体验优化",
+      "desc": "优化桌面端侧边栏与画布展开、长会话文件预览及图片查看；增强 1688 生意助手图片生成授权引导与长耗时生图任务稳定性。",
+      "link": "skill-radar.html",
+      "verified": true
+    },
+    {
+      "date": "2026-10-03",
+      "tag": "官方更新",
+      "title": "Accio Work v0.34.2 · 参考图与批量生图稳定性升级",
+      "desc": "修复图片生成或编辑忽略参考图的问题；提升图片编辑并发能力，统一超时上限；修复表格只读预览文本复制和自动化会话消息误去重问题。",
+      "link": "skill-radar.html",
+      "verified": true
+    },
+    {
+      "date": "2026-09-30",
+      "tag": "官方更新",
+      "title": "Accio Work v0.34.1 · 客户端启动与公式渲染修复",
+      "desc": "修复桌面端启动后 Agent 与团队列表偶发空白；避免插件数据检查阻塞启动；修复跨行数学公式影响后续正文排版的问题。",
+      "link": "q/install.html",
+      "verified": true
+    },
+    {
+      "date": "2026-09-24",
+      "tag": "官方更新",
+      "title": "Accio Work v0.34.0 · 1688 多店铺 + TikTok Ads + Agent 包导入导出",
+      "desc": "企业空间账号（含体验版）可连接和切换多个 1688 店铺；桌面端支持按店铺连接 TikTok Ads；支持导入、导出本地 Agent 包，方便备份与复用。",
+      "link": "q/multistore.html",
+      "verified": true
+    },
+    {
+      "date": "2026-09-18",
+      "tag": "官方更新",
+      "title": "Accio Work v0.33.0 · 消息发送升级 + 会话选店",
+      "desc": "会话内可查找联系人、群组和 Webhook 并发送文字、图片与文件；Team、定时任务和子代理可向指定目标发送消息；新会话首次发送前支持选择和切换 Alibaba 店铺。",
+      "link": "q/multistore.html",
+      "verified": true
+    },
+    {
+      "date": "2026-09-11",
+      "tag": "官方更新",
+      "title": "Accio Work v0.32.6 · 每日免费 Credits + 视频生成优化",
+      "desc": "新用户首次登录可领取每日免费 Credits；优化视频生成预览与记录展示，并提升 IM 定时任务、复杂网络文件读取、浏览器自动化和插件绑定稳定性。",
+      "link": "q/credits.html",
+      "verified": true
+    },
     {
       "date": "2026-09-02",
       "tag": "官方更新",
       "title": "Accio Work v0.32.0 · 群聊定时任务 + 团队知识库 + 定时任务升级不丢失",
       "desc": "群聊会话支持创建和运行定时任务;团队体验版支持个人知识库;个人空间 Agent 可一键复制到团队空间;定时任务在版本升级后不再丢失;完成店铺授权后自动沉淀商家画像到账号记忆。",
-      "url": "https://www.accio-ai.com/work/doc?slug=changelog"
+      "link": "skill-radar.html",
+      "verified": true
     },
     {
       "date": "2026-08-26",

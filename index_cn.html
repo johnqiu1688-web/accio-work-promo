@@ -285,10 +285,10 @@
   },
   {
    "@type": "Question",
-   "name": "多店合规隔离 / 子账号物理隔离",
+   "name": "Accio Work 如何连接和切换多个 1688 店铺？",
    "acceptedAnswer": {
-    "@type": "Answer",
-    "text": "确保每个子账号拥有独立的 Connector 授权，不建议跨设备多点登录。所有授权可在权限设置中审计追踪。 FDE实战补充：FDE 合规建议：通过 Accio 的本地沙箱为每个子账号提供独立的运行环境与 Connector 授权，做到多店之间数据与配置相互隔离、规范运营，降低因环境混用导致的账号风险。建议每个店铺严格使用独立授权、遵守平台多账号管理规范。"
+     "@type": "Answer",
+     "text": "从 Accio Work 0.34.0 起，拥有企业空间的账号（含体验版）可连接和切换多个 1688 店铺；0.34.4 在单专家会话输入框中增加已关联店铺入口，可随时查看并切换已授权店铺，且 1688 店铺采用单选方式。"
    }
   },
   {
@@ -720,10 +720,10 @@
           </div>
         </details>
         <details class="glass-ui rounded-3xl p-6 group">
-          <summary class="cursor-pointer flex items-center justify-between"><span class="text-white font-bold text-base">多店合规隔离 / 子账号物理隔离</span><span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase">安全</span></summary>
+          <summary class="cursor-pointer flex items-center justify-between"><span class="text-white font-bold text-base">1688 多店铺连接 / 会话内选店</span><span class="text-[8px] bg-blue-500/10 text-blue-400 px-2 py-0.5 rounded uppercase">0.34.4</span></summary>
           <div class="mt-5 space-y-4 text-sm">
-            <div><span class="text-blue-400 font-black text-xs uppercase">官方口径：</span><span class="text-zinc-300">确保每个子账号拥有独立的 Connector 授权，不建议跨设备多点登录。所有授权可在权限设置中审计追踪。</span></div>
-            <div><span class="text-orange-500 font-black text-xs uppercase">FDE 实战：</span><span class="text-white">FDE 合规建议：通过 Accio 的本地沙箱为每个子账号提供独立的运行环境与 Connector 授权，做到多店之间数据与配置相互隔离、规范运营，降低因环境混用导致的账号风险。建议每个店铺严格使用独立授权、遵守平台多账号管理规范。</span></div>
+            <div><span class="text-blue-400 font-black text-xs uppercase">官方口径：</span><span class="text-zinc-300">企业空间账号（含体验版）可连接和切换多个 1688 店铺；单专家会话输入框可查看并切换已授权店铺，1688 店铺采用单选。</span></div>
+            <div><span class="text-orange-500 font-black text-xs uppercase">实战要点：</span><span class="text-white">每次发送发品、图片或广告任务前，从会话输入框确认当前店铺；若授权窗口中途关闭，可返回原入口恢复未完成授权。</span></div>
             <a href="https://getquon.com/q/multistore.html" class="inline-block text-orange-500 text-xs font-black uppercase tracking-widest mt-2">查看完整解答 &rarr;</a>
           </div>
         </details>
@@ -856,7 +856,7 @@
             { id:'marketing', cat:'营销', title:'潜客分析 / 社媒营销（OKKI Shops）', tags:['潜客','获客','营销','社媒','okki shops','发帖','图文','b2b','线索','客户分析','审核'], aliases:['怎么获客','社媒怎么发','潜客分析','b2b营销','okki shops'], pinyin:['qianke','huoke','yingxiao','shemei'], official:'通过 OKKI Shops 插件实现策略规划与跨平台图文自动发布。动作集：差异化战略报告、行业情报雷达周报、社媒选题矩阵。也可对业务员撰写的帖子做 AI 审核。', fde:'FDE 建议：先让 AI 出社媒选题矩阵，再批量生成图文，人工只做终审，B2B 内容产能翻倍。', links:[{t:'官方·潜客分析与管理',s:'Help',u:DOC+'help-automated-marketing'}], skill:'#', action:'查看获客方案' },
             { id:'1688', cat:'采购', title:'1688 厂家 DNA 尽调核验', tags:['1688','采购','工厂','厂家','贸易商','二道贩子','验厂','源头','溢价','股权','审计'], aliases:['1688怎么找工厂','怎么辨别贸易商','源头工厂','1688审计','验厂'], pinyin:['1688','caigou','gongchang','maoyishang'], official:'识别工厂真伪官方建议：查看诚信通年限、金牌标识、验厂视频，下单前通过旺旺实地确认细节。', fde:'FDE 尽调方案：官方建议看验厂视频，我们再补一层"工商背景核验"——自动核查供应商的公开工商信息（法人关联企业数、参保人数变化等公开数据），辅助识别贸易商伪装成工厂的情况，帮你锁定源头工厂、把控采购质量与成本。所有数据均来自公开渠道。', links:[{t:'官方·国际站运营自动化',s:'Help',u:DOC+'help-general-automation'}], skill:'skill_1688_audit.html', action:'查看 1688 审计方案' },
             { id:'okki', cat:'CRM', title:'OKKI CRM 120 封发信限制 / 僵尸客户复活', tags:['okki','crm','120','发信','邮件','限额','群发','僵尸客户','公海','开发信','触达'], aliases:['okki发信限制','120封怎么破','僵尸客户','公海客户','开发信回复率'], pinyin:['okki','crm','faxin','jiangshikehu'], official:'OKKI 对单一账号设有每日发信安全阈值（约 120 封）以防垃圾邮件判定，建议分批触达保障送达率；可借社媒模块查客户动态写个性化内容提升回复率。', fde:'FDE 增效方案：在 OKKI 合规发信能力内，用 Accio 自动完成"逐客定制"——自动检索买家最新公开动态（融资/展会等）并填入开篇，把有限的每日触达额度用在最高价值的客户上，显著提升僵尸客户的回复率与复活率。建议严格遵守平台发信规范，避免触发垃圾邮件判定。', links:[{t:'官方·潜客分析与管理',s:'Help',u:DOC+'help-automated-marketing'}], skill:'skill_okki_revival.html', action:'获取 OKKI 复活包' },
-            { id:'multistore', cat:'安全', title:'多店合规隔离 / 子账号物理隔离', tags:['多店','合规隔离','子账号','封号','指纹','隔离','安全运营','多账号','关联'], aliases:['多个店铺','怎么合规隔离','子账号封号','安全运营','多账号登录'], pinyin:['duodian','fangguanlian','fenghao'], official:'确保每个子账号拥有独立的 Connector 授权，不建议跨设备多点登录。所有授权可在权限设置中审计追踪。', fde:'FDE 合规建议：通过 Accio 的本地沙箱为每个子账号提供独立的运行环境与 Connector 授权，做到多店之间数据与配置相互隔离、规范运营，降低因环境混用导致的账号风险。建议每个店铺严格使用独立授权、遵守平台多账号管理规范。', links:[{t:'官方·权限与安全',s:'Help',u:DOC+'help-permissions'}], skill:'#', action:'查看合规隔离方案' },
+            { id:'multistore', cat:'1688', title:'1688 多店铺连接 / 会话内选店', tags:['多店','1688','店铺连接','店铺切换','会话选店','店铺授权','tiktok ads','0.34.4','企业空间'], aliases:['多个1688店铺','怎么切换店铺','会话怎么选店','授权窗口关了','按店铺授权广告'], pinyin:['duodian','1688','dianpuqiehuan','shouquan'], official:'企业空间账号（含体验版）可连接和切换多个 1688 店铺；单专家会话输入框可查看并切换已授权店铺，1688 店铺采用单选。', fde:'每次发送发品、图片或广告任务前确认当前店铺；若授权窗口中途关闭，可返回原入口恢复未完成授权。', links:[{t:'官方·发布说明',s:'Changelog',u:'https://www.accio-ai.com/work/doc?slug=changelog'}], skill:'q/multistore.html', action:'查看多店铺操作清单' },
             { id:'create-team', cat:'团队', title:'开通 / 加入团队空间', tags:['团队','团队空间','开通','加入','邀请成员','企业空间','切换空间'], aliases:['怎么建团队','邀请同事','加入团队','切换到团队'], pinyin:['tuandui','kaitong','jiaru'], official:'点击立即开通并支付后，通过团队订阅完善企业信息。Owner/Admin 通过注册邮箱邀请成员并分配初始积分。新成员默认 Member，可被提升为 Admin。成员被邀请后需在客户端手动切换至企业空间。', fde:'FDE 提示：邀请后让成员务必在客户端切换空间，否则看不到团队资产。', links:[{t:'官方·加入团队空间',s:'Help',u:DOC+'help-create-team'}], skill:'#', action:'查看团队开通' },
             { id:'roles', cat:'团队', title:'团队角色与权限（Owner/Admin/Member）', tags:['角色','权限','owner','admin','member','管理员','成员','离职'], aliases:['角色有哪些','owner能干嘛','admin权限','成员离职怎么办'], pinyin:['jiaose','quanxian','owner'], official:'Owner（最高权限，管财务与解散）、Admin（邀请移除成员、管理资产）、Member（使用授权资产）。Member 离职后账号回退至个人空间，无法查看团队账单。', fde:'FDE 建议：财务/解散权限只留给 Owner，日常管理交给 Admin，降低误操作风险。', links:[{t:'官方·团队角色介绍&管理',s:'Help',u:DOC+'help-role-management'}], skill:'#', action:'查看角色管理' },
             { id:'team-assets', cat:'团队', title:'企业资产管理（Agent / Skill 共享）', tags:['资产','企业资产','共享','全员可见','agent共享','skill共享','团队资产'], aliases:['怎么共享agent','全员可见','团队skill','资产管理'], pinyin:['zichan','gongxiang','quanyuankejian'], official:'Owner/Admin 统一管理团队 Agent、Skill 等资产。勾选全员可见后全员可用，否则仅创建者可用。本地更新/删除已设全员可见的资产只影响本地，云端不同步删除。成员移除后其团队数据资产仍归团队。', fde:'FDE 建议：把标准化 SOP 做成 Skill 设全员可见，新人入职即用，统一团队打法。', links:[{t:'官方·企业资产管理',s:'Help',u:DOC+'help-team-assets'}], skill:'#', action:'查看资产管理' }
@@ -994,7 +994,7 @@
         fetch('/updates.json').then(function(r){return r.json();}).then(function(data){
           var el=document.getElementById('updates-list'); if(!el) return;
           var tagColor={'官方更新':'emerald','实战手册':'orange','技术预警':'red','社区热议':'blue'};
-          el.innerHTML=data.items.map(function(u){
+          el.innerHTML=data.items.slice(0,8).map(function(u){
             var c=tagColor[u.tag]||'zinc';
             return '<a href="'+u.link+'" onclick="trackEvent(\'retention\',\'update_click\',u.link)" class="glass-ui rounded-2xl p-5 block hover:border-brand-orange/40 transition group">'
               +'<div class="flex items-center justify-between mb-2"><span class="text-[8px] font-black bg-'+c+'-500/10 text-'+c+'-400 px-2 py-0.5 rounded uppercase">'+u.tag+'</span><span class="text-[9px] text-zinc-600">'+u.date+'</span></div>'
