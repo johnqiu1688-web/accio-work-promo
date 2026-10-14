@@ -51,10 +51,31 @@
             body { padding-bottom: 60px !important; }
             /* 拇指区双 CTA · 严格 grid */
             body .mobile-hero-cta { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
-            /* sticky 合规入口移动端右下 */
+            /* sticky 双入口移动端并排，避开底部状态栏 */
             body .sticky-compliance-cta { bottom: 76px !important; right: 12px !important; padding: 10px 14px !important; font-size: 11px !important; }
+            body .sticky-radar-cta { bottom: 76px !important; right: 150px !important; padding: 10px 14px !important; font-size: 11px !important; }
+            /* 盈利战术地图：桌面绝对坐标改为移动端单列，防止撑宽页面 */
+            body #lab { margin-bottom: 80px !important; }
+            body #lab > .text-center { margin-bottom: 32px !important; }
+            body .tactic-map { height: auto !important; display: grid !important; grid-template-columns: 1fr !important; gap: 12px !important; }
+            body .tactic-map > svg { display: none !important; }
+            body .tactic-map > div { position: relative !important; left: auto !important; top: auto !important; width: 100% !important; padding: 20px !important; border-radius: 24px !important; text-align: left !important; }
+            body .tactic-map > div .mb-8 { margin-bottom: 16px !important; }
         }
         .mobile-hero-cta { display: none; }
+
+        /* ===== Sticky Skill Radar 入口 ===== */
+        .sticky-radar-cta {
+            position: fixed; bottom: 32px; right: 210px; z-index: 9999;
+            background: rgba(249,115,22,.95); color: #fff;
+            padding: 14px 20px; border-radius: 999px;
+            font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .08em;
+            box-shadow: 0 10px 40px rgba(249,115,22,.35), 0 0 0 1px rgba(249,115,22,.4);
+            backdrop-filter: blur(10px);
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+        .sticky-radar-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(249,115,22,.5), 0 0 0 1px rgba(249,115,22,.6); }
 
         /* ===== Sticky 合规增效入口 · 全站悬浮 ===== */
         .sticky-compliance-cta {
@@ -463,7 +484,7 @@
                 <h2 class="text-4xl font-black text-white italic uppercase tracking-tighter">Accio Work 盈利战术地图</h2>
                 <p class="text-zinc-500 text-sm mt-2 font-medium">从环境激活到资产变现的全链路 FDE 算法交付</p>
             </div>
-            <div class="relative h-[600px] w-full flex items-center justify-center">
+            <div class="tactic-map relative h-[600px] w-full flex items-center justify-center">
                 <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40">
                     <path class="connector-line" d="M 250 300 L 500 150" stroke="#f97316" stroke-width="1" fill="none"/>
                     <path class="connector-line" d="M 250 300 L 500 300" stroke="#f97316" stroke-width="1" fill="none"/>
